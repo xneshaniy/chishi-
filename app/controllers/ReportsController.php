@@ -37,7 +37,7 @@ final class ReportsController {
                                  WHERE si.date BETWEEN ? AND ?
                                  GROUP BY s.id ORDER BY bonus_qty DESC", [$from, $to]);
         // Customer bonus lines (free goods on sales invoices)
-        $customerBonus = db_all("SELECT p.sku, p.name AS product, i.bonus_scheme, COUNT(*) AS lines, COALESCE(SUM(ii.qty),0) AS qty, COALESCE(SUM(ii.cost_total),0) AS cost
+        $customerBonus = db_all("SELECT p.sku, p.name AS product, i.bonus_scheme, COUNT(*) AS `lines`, COALESCE(SUM(ii.qty),0) AS qty, COALESCE(SUM(ii.cost_total),0) AS cost
                                  FROM sales_invoice_items ii
                                  JOIN sales_invoices i ON i.id = ii.invoice_id
                                  JOIN products p ON p.id = ii.product_id
@@ -45,7 +45,7 @@ final class ReportsController {
                                  GROUP BY p.id, i.bonus_scheme
                                  ORDER BY qty DESC", [$from, $to]);
         // Purchase bonus (supplier free goods)
-        $purchaseBonus = db_all("SELECT p.sku, p.name AS product, COUNT(*) AS lines, COALESCE(SUM(pi.qty),0) AS qty
+        $purchaseBonus = db_all("SELECT p.sku, p.name AS product, COUNT(*) AS `lines`, COALESCE(SUM(pi.qty),0) AS qty
                                  FROM purchase_items pi
                                  JOIN purchase_invoices i ON i.id = pi.invoice_id
                                  JOIN products p ON p.id = pi.product_id
@@ -183,7 +183,7 @@ final class ReportsController {
     }
 
     public static function stockValue(): void {
-        $rows = db_all("SELECT w.code, w.name, w.type, COALESCE(SUM(b.qty),0) AS qty, COALESCE(SUM(b.qty * b.avg_cost),0) AS value, COUNT(*) AS lines
+        $rows = db_all("SELECT w.code, w.name, w.type, COALESCE(SUM(b.qty),0) AS qty, COALESCE(SUM(b.qty * b.avg_cost),0) AS value, COUNT(*) AS `lines`
             FROM warehouses w LEFT JOIN stock_balances b ON b.warehouse_id = w.id WHERE w.is_active = 1 GROUP BY w.id ORDER BY value DESC");
         $grand = array_sum(array_column($rows, 'value'));
         $byKind = db_all("SELECT p.kind, COALESCE(SUM(b.qty),0) AS qty, COALESCE(SUM(b.qty * b.avg_cost),0) AS value

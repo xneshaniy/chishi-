@@ -12,9 +12,7 @@ foreach ($entries as $e) {
 // current-month total (from DB via controller — fallback if not passed)
 $monthKg = 0.0;
 if (function_exists('db_val')) {
-    $driver  = (string)db()->getAttribute(PDO::ATTR_DRIVER_NAME);
-    $ymExpr  = $driver === 'mysql' ? "DATE_FORMAT(usage_date,'%Y-%m')" : "strftime('%Y-%m',usage_date)";
-    $monthKg = (float)db_val("SELECT COALESCE(SUM(qty_kg),0) FROM rm_daily_usage WHERE status='posted' AND $ymExpr=strftime('%Y-%m','now')");
+    $monthKg = (float)db_val("SELECT COALESCE(SUM(qty_kg),0) FROM rm_daily_usage WHERE status='posted' AND usage_date >= ? AND usage_date <= ?", [date('Y-m-01'), date('Y-m-t')]);
 }
 
 // monthly date-range summary (last 30 days)

@@ -17,7 +17,9 @@ final class Database {
         } else {
             $dsn = sprintf('mysql:host=%s;port=%d;dbname=%s;charset=%s',
                 $c['host'], (int)($c['port'] ?? 3306), $c['name'], $c['charset'] ?? 'utf8mb4');
-            self::$pdo = new PDO($dsn, $c['user'], $c['pass'], self::opts());
+            $opts = self::opts();
+            $opts[PDO::MYSQL_ATTR_INIT_COMMAND] = "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci";
+            self::$pdo = new PDO($dsn, $c['user'], $c['pass'], $opts);
         }
         return self::$pdo;
     }

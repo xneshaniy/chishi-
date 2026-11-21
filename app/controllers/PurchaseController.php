@@ -338,9 +338,7 @@ final class PurchaseController {
             $todayEntryCount++;
         }
         // Current-month total usage
-        $driver = (string)db()->getAttribute(PDO::ATTR_DRIVER_NAME);
-        $ymExpr = $driver === 'mysql' ? "DATE_FORMAT(usage_date,'%Y-%m')" : "strftime('%Y-%m',usage_date)";
-        $monthTotalKg = (float)db_val("SELECT COALESCE(SUM(qty_kg),0) FROM rm_daily_usage WHERE status='posted' AND $ymExpr=strftime('%Y-%m','now')");
+        $monthTotalKg = (float)db_val("SELECT COALESCE(SUM(qty_kg),0) FROM rm_daily_usage WHERE status='posted' AND usage_date >= ? AND usage_date <= ?", [date('Y-m-01'), date('Y-m-t')]);
 
         view('purchase/raw', [
             'p'             => $p,
