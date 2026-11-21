@@ -2,6 +2,10 @@
 final class ReportsController {
 
     /* ============ Salesman selling BELOW issue rate — discount/loss report ============ */
+    public static function losses(): void {
+        self::priceDifference();
+    }
+
     public static function priceDifference(): void {
         $from = inp('from', date('Y-m-01')); $to = inp('to', today());
         $rows = db_all("SELECT i.invoice_no, i.date, COALESCE(c.name, 'Walk-in') AS customer, s.name AS salesman, p.sku, p.name AS product,
