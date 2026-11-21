@@ -21,6 +21,9 @@ $installed = file_exists(LOCK) || file_exists(ROOT . '/config/config.php');
 /* ---------- Step handlers ---------- */
 if (!$installed && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && ($_POST['action'] ?? '') === 'install') {
     $dbHost = trim($_POST['db_host'] ?? 'localhost');
+    if (strtolower($dbHost) === 'hostinger' || $dbHost === '') {
+        $dbHost = 'localhost';
+    }
     $dbName = trim($_POST['db_name'] ?? '');
     $dbUser = trim($_POST['db_user'] ?? '');
     $dbPass = $_POST['db_pass'] ?? '';
@@ -143,7 +146,7 @@ $reqs = [
     <form method="post" action="">
       <input type="hidden" name="action" value="install">
       <div class="form-grid" style="grid-template-columns:1fr 1fr">
-        <div style="grid-column:1/-1"><label class="f">MySQL Host (Hostinger: <code>localhost</code>)</label><input class="f" name="db_host" value="localhost" required></div>
+        <div style="grid-column:1/-1"><label class="f">MySQL Host (Leave as <code>localhost</code>)</label><input class="f" name="db_host" value="localhost" readonly style="background:#f1f5f9"></div>
         <div><label class="f">Database Name *</label><input class="f" name="db_name" value="u997441419_software" required></div>
         <div><label class="f">Database User *</label><input class="f" name="db_user" value="u997441419_software" required></div>
         <div><label class="f">Database Password *</label><input class="f" name="db_pass" type="password" placeholder="Hostinger Database Password" required autocomplete="new-password"></div>
