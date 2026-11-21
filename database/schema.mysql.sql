@@ -1403,7 +1403,7 @@ CREATE TABLE other_income (
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   INDEX idx_oi_date (date),
   INDEX idx_oi_status (status),
-  CONSTRAINT fk_oi_acc FOREIGN KEY (account_id) REFERENCES cash_bank_accounts(id) ON DELETE SET NULL
+  CONSTRAINT fk_oi_acc FOREIGN KEY (account_id) REFERENCES cash_bank_accounts(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE expenses (

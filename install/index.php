@@ -49,7 +49,8 @@ if (!$installed && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && ($_POST['
 
     if (!$errors) {
         try {
-            // 1) Schema
+            // 1) Schema (disable FK checks during table creation)
+            $pdo->exec("SET FOREIGN_KEY_CHECKS = 0;");
             $sql = file_get_contents(ROOT . '/database/schema.mysql.sql');
             $statements = preg_split('/;\s*(\r?\n|$)/', $sql);
             foreach ($statements as $st) {
@@ -57,6 +58,7 @@ if (!$installed && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && ($_POST['
                 if ($st === '') continue;
                 $pdo->exec($st);
             }
+            $pdo->exec("SET FOREIGN_KEY_CHECKS = 1;");
             // 2) Base seed (roles, permissions, chart of accounts, FY, branch, warehouses, cash/bank)
             $GLOBALS['CONFIG'] = ['db' => ['driver' => 'mysql']]; // seed.php needs a callable db(); provide via Database class
             require_once ROOT . '/app/core/Database.php';
