@@ -8,8 +8,8 @@ return [
     // Database — Hostinger Premium MySQL (see README §4)
     'db' => [
         'host'    => 'localhost',            // e.g. localhost (Hostinger) or 127.0.0.1
-        'name'    => 'PASTE_DB_NAME',        // e.g. u123456789_ctc_erp
-        'user'    => 'PASTE_DB_USER',        // e.g. u123456789_ctcadmin
+        'name'    => 'u997441419_software',
+        'user'    => 'u997441419_software',
         'pass'    => 'PASTE_DB_PASSWORD',
         'charset' => 'utf8mb4',
         'port'    => 3306,

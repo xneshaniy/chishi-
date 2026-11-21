@@ -142,13 +142,13 @@ $reqs = [
       <input type="hidden" name="action" value="install">
       <div class="form-grid" style="grid-template-columns:1fr 1fr">
         <div style="grid-column:1/-1"><label class="f">MySQL Host (Hostinger: <code>localhost</code>)</label><input class="f" name="db_host" value="localhost" required></div>
-        <div><label class="f">Database Name *</label><input class="f" name="db_name" placeholder="u123456789_ctc_erp" required></div>
-        <div><label class="f">Database User *</label><input class="f" name="db_user" placeholder="u123456789_ctcadmin" required></div>
-        <div><label class="f">Database Password *</label><input class="f" name="db_pass" type="password" required autocomplete="new-password"></div>
+        <div><label class="f">Database Name *</label><input class="f" name="db_name" value="u997441419_software" required></div>
+        <div><label class="f">Database User *</label><input class="f" name="db_user" value="u997441419_software" required></div>
+        <div><label class="f">Database Password *</label><input class="f" name="db_pass" type="password" placeholder="Hostinger Database Password" required autocomplete="new-password"></div>
         <div><label class="f">Port</label><input class="f" name="db_port" type="number" value="3306"></div>
         <div style="grid-column:1/-1"><label class="f">Company Name</label><input class="f" name="company" value="Chishti Tobacco Company"></div>
-        <div><label class="f">Owner Full Name *</label><input class="f" name="admin_name" placeholder="Haseeb Chishti" required></div>
-        <div><label class="f">Owner Username *</label><input class="f" name="admin_username" placeholder="owner" required></div>
+        <div><label class="f">Owner Full Name *</label><input class="f" name="admin_name" value="Haseeb Chishti" required></div>
+        <div><label class="f">Owner Username *</label><input class="f" name="admin_username" value="admin" required></div>
         <div><label class="f">Owner Password * (min 8)</label><input class="f" name="admin_password" type="password" required autocomplete="new-password"></div>
         <div><label class="f">Confirm Password *</label><input class="f" name="admin_password_confirm" type="password" required autocomplete="new-password"></div>
         <div style="grid-column:1/-1"><label style="display:flex;gap:8px;align-items:center"><input type="checkbox" name="https" checked> Site uses HTTPS (recommended — required for secure cookies)</label></div>
