@@ -16,13 +16,19 @@ $title = $isRaw ? __('Add New Purchase — Raw Material') : __('Receive Goods (G
     <?= idempotency_input() ?>
     <input type="hidden" name="is_raw" value="1">
     <input type="hidden" name="discount" value="0.00">
-    <input type="hidden" name="warehouse_id" value="1">
-
-    <!-- Top Fields: Date & Supplier & Account -->
-    <div class="form-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:16px">
+    <!-- Top Fields: Date & Supplier & Account & Warehouse -->
+    <div class="form-grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:16px">
       <div>
         <label class="f"><?= __('Purchase Date *') ?></label>
         <input class="f" type="date" name="date" value="<?= e(today()) ?>" required>
+      </div>
+      <div>
+        <label class="f"><?= __('Receive Into Warehouse *') ?></label>
+        <select class="f" name="warehouse_id" required>
+          <?php foreach ($warehouses as $w): ?>
+            <option value="<?= (int)$w['id'] ?>" <?= ((int)$w['id'] === (int)RawMaterial::defaultWarehouse()) ? 'selected' : '' ?>><?= e($w['name']) ?></option>
+          <?php endforeach; ?>
+        </select>
       </div>
       <div>
         <label class="f"><?= __('Supplier') ?> <small class="muted" id="suppProdCountHint"></small></label>

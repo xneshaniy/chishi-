@@ -89,7 +89,7 @@ final class PurchaseController {
         if (!is_owner_or_admin()) { http_response_code(403); exit('Forbidden — raw material purchases are Owner/Admin only.'); }
 
         // Handle POST actions for Suppliers & Products tab
-        if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
+        if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && in_array(inp('action'), ['add_supplier', 'map_products', 'add_product_to_supplier', 'remove_supplier_product', 'delete_supplier', 'add_raw_product'], true)) {
             require_post(); csrf_verify();
             $action = inp('action');
             if ($action === 'add_supplier') {
