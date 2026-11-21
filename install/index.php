@@ -77,9 +77,9 @@ if (!$installed && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && ($_POST['
             $sample = file_get_contents(ROOT . '/config/config.sample.php');
             $sample = str_replace("'host'    => 'localhost'", "'host'    => '" . addslashes($dbHost) . "'", $sample);
             $sample = str_replace("'port'    => 3306", "'port'    => " . $dbPort, $sample);
-            $sample = str_replace("'PASTE_DB_NAME'", addslashes($dbName), $sample);
-            $sample = str_replace("'PASTE_DB_USER'", addslashes($dbUser), $sample);
-            $sample = str_replace("'PASTE_DB_PASSWORD'", addslashes($dbPass), $sample);
+            $sample = preg_replace("/'name'\s*=>\s*'[^']*'/", "'name'    => '" . addslashes($dbName) . "'", $sample);
+            $sample = preg_replace("/'user'\s*=>\s*'[^']*'/", "'user'    => '" . addslashes($dbUser) . "'", $sample);
+            $sample = preg_replace("/'pass'\s*=>\s*'[^']*'/", "'pass'    => '" . addslashes($dbPass) . "'", $sample);
             $sample = str_replace("'company'   => 'Chishti Tobacco Company'", "'company'   => '" . addslashes($company) . "'", $sample);
             $sample = str_replace("'https'     => true", "'https'     => " . ($useHttps ? 'true' : 'false'), $sample);
             if (file_put_contents(ROOT . '/config/config.php', $sample, LOCK_EX) === false) {
