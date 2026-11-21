@@ -57,10 +57,14 @@ if (!$installed && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && ($_POST['
             }
             $sql = file_get_contents(ROOT . '/database/schema.mysql.sql');
             $statements = preg_split('/;\s*(\r?\n|$)/', $sql);
-            foreach ($statements as $st) {
+            foreach ($statements as $stIdx => $st) {
                 $st = trim($st);
                 if ($st === '') continue;
-                $pdo->exec($st);
+                try {
+                    $pdo->exec($st);
+                } catch (Throwable $se) {
+                    throw new RuntimeException("Error in statement #{$stIdx}: " . $se->getMessage() . " | SQL: " . substr($st, 0, 200));
+                }
             }
             $pdo->exec("SET FOREIGN_KEY_CHECKS = 1;");
             // 2) Base seed (roles, permissions, chart of accounts, FY, branch, warehouses, cash/bank)

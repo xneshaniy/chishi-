@@ -1647,7 +1647,7 @@ CREATE TABLE IF NOT EXISTS claim_goods (
   date DATE NOT NULL,
   reason VARCHAR(255) NULL,
   status VARCHAR(16) NOT NULL DEFAULT 'pending_approval',
-  payment_type VARCHAR(10) NOT NULL DEFAULT 'outstanding',
+  payment_type VARCHAR(20) NOT NULL DEFAULT 'outstanding',
   pay_account_id INT NULL,
   good_qty DECIMAL(18,3) NOT NULL DEFAULT 0,
   damaged_qty DECIMAL(18,3) NOT NULL DEFAULT 0,
