@@ -24,7 +24,7 @@ if (!$installed && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && ($_POST['
     $dbPort = 3306;
     $dbName = trim($_POST['db_name'] ?? '') ?: 'u997441419_software';
     $dbUser = trim($_POST['db_user'] ?? '') ?: 'u997441419_software';
-    $dbPass = $_POST['db_pass'] ?? '';
+    $dbPass = trim($_POST['db_pass'] ?? '');
     $company = trim($_POST['company'] ?? 'Chishti Tobacco Company');
     $adminName = trim($_POST['admin_name'] ?? '');
     $adminUser = trim($_POST['admin_username'] ?? '');

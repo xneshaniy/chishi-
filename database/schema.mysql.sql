@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS warehouses (
   branch_id INT NULL,
   code VARCHAR(20) NOT NULL UNIQUE,
   name VARCHAR(120) NOT NULL,
-  type VARCHAR(20) NOT NULL DEFAULT 'warehouse', -- factory|central|warehouse|salesman|vehicle
+  type VARCHAR(20) NOT NULL DEFAULT 'warehouse',
   is_default TINYINT(1) NOT NULL DEFAULT 0,
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   is_archived TINYINT(1) NOT NULL DEFAULT 0,
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS warehouses (
 
 CREATE TABLE IF NOT EXISTS fiscal_years (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) NOT NULL,          -- e.g. FY 2026-27
+  name VARCHAR(30) NOT NULL,
   start_date DATE NOT NULL,
   end_date DATE NOT NULL,
   is_active TINYINT(1) NOT NULL DEFAULT 0,
@@ -55,10 +55,10 @@ CREATE TABLE IF NOT EXISTS fiscal_years (
 CREATE TABLE IF NOT EXISTS fiscal_periods (
   id INT AUTO_INCREMENT PRIMARY KEY,
   fiscal_year_id INT NOT NULL,
-  name VARCHAR(30) NOT NULL,          -- e.g. Jul 2026
+  name VARCHAR(30) NOT NULL,
   start_date DATE NOT NULL,
   end_date DATE NOT NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'open', -- open|closed
+  status VARCHAR(10) NOT NULL DEFAULT 'open',
   CONSTRAINT fk_fp_fy FOREIGN KEY (fiscal_year_id) REFERENCES fiscal_years(id) ON DELETE CASCADE,
   INDEX idx_fp_dates (start_date, end_date)
 ) ENGINE=InnoDB;
@@ -96,14 +96,14 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS roles (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  code VARCHAR(40) NOT NULL UNIQUE,   -- owner|admin|accountant|manager|storekeeper|salesman
+  code VARCHAR(40) NOT NULL UNIQUE,
   name VARCHAR(80) NOT NULL,
   description VARCHAR(255) NULL
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS permissions (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  code VARCHAR(80) NOT NULL UNIQUE,   -- module.action e.g. sales.create
+  code VARCHAR(80) NOT NULL UNIQUE,
   module VARCHAR(40) NOT NULL,
   description VARCHAR(255) NULL
 ) ENGINE=InnoDB;
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS login_history (
   username VARCHAR(60) NULL,
   ip VARCHAR(45) NULL,
   user_agent VARCHAR(255) NULL,
-  status VARCHAR(10) NOT NULL,        -- success|failed|locked
+  status VARCHAR(10) NOT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   INDEX idx_lh_user (user_id, created_at)
 ) ENGINE=InnoDB;
@@ -183,15 +183,15 @@ CREATE TABLE IF NOT EXISTS attachments (
 CREATE TABLE IF NOT EXISTS product_categories (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
-  kind VARCHAR(20) NOT NULL DEFAULT 'finished',  -- finished|raw|packaging
+  kind VARCHAR(20) NOT NULL DEFAULT 'finished',
   is_archived TINYINT(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB;
 
 CREATE TABLE IF NOT EXISTS product_packaging (
   product_id INT PRIMARY KEY,
-  pack_pieces DECIMAL(10,3) NULL,      -- pieces per pack; NULL = use global default
-  bundle_packs DECIMAL(10,3) NULL,     -- packs per bundle; NULL = not configured
-  packet_bundles DECIMAL(10,3) NULL,   -- bundles per packet; NULL = not configured
+  pack_pieces DECIMAL(10,3) NULL,
+  bundle_packs DECIMAL(10,3) NULL,
+  packet_bundles DECIMAL(10,3) NULL,
   updated_at DATETIME NULL,
   CONSTRAINT fk_pack_p FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
@@ -209,7 +209,7 @@ CREATE TABLE IF NOT EXISTS products (
   name VARCHAR(150) NOT NULL,
   category_id INT NULL,
   unit_id INT NULL,
-  kind VARCHAR(20) NOT NULL DEFAULT 'finished',  -- finished|raw|packaging
+  kind VARCHAR(20) NOT NULL DEFAULT 'finished',
   pack_size VARCHAR(60) NULL,
   purchase_price DECIMAL(18,2) NOT NULL DEFAULT 0,
   sale_price DECIMAL(18,2) NOT NULL DEFAULT 0,
@@ -276,7 +276,7 @@ CREATE TABLE IF NOT EXISTS customers (
   ntn VARCHAR(40) NULL,
   credit_limit DECIMAL(18,2) NOT NULL DEFAULT 0,
   opening_balance DECIMAL(18,2) NOT NULL DEFAULT 0,
-  opening_type VARCHAR(6) NOT NULL DEFAULT 'debit',  -- debit|credit
+  opening_type VARCHAR(6) NOT NULL DEFAULT 'debit',
   salesman_id INT NULL,
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   is_archived TINYINT(1) NOT NULL DEFAULT 0,
@@ -302,9 +302,9 @@ CREATE TABLE IF NOT EXISTS salesmen (
   cnic_back_path VARCHAR(255) NULL,
   deactivated_at DATETIME NULL,
   deactivated_by INT NULL,
-  warehouse_id INT NULL,              -- stock location dedicated to this salesman
+  warehouse_id INT NULL,
   salary DECIMAL(18,2) NOT NULL DEFAULT 0,
-  salary_frequency VARCHAR(10) NOT NULL DEFAULT 'monthly', -- monthly|weekly
+  salary_frequency VARCHAR(10) NOT NULL DEFAULT 'monthly',
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   is_archived TINYINT(1) NOT NULL DEFAULT 0,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -334,7 +334,7 @@ CREATE TABLE IF NOT EXISTS suppliers (
   city VARCHAR(100) NULL,
   ntn VARCHAR(40) NULL,
   opening_balance DECIMAL(18,2) NOT NULL DEFAULT 0,
-  opening_type VARCHAR(6) NOT NULL DEFAULT 'credit', -- supplier opening is normally payable (credit)
+  opening_type VARCHAR(6) NOT NULL DEFAULT 'credit',
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   is_archived TINYINT(1) NOT NULL DEFAULT 0,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -360,11 +360,11 @@ CREATE TABLE IF NOT EXISTS employees (
   user_id INT NULL,
   deactivated_at DATETIME NULL,
   deactivated_by INT NULL,
-  salary_type VARCHAR(10) NOT NULL DEFAULT 'monthly', -- monthly|daily
+  salary_type VARCHAR(10) NOT NULL DEFAULT 'monthly',
   salary_rate DECIMAL(18,2) NOT NULL DEFAULT 0,
   overtime_rate DECIMAL(18,2) NULL,
-  payment_method VARCHAR(10) NOT NULL DEFAULT 'cash', -- cash|bank (preselects payout account)
-  salary_frequency VARCHAR(10) NOT NULL DEFAULT 'monthly', -- monthly|weekly
+  payment_method VARCHAR(10) NOT NULL DEFAULT 'cash',
+  salary_frequency VARCHAR(10) NOT NULL DEFAULT 'monthly',
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   is_archived TINYINT(1) NOT NULL DEFAULT 0,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -374,7 +374,7 @@ CREATE TABLE IF NOT EXISTS attendance (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
   date DATE NOT NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'present', -- present|absent|leave|half_day|off
+  status VARCHAR(12) NOT NULL DEFAULT 'present',
   hours DECIMAL(10,2) NOT NULL DEFAULT 8.00,
   UNIQUE KEY uq_att (employee_id, date),
   CONSTRAINT fk_att_emp FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
@@ -383,7 +383,7 @@ CREATE TABLE IF NOT EXISTS attendance (
 CREATE TABLE IF NOT EXISTS employee_documents (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
-  doc_type VARCHAR(60) NOT NULL DEFAULT 'other', -- photo|cnic_front|cnic_back|contract|certificate|other
+  doc_type VARCHAR(60) NOT NULL DEFAULT 'other',
   original_name VARCHAR(255) NOT NULL,
   file_path VARCHAR(255) NOT NULL,
   mime VARCHAR(120) NULL,
@@ -462,7 +462,7 @@ CREATE TABLE IF NOT EXISTS staff_attendance (
   employee_id INT NULL,
   salesman_id INT NULL,
   date DATE NOT NULL,
-  status VARCHAR(8) NOT NULL, -- present|absent|leave|half_day
+  status VARCHAR(8) NOT NULL,
   marked_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME NULL,
@@ -510,7 +510,7 @@ CREATE TABLE IF NOT EXISTS grinding_records (
   qty_received_kg DECIMAL(18,3) NOT NULL,
   loss_kg DECIMAL(18,3) NOT NULL DEFAULT 0,
   charges DECIMAL(18,2) NOT NULL DEFAULT 0,
-  charges_status VARCHAR(10) NOT NULL DEFAULT 'pending',   -- pending|paid
+  charges_status VARCHAR(10) NOT NULL DEFAULT 'pending',
   notes TEXT NULL,
   created_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -536,7 +536,7 @@ CREATE TABLE IF NOT EXISTS employee_advances (
   amount DECIMAL(18,2) NOT NULL,
   notes VARCHAR(255) NULL,
   payroll_id INT NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'approved',  -- pending|approved|rejected|disbursed|cancelled
+  status VARCHAR(12) NOT NULL DEFAULT 'approved',
   approved_by INT NULL,
   approved_at DATETIME NULL,
   monthly_deduction DECIMAL(18,2) NULL,
@@ -564,7 +564,7 @@ CREATE TABLE IF NOT EXISTS payroll (
   loan_deduction DECIMAL(18,2) NOT NULL DEFAULT 0,
   net_pay DECIMAL(18,2) NOT NULL DEFAULT 0,
   account_id INT NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'draft',   -- draft|pending_approval|paid|reversed
+  status VARCHAR(10) NOT NULL DEFAULT 'draft',
   journal_entry_id INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   UNIQUE KEY uq_payroll (employee_id, period_start, period_end),
@@ -578,7 +578,7 @@ CREATE TABLE IF NOT EXISTS payroll_payments (
   amount DECIMAL(18,2) NOT NULL,
   account_id INT NOT NULL,
   notes VARCHAR(255) NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'pending',  -- pending|paid|rejected
+  status VARCHAR(12) NOT NULL DEFAULT 'pending',
   journal_entry_id INT NULL,
   requested_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -666,9 +666,9 @@ CREATE TABLE IF NOT EXISTS maintenance_records (
   other_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
   parts_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
   total_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
-  payment_type VARCHAR(10) NOT NULL DEFAULT 'cash',  -- cash|bank|credit
+  payment_type VARCHAR(10) NOT NULL DEFAULT 'cash',
   account_id INT NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'pending',      -- pending|posted|rejected|reversed
+  status VARCHAR(12) NOT NULL DEFAULT 'pending',
   attachment VARCHAR(255) NULL,
   expense_id INT NULL,
   created_by INT NULL,
@@ -722,8 +722,8 @@ CREATE TABLE IF NOT EXISTS stock_movements (
   id INT AUTO_INCREMENT PRIMARY KEY,
   product_id INT NOT NULL,
   warehouse_id INT NOT NULL,
-  type VARCHAR(30) NOT NULL,  -- opening|purchase|sale|sale_return|issue|receipt|transfer_in|transfer_out|adjustment_in|adjustment_out|production_in|production_consumption|damaged|expired|salesman_issue_out
-  qty DECIMAL(18,3) NOT NULL,        -- signed: + in / - out
+  type VARCHAR(30) NOT NULL,
+  qty DECIMAL(18,3) NOT NULL,
   unit_cost DECIMAL(18,4) NOT NULL DEFAULT 0,
   total_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
   balance_qty DECIMAL(18,3) NULL,
@@ -747,7 +747,7 @@ CREATE TABLE IF NOT EXISTS stock_adjustments (
   warehouse_id INT NOT NULL,
   date DATE NOT NULL,
   reason VARCHAR(255) NOT NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'pending',  -- pending|approved|rejected
+  status VARCHAR(12) NOT NULL DEFAULT 'pending',
   created_by INT NULL,
   approved_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -759,7 +759,7 @@ CREATE TABLE IF NOT EXISTS stock_adjustment_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   adjustment_id INT NOT NULL,
   product_id INT NOT NULL,
-  direction VARCHAR(3) NOT NULL,          -- in|out
+  direction VARCHAR(3) NOT NULL,
   qty DECIMAL(18,3) NOT NULL,
   unit_cost DECIMAL(18,4) NOT NULL DEFAULT 0,
   CONSTRAINT fk_sai_a FOREIGN KEY (adjustment_id) REFERENCES stock_adjustments(id) ON DELETE CASCADE,
@@ -773,10 +773,10 @@ CREATE TABLE IF NOT EXISTS factory_issues (
   `date` DATE NOT NULL,
   batch_no VARCHAR(60) NULL,
   details VARCHAR(255) NULL,
-  production_order_id INT NULL,        -- linked production order for costing (optional)
+  production_order_id INT NULL,
   issued_by INT NULL,
   approved_by INT NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'posted',  -- posted|pending|rejected|cancelled
+  status VARCHAR(12) NOT NULL DEFAULT 'posted',
   notes VARCHAR(255) NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_fi_po FOREIGN KEY (production_order_id) REFERENCES production_orders(id) ON DELETE SET NULL
@@ -785,10 +785,10 @@ CREATE TABLE IF NOT EXISTS factory_issues (
 CREATE TABLE IF NOT EXISTS factory_issue_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   issue_id INT NOT NULL,
-  product_id INT NOT NULL,             -- raw material (KG base)
-  warehouse_id INT NOT NULL,           -- RM warehouse to deduct from
-  qty_kg DECIMAL(18,3) NOT NULL,       -- always KG
-  unit_cost DECIMAL(18,4) NOT NULL DEFAULT 0,   -- cost per KG at time of consumption
+  product_id INT NOT NULL,
+  warehouse_id INT NOT NULL,
+  qty_kg DECIMAL(18,3) NOT NULL,
+  unit_cost DECIMAL(18,4) NOT NULL DEFAULT 0,
   total_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
   INDEX idx_fii_p (product_id),
   INDEX idx_fii_i (issue_id),
@@ -832,7 +832,7 @@ CREATE TABLE IF NOT EXISTS daily_production_rm_items (
 
 CREATE TABLE IF NOT EXISTS bills_of_materials (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  product_id INT NOT NULL,                -- finished good produced
+  product_id INT NOT NULL,
   name VARCHAR(120) NOT NULL,
   output_qty DECIMAL(18,3) NOT NULL DEFAULT 1,
   is_active TINYINT(1) NOT NULL DEFAULT 1,
@@ -852,7 +852,7 @@ CREATE TABLE IF NOT EXISTS production_orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
   order_no VARCHAR(30) NOT NULL UNIQUE,
   product_id INT NOT NULL,
-  warehouse_id INT NOT NULL,              -- finished goods destination
+  warehouse_id INT NOT NULL,
   bom_id INT NULL,
   qty_planned DECIMAL(18,3) NOT NULL,
   qty_produced DECIMAL(18,3) NOT NULL DEFAULT 0,
@@ -861,7 +861,7 @@ CREATE TABLE IF NOT EXISTS production_orders (
   overhead_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
   materials_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
   total_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
-  status VARCHAR(12) NOT NULL DEFAULT 'draft',  -- draft|released|completed|cancelled
+  status VARCHAR(12) NOT NULL DEFAULT 'draft',
   batch_no VARCHAR(60) NULL,
   expiry_date DATE NULL,
   notes VARCHAR(255) NULL,
@@ -914,13 +914,13 @@ CREATE TABLE IF NOT EXISTS production_inputs (
 CREATE TABLE IF NOT EXISTS cash_bank_accounts (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(120) NOT NULL,
-  type VARCHAR(10) NOT NULL,               -- cash|bank
+  type VARCHAR(10) NOT NULL,
   bank_name VARCHAR(120) NULL,
   account_no VARCHAR(60) NULL,
   iban VARCHAR(60) NULL,
   branch VARCHAR(120) NULL,
   opening_balance DECIMAL(18,2) NOT NULL DEFAULT 0,
-  gl_account_id INT NULL,                  -- linked chart of accounts row
+  gl_account_id INT NULL,
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   is_archived TINYINT(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB;
@@ -935,7 +935,7 @@ CREATE TABLE IF NOT EXISTS bank_transfers (
   reference VARCHAR(120) NULL,
   notes VARCHAR(255) NULL,
   journal_entry_id INT NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'pending',  -- pending|posted|rejected|reversed
+  status VARCHAR(10) NOT NULL DEFAULT 'pending',
   created_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_bt_from FOREIGN KEY (from_account_id) REFERENCES cash_bank_accounts(id),
@@ -946,13 +946,13 @@ CREATE TABLE IF NOT EXISTS cheques (
   id INT AUTO_INCREMENT PRIMARY KEY,
   cheque_no VARCHAR(40) NOT NULL,
   bank_account_id INT NOT NULL,
-  direction VARCHAR(8) NOT NULL DEFAULT 'received', -- received|issued
-  party_type VARCHAR(10) NULL,            -- customer|supplier|other
+  direction VARCHAR(8) NOT NULL DEFAULT 'received',
+  party_type VARCHAR(10) NULL,
   party_name VARCHAR(150) NULL,
   amount DECIMAL(18,2) NOT NULL DEFAULT 0,
   issue_date DATE NULL,
   due_date DATE NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'pending',   -- pending|cleared|bounced|cancelled
+  status VARCHAR(10) NOT NULL DEFAULT 'pending',
   notes VARCHAR(255) NULL,
   CONSTRAINT fk_chq_ba FOREIGN KEY (bank_account_id) REFERENCES cash_bank_accounts(id),
   INDEX idx_chq_status (status),
@@ -966,7 +966,7 @@ CREATE TABLE IF NOT EXISTS purchase_orders (
   supplier_id INT NOT NULL,
   order_date DATE NOT NULL,
   expected_date DATE NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'draft',     -- draft|approved|received|cancelled
+  status VARCHAR(12) NOT NULL DEFAULT 'draft',
   subtotal DECIMAL(18,2) NOT NULL DEFAULT 0,
   tax DECIMAL(18,2) NOT NULL DEFAULT 0,
   total DECIMAL(18,2) NOT NULL DEFAULT 0,
@@ -994,15 +994,15 @@ CREATE TABLE IF NOT EXISTS purchase_invoices (
   po_id INT NULL,
   supplier_invoice_no VARCHAR(60) NULL,
   date DATE NOT NULL,
-  payment_type VARCHAR(6) NOT NULL DEFAULT 'credit',  -- cash|credit
+  payment_type VARCHAR(6) NOT NULL DEFAULT 'credit',
   cash_account_id INT NULL,
   warehouse_id INT NOT NULL,
   subtotal DECIMAL(18,2) NOT NULL DEFAULT 0,
   discount DECIMAL(18,2) NOT NULL DEFAULT 0,
   tax DECIMAL(18,2) NOT NULL DEFAULT 0,
   total DECIMAL(18,2) NOT NULL DEFAULT 0,
-  status VARCHAR(10) NOT NULL DEFAULT 'posted',       -- posted|reversed
-  payment_status VARCHAR(10) NOT NULL DEFAULT 'unpaid', -- paid|unpaid|partial
+  status VARCHAR(10) NOT NULL DEFAULT 'posted',
+  payment_status VARCHAR(10) NOT NULL DEFAULT 'unpaid',
   amount_paid DECIMAL(18,2) NOT NULL DEFAULT 0,
   journal_entry_id INT NULL,
   created_by INT NULL,
@@ -1018,9 +1018,9 @@ CREATE TABLE IF NOT EXISTS purchase_items (
   invoice_id INT NOT NULL,
   product_id INT NOT NULL,
   qty DECIMAL(18,3) NOT NULL,
-  unit_short VARCHAR(10) NULL,     -- unit as purchased for raw materials: KG|TON|MAN (NULL for FG/packaging)
-  qty_kg DECIMAL(18,3) NULL,       -- qty converted to KG base for raw materials (else equals qty)
-  unit_cost DECIMAL(18,2) NOT NULL DEFAULT 0,   -- cost per ORIGINAL purchase unit
+  unit_short VARCHAR(10) NULL,
+  qty_kg DECIMAL(18,3) NULL,
+  unit_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
   discount DECIMAL(18,2) NOT NULL DEFAULT 0,
   tax_rate DECIMAL(6,2) NOT NULL DEFAULT 0,
   tax_amount DECIMAL(18,2) NOT NULL DEFAULT 0,
@@ -1038,7 +1038,7 @@ CREATE TABLE IF NOT EXISTS sales_orders (
   salesman_id INT NULL,
   order_date DATE NOT NULL,
   delivery_date DATE NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'draft',        -- draft|confirmed|delivered|cancelled
+  status VARCHAR(12) NOT NULL DEFAULT 'draft',
   subtotal DECIMAL(18,2) NOT NULL DEFAULT 0,
   total DECIMAL(18,2) NOT NULL DEFAULT 0,
   notes VARCHAR(255) NULL,
@@ -1067,7 +1067,7 @@ CREATE TABLE IF NOT EXISTS sales_invoices (
   warehouse_id INT NOT NULL,
   date DATE NOT NULL,
   due_date DATE NULL,
-  payment_type VARCHAR(6) NOT NULL DEFAULT 'cash',    -- cash|credit
+  payment_type VARCHAR(6) NOT NULL DEFAULT 'cash',
   cash_account_id INT NULL,
   subtotal DECIMAL(18,2) NOT NULL DEFAULT 0,
   discount DECIMAL(18,2) NOT NULL DEFAULT 0,
@@ -1076,7 +1076,7 @@ CREATE TABLE IF NOT EXISTS sales_invoices (
   cost_total DECIMAL(18,2) NOT NULL DEFAULT 0,
   authorized_by INT NULL,
   bonus_scheme VARCHAR(100) NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'posted',       -- posted|reversed
+  status VARCHAR(10) NOT NULL DEFAULT 'posted',
   journal_entry_id INT NULL,
   created_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -1097,7 +1097,7 @@ CREATE TABLE IF NOT EXISTS sales_invoice_items (
   discount DECIMAL(18,2) NOT NULL DEFAULT 0,
   tax_rate DECIMAL(6,2) NOT NULL DEFAULT 0,
   tax_amount DECIMAL(18,2) NOT NULL DEFAULT 0,
-  line_total DECIMAL(18,2) NOT NULL DEFAULT 0,   -- qty*price - discount + tax
+  line_total DECIMAL(18,2) NOT NULL DEFAULT 0,
   net_before_tax DECIMAL(18,2) NOT NULL DEFAULT 0,
   cost_price DECIMAL(18,4) NOT NULL DEFAULT 0,
   cost_total DECIMAL(18,2) NOT NULL DEFAULT 0,
@@ -1114,7 +1114,7 @@ CREATE TABLE IF NOT EXISTS sales_returns (
   date DATE NOT NULL,
   reason VARCHAR(255) NULL,
   total DECIMAL(18,2) NOT NULL DEFAULT 0,
-  status VARCHAR(10) NOT NULL DEFAULT 'posted',       -- posted|reversed
+  status VARCHAR(10) NOT NULL DEFAULT 'posted',
   journal_entry_id INT NULL,
   created_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -1155,8 +1155,8 @@ CREATE TABLE IF NOT EXISTS salesman_issues (
   salesman_id INT NOT NULL,
   from_warehouse_id INT NOT NULL,
   date DATE NOT NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'posted',      -- pending_approval|posted|reversed
-  issue_type VARCHAR(10) NOT NULL DEFAULT 'transfer',  -- transfer|credit_issue
+  status VARCHAR(10) NOT NULL DEFAULT 'posted',
+  issue_type VARCHAR(10) NOT NULL DEFAULT 'transfer',
   total_payable DECIMAL(18,2) NOT NULL DEFAULT 0,
   total_bonus_cost DECIMAL(18,2) NOT NULL DEFAULT 0,
   bonus_reason VARCHAR(255) NULL,
@@ -1164,7 +1164,7 @@ CREATE TABLE IF NOT EXISTS salesman_issues (
   approved_by INT NULL,
   bonus_scheme VARCHAR(100) NULL,
   notes VARCHAR(255) NULL,
-  related_issue_id INT NULL,                  -- goods return: the original salesman invoice being returned against
+  related_issue_id INT NULL,
   created_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_si2_sm FOREIGN KEY (salesman_id) REFERENCES salesmen(id),
@@ -1195,7 +1195,7 @@ CREATE TABLE IF NOT EXISTS salesman_settlements (
   collected_total DECIMAL(18,2) NOT NULL DEFAULT 0,
   cash_counted DECIMAL(18,2) NOT NULL DEFAULT 0,
   expected_cash DECIMAL(18,2) NOT NULL DEFAULT 0,
-  variance DECIMAL(18,2) NOT NULL DEFAULT 0,         -- negative = shortage
+  variance DECIMAL(18,2) NOT NULL DEFAULT 0,
   notes VARCHAR(255) NULL,
   created_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -1282,10 +1282,10 @@ CREATE TABLE IF NOT EXISTS salesman_salary_payments (
   `date` DATE NOT NULL,
   amount DECIMAL(18,2) NOT NULL,
   account_id INT NOT NULL,
-  method VARCHAR(6) NOT NULL DEFAULT 'cash',   -- cash|bank
+  method VARCHAR(6) NOT NULL DEFAULT 'cash',
   `period` VARCHAR(10) NULL,                     -- YYYY-MM
   notes VARCHAR(255) NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'pending',  -- pending|paid|rejected|reversed
+  status VARCHAR(12) NOT NULL DEFAULT 'pending',
   journal_entry_id INT NULL,
   requested_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -1301,9 +1301,9 @@ CREATE TABLE IF NOT EXISTS salesman_salary_advances (
   amount DECIMAL(18,2) NOT NULL,
   reason VARCHAR(255) NOT NULL,
   account_id INT NOT NULL,
-  method VARCHAR(6) NOT NULL DEFAULT 'cash',   -- cash|bank
+  method VARCHAR(6) NOT NULL DEFAULT 'cash',
   deducted DECIMAL(18,2) NOT NULL DEFAULT 0,
-  status VARCHAR(12) NOT NULL DEFAULT 'pending',   -- pending|paid|rejected|reversed
+  status VARCHAR(12) NOT NULL DEFAULT 'pending',
   journal_entry_id INT NULL,
   requested_by INT NULL,
   approved_by INT NULL,
@@ -1318,15 +1318,15 @@ CREATE TABLE IF NOT EXISTS salesman_expenses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   salesman_id INT NOT NULL,
   `date` DATE NOT NULL,
-  expense_type VARCHAR(20) NOT NULL,   -- diesel|vehicle|food|hotel|repair|other
+  expense_type VARCHAR(20) NOT NULL,
   amount DECIMAL(18,2) NOT NULL,
   description VARCHAR(255) NOT NULL,
-  payment_type VARCHAR(6) NOT NULL DEFAULT 'cash',  -- cash|bank
-  account_id INT NULL,                                -- NULL when paid_from = 'collection'
-  paid_from VARCHAR(10) NOT NULL DEFAULT 'company',   -- company | collection
+  payment_type VARCHAR(6) NOT NULL DEFAULT 'cash',
+  account_id INT NULL,
+  paid_from VARCHAR(10) NOT NULL DEFAULT 'company',
   attachment VARCHAR(255) NULL,
   notes VARCHAR(255) NULL,
-  status VARCHAR(12) NOT NULL DEFAULT 'pending',    -- pending|posted|rejected|reversed
+  status VARCHAR(12) NOT NULL DEFAULT 'pending',
   journal_entry_id INT NULL,
   requested_by INT NULL,
   approved_by INT NULL,
@@ -1341,10 +1341,10 @@ CREATE TABLE IF NOT EXISTS salesman_expenses (
 CREATE TABLE IF NOT EXISTS receipts (
   id INT AUTO_INCREMENT PRIMARY KEY,
   receipt_no VARCHAR(30) NOT NULL UNIQUE,
-  party_type VARCHAR(10) NOT NULL DEFAULT 'customer',  -- customer
+  party_type VARCHAR(10) NOT NULL DEFAULT 'customer',
   customer_id INT NULL,
   contact_name VARCHAR(120) NULL,
-  account_id INT NOT NULL,                             -- cash_bank_accounts
+  account_id INT NOT NULL,
   date DATE NOT NULL,
   amount DECIMAL(18,2) NOT NULL,
   reference VARCHAR(120) NULL,
@@ -1360,15 +1360,15 @@ CREATE TABLE IF NOT EXISTS receipts (
 CREATE TABLE IF NOT EXISTS payments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   payment_no VARCHAR(30) NOT NULL UNIQUE,
-  party_type VARCHAR(10) NOT NULL,          -- supplier|expense|owner|salary|salesman|other
-  party_id INT NULL,                        -- supplier id / expense id / employee id …
-  account_id INT NOT NULL,                  -- cash/bank account paid from
+  party_type VARCHAR(10) NOT NULL,
+  party_id INT NULL,
+  account_id INT NOT NULL,
   date DATE NOT NULL,
   amount DECIMAL(18,2) NOT NULL,
   reference VARCHAR(120) NULL,
   notes VARCHAR(255) NULL,
   journal_entry_id INT NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'pending',  -- pending|posted|rejected|reversed
+  status VARCHAR(10) NOT NULL DEFAULT 'pending',
   created_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_pay_acc FOREIGN KEY (account_id) REFERENCES cash_bank_accounts(id),
@@ -1380,7 +1380,7 @@ CREATE TABLE IF NOT EXISTS payments (
 CREATE TABLE IF NOT EXISTS expense_categories (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL UNIQUE,
-  gl_account_id INT NOT NULL,               -- linked expense account
+  gl_account_id INT NOT NULL,
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   is_archived TINYINT(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB;
@@ -1414,10 +1414,10 @@ CREATE TABLE IF NOT EXISTS expenses (
   amount DECIMAL(18,2) NOT NULL,
   payee VARCHAR(150) NULL,
   description VARCHAR(255) NULL,
-  payment_type VARCHAR(6) NOT NULL DEFAULT 'cash',   -- cash|bank|payable
-  account_id INT NULL,                                -- cash/bank account (null if payable)
+  payment_type VARCHAR(6) NOT NULL DEFAULT 'cash',
+  account_id INT NULL,
   attachment VARCHAR(255) NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'posted',       -- pending|approved|posted|rejected|reversed
+  status VARCHAR(10) NOT NULL DEFAULT 'posted',
   journal_entry_id INT NULL,
   created_by INT NULL,
   approved_by INT NULL,
@@ -1440,7 +1440,7 @@ CREATE TABLE IF NOT EXISTS claims (
   date DATE NOT NULL,
   description VARCHAR(255) NOT NULL,
   amount DECIMAL(18,2) NOT NULL DEFAULT 0,
-  status VARCHAR(10) NOT NULL DEFAULT 'pending',      -- pending|approved|rejected
+  status VARCHAR(10) NOT NULL DEFAULT 'pending',
   approved_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_clm_c FOREIGN KEY (customer_id) REFERENCES customers(id),
@@ -1451,10 +1451,10 @@ CREATE TABLE IF NOT EXISTS bonuses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   bonus_no VARCHAR(30) NOT NULL UNIQUE,
   salesman_id INT NOT NULL,
-  period_month CHAR(7) NOT NULL,                       -- YYYY-MM
+  period_month CHAR(7) NOT NULL,
   amount DECIMAL(18,2) NOT NULL DEFAULT 0,
   reason VARCHAR(255) NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'pending',       -- pending|paid
+  status VARCHAR(10) NOT NULL DEFAULT 'pending',
   created_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_bon_sm FOREIGN KEY (salesman_id) REFERENCES salesmen(id)
@@ -1465,11 +1465,11 @@ CREATE TABLE IF NOT EXISTS chart_of_accounts (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(20) NOT NULL UNIQUE,
   name VARCHAR(150) NOT NULL,
-  type VARCHAR(12) NOT NULL,                -- asset|liability|equity|income|expense
+  type VARCHAR(12) NOT NULL,
   parent_id INT NULL,
   is_system TINYINT(1) NOT NULL DEFAULT 0,
   allow_posting TINYINT(1) NOT NULL DEFAULT 1,
-  system_key VARCHAR(40) NULL UNIQUE,       -- AR|AP|CASH|... used by auto-posting engine
+  system_key VARCHAR(40) NULL UNIQUE,
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   is_archived TINYINT(1) NOT NULL DEFAULT 0,
   CONSTRAINT fk_coa_parent FOREIGN KEY (parent_id) REFERENCES chart_of_accounts(id) ON DELETE SET NULL,
@@ -1485,7 +1485,7 @@ CREATE TABLE IF NOT EXISTS journal_entries (
   reference_type VARCHAR(40) NULL,
   reference_id INT NULL,
   memo VARCHAR(255) NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'posted',   -- draft|posted|reversed
+  status VARCHAR(10) NOT NULL DEFAULT 'posted',
   reversal_of INT NULL,
   idem_key VARCHAR(64) NULL UNIQUE,
   created_by INT NULL,
@@ -1521,8 +1521,8 @@ CREATE TABLE IF NOT EXISTS journal_lines (
 -- ---------- Approvals (outgoing payments require Owner/Admin approval) ----------
 CREATE TABLE IF NOT EXISTS approval_requests (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  request_type VARCHAR(20) NOT NULL,     -- payment|transfer|expense|payroll|advance|loan|bonus|discount|refund|other
-  reference_type VARCHAR(40) NOT NULL,   -- payments|expenses|payroll|payroll_payments|employee_advances|employee_loans|sales_invoices|bank_transfers|salesman_issues
+  request_type VARCHAR(20) NOT NULL,
+  reference_type VARCHAR(40) NOT NULL,
   reference_id INT NOT NULL,
   amount DECIMAL(18,2) NOT NULL DEFAULT 0,
   reason VARCHAR(255) NULL,
@@ -1530,7 +1530,7 @@ CREATE TABLE IF NOT EXISTS approval_requests (
   requested_at DATETIME NOT NULL,
   approver_id INT NULL,
   decided_at DATETIME NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'pending',  -- pending|approved|rejected
+  status VARCHAR(10) NOT NULL DEFAULT 'pending',
   decision_note VARCHAR(255) NULL,
   created_at DATETIME NULL,
   UNIQUE KEY uq_approval (reference_type, reference_id, request_type),
@@ -1542,7 +1542,7 @@ CREATE TABLE IF NOT EXISTS salesman_ledger (
   id INT AUTO_INCREMENT PRIMARY KEY,
   salesman_id INT NOT NULL,
   date DATE NOT NULL,
-  doc_type VARCHAR(20) NOT NULL,     -- issue|payment|return|adjustment
+  doc_type VARCHAR(20) NOT NULL,
   doc_id INT NULL,
   doc_no VARCHAR(30) NULL,
   debit DECIMAL(18,2) NOT NULL DEFAULT 0,
@@ -1564,13 +1564,13 @@ CREATE TABLE IF NOT EXISTS employee_loans (
   amount DECIMAL(18,2) NOT NULL,
   date DATE NOT NULL,
   reason VARCHAR(255) NOT NULL,
-  installment_type VARCHAR(10) NOT NULL DEFAULT 'monthly',  -- weekly|monthly
+  installment_type VARCHAR(10) NOT NULL DEFAULT 'monthly',
   installment_amount DECIMAL(18,2) NOT NULL,
   total_installments INT NOT NULL DEFAULT 1,
   recovered DECIMAL(18,2) NOT NULL DEFAULT 0,
   paid_installments INT NOT NULL DEFAULT 0,
   outstanding DECIMAL(18,2) NOT NULL DEFAULT 0,
-  status VARCHAR(12) NOT NULL DEFAULT 'pending',  -- pending|active|completed|rejected|cancelled
+  status VARCHAR(12) NOT NULL DEFAULT 'pending',
   account_id INT NULL,
   journal_entry_id INT NULL,
   requested_by INT NULL,
@@ -1587,7 +1587,7 @@ CREATE TABLE IF NOT EXISTS loan_installments (
   installment_no INT NOT NULL,
   due_date DATE NOT NULL,
   amount DECIMAL(18,2) NOT NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'due',  -- due|deducted|paid
+  status VARCHAR(10) NOT NULL DEFAULT 'due',
   payroll_id INT NULL,
   paid_date DATE NULL,
   UNIQUE KEY uq_install (loan_id, installment_no),
@@ -1599,7 +1599,7 @@ CREATE TABLE IF NOT EXISTS loan_installments (
 CREATE TABLE IF NOT EXISTS bonus_schemes (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL UNIQUE,
-  kind VARCHAR(20) NOT NULL DEFAULT 'salesman',  -- salesman|customer|purchase|promotion|special
+  kind VARCHAR(20) NOT NULL DEFAULT 'salesman',
   description VARCHAR(255) NULL,
   requires_approval TINYINT(1) NOT NULL DEFAULT 0,
   is_active TINYINT(1) NOT NULL DEFAULT 1,
@@ -1610,7 +1610,7 @@ CREATE TABLE IF NOT EXISTS bonus_schemes (
 CREATE TABLE IF NOT EXISTS payroll_deductions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   payroll_id INT NOT NULL,
-  source_type VARCHAR(10) NOT NULL,   -- advance|loan_installment
+  source_type VARCHAR(10) NOT NULL,
   source_id INT NOT NULL,
   amount DECIMAL(18,2) NOT NULL,
   INDEX idx_pd_payroll (payroll_id),
@@ -1622,14 +1622,14 @@ CREATE TABLE IF NOT EXISTS payroll_deductions (
 CREATE TABLE IF NOT EXISTS notifications (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
-  type VARCHAR(40) NOT NULL,            -- payment_request|approval|expense|advance|loan|sale|purchase|low_stock|receipt|overdue|accounting|journal|bonus
+  type VARCHAR(40) NOT NULL,
   title VARCHAR(180) NOT NULL,
   body VARCHAR(500) NULL,
-  link VARCHAR(220) NULL,               -- internal route to the related record (e.g. index.php?r=admin/approvals)
+  link VARCHAR(220) NULL,
   entity_type VARCHAR(40) NULL,
   entity_id INT NULL,
   is_read TINYINT(1) NOT NULL DEFAULT 0,
-  dedupe_key VARCHAR(90) NULL,          -- per-user deduplication (same user + same event = one notification)
+  dedupe_key VARCHAR(90) NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_notif_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   UNIQUE KEY uq_notif_user_dedupe (user_id, dedupe_key),
@@ -1646,13 +1646,13 @@ CREATE TABLE IF NOT EXISTS claim_goods (
   warehouse_id INT NOT NULL,
   date DATE NOT NULL,
   reason VARCHAR(255) NULL,
-  status VARCHAR(16) NOT NULL DEFAULT 'pending_approval',  -- pending_approval|posted|rejected|reversed
-  payment_type VARCHAR(10) NOT NULL DEFAULT 'outstanding',  -- cash|outstanding
+  status VARCHAR(16) NOT NULL DEFAULT 'pending_approval',
+  payment_type VARCHAR(10) NOT NULL DEFAULT 'outstanding',
   pay_account_id INT NULL,
   good_qty DECIMAL(18,3) NOT NULL DEFAULT 0,
   damaged_qty DECIMAL(18,3) NOT NULL DEFAULT 0,
   rejected_qty DECIMAL(18,3) NOT NULL DEFAULT 0,
-  claim_amount DECIMAL(18,2) NOT NULL DEFAULT 0,          -- eligible claim payable under approved terms (accepted goods only)
+  claim_amount DECIMAL(18,2) NOT NULL DEFAULT 0,
   cash_paid DECIMAL(18,2) NOT NULL DEFAULT 0,
   journal_entry_id INT NULL,
   approved_by INT NULL,
@@ -1672,8 +1672,8 @@ CREATE TABLE IF NOT EXISTS claim_goods_items (
   good_qty DECIMAL(18,3) NOT NULL DEFAULT 0,
   damaged_qty DECIMAL(18,3) NOT NULL DEFAULT 0,
   rejected_qty DECIMAL(18,3) NOT NULL DEFAULT 0,
-  claim_rate DECIMAL(18,2) NOT NULL DEFAULT 0,   -- per accepted unit (approved claim terms)
-  line_claim DECIMAL(18,2) NOT NULL DEFAULT 0,   -- good_qty × claim_rate
+  claim_rate DECIMAL(18,2) NOT NULL DEFAULT 0,
+  line_claim DECIMAL(18,2) NOT NULL DEFAULT 0,
   CONSTRAINT fk_cgi_cg FOREIGN KEY (claim_goods_id) REFERENCES claim_goods(id) ON DELETE CASCADE,
   CONSTRAINT fk_cgi_prod FOREIGN KEY (product_id) REFERENCES products(id),
   INDEX idx_cgi_cg (claim_goods_id)
@@ -1686,7 +1686,7 @@ CREATE TABLE IF NOT EXISTS claim_goods_payments (
   date DATE NOT NULL,
   amount DECIMAL(18,2) NOT NULL,
   account_id INT NOT NULL,
-  status VARCHAR(10) NOT NULL DEFAULT 'pending',  -- pending|posted|rejected
+  status VARCHAR(10) NOT NULL DEFAULT 'pending',
   journal_entry_id INT NULL,
   created_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
