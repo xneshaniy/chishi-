@@ -1695,7 +1695,6 @@ CREATE TABLE claim_goods_payments (
   INDEX idx_cgp_cg (claim_goods_id)
 ) ENGINE=InnoDB;
 
-SET FOREIGN_KEY_CHECKS = 1;
 
 -- ---------- Personal loans (separate, non-accounting) ----------
 
@@ -1779,4 +1778,6 @@ CREATE TABLE gifts (
   CONSTRAINT fk_gift_prod FOREIGN KEY (product_id) REFERENCES products(id),
   CONSTRAINT fk_gift_exp FOREIGN KEY (expense_id) REFERENCES expenses(id) ON DELETE SET NULL
 ) ENGINE=InnoDB;
+
+SET FOREIGN_KEY_CHECKS = 1;
 
