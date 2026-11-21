@@ -97,8 +97,10 @@ final class PhotoUpload {
         elseif ($mime === 'image/webp') { imagewebp($thumb, null, 82); }
         else { imagejpeg($thumb, null, 82); }
         $raw = ob_get_clean();
-        imagedestroy($src);
-        imagedestroy($thumb);
+        if (PHP_VERSION_ID < 80000) {
+            @imagedestroy($src);
+            @imagedestroy($thumb);
+        }
         if ($raw === null || $raw === false) return null;
         return ['raw' => $raw];
     }

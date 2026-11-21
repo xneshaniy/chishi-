@@ -89,6 +89,10 @@ CREATE TABLE IF NOT EXISTS users (
   notify_desktop TINYINT(1) NOT NULL DEFAULT 1,
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   force_password_change TINYINT(1) NOT NULL DEFAULT 0,
+  province_id INT NULL,
+  city_id INT NULL,
+  area_id INT NULL,
+  temp_password VARCHAR(100) DEFAULT NULL,
   last_login DATETIME NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_users_branch FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL
@@ -312,6 +316,8 @@ CREATE TABLE IF NOT EXISTS salesmen (
   vehicle_type VARCHAR(60) NULL,
   vehicle_reg VARCHAR(60) NULL,
   vehicle_note VARCHAR(255) NULL,
+  left_date DATE DEFAULT NULL,
+  departure_reason TEXT DEFAULT NULL,
   CONSTRAINT fk_sm_wh FOREIGN KEY (warehouse_id) REFERENCES warehouses(id) ON DELETE SET NULL
 ) ENGINE=InnoDB;
 
@@ -367,6 +373,8 @@ CREATE TABLE IF NOT EXISTS employees (
   salary_frequency VARCHAR(10) NOT NULL DEFAULT 'monthly',
   is_active TINYINT(1) NOT NULL DEFAULT 1,
   is_archived TINYINT(1) NOT NULL DEFAULT 0,
+  left_date DATE DEFAULT NULL,
+  departure_reason TEXT DEFAULT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
@@ -563,6 +571,7 @@ CREATE TABLE IF NOT EXISTS payroll (
   hours_worked DECIMAL(10,2) NULL,
   loan_deduction DECIMAL(18,2) NOT NULL DEFAULT 0,
   net_pay DECIMAL(18,2) NOT NULL DEFAULT 0,
+  amount_paid DECIMAL(18,2) NOT NULL DEFAULT 0,
   account_id INT NULL,
   status VARCHAR(10) NOT NULL DEFAULT 'draft',
   journal_entry_id INT NULL,
@@ -1709,6 +1718,7 @@ CREATE TABLE IF NOT EXISTS personal_loans (
   description VARCHAR(255) NULL,
   notes TEXT NULL,
   status VARCHAR(12) NOT NULL DEFAULT 'pending',
+  account_id INT NULL,
   created_by INT NULL,
   updated_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -1721,6 +1731,7 @@ CREATE TABLE IF NOT EXISTS personal_loan_repayments (
   repayment_date DATE NOT NULL,
   amount DECIMAL(18,2) NOT NULL,
   note VARCHAR(255) NULL,
+  account_id INT NULL,
   recorded_by INT NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_plr_loan FOREIGN KEY (loan_id) REFERENCES personal_loans(id) ON DELETE CASCADE,
