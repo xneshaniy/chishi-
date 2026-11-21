@@ -160,10 +160,10 @@ $reqs = [
           <input class="f" name="db_pass" type="password" placeholder="Enter Hostinger MySQL Password" required autocomplete="new-password">
         </div>
         <div style="grid-column:1/-1"><label class="f">Company Name</label><input class="f" name="company" value="Chishti Tobacco Company"></div>
-        <div><label class="f">Owner Full Name *</label><input class="f" name="admin_name" value="Haseeb Chishti" required></div>
-        <div><label class="f">Owner Username *</label><input class="f" name="admin_username" value="admin" required></div>
-        <div><label class="f">Owner Password * (min 8)</label><input class="f" name="admin_password" type="password" required autocomplete="new-password"></div>
-        <div><label class="f">Confirm Password *</label><input class="f" name="admin_password_confirm" type="password" required autocomplete="new-password"></div>
+        <div><label class="f">Owner Full Name *</label><input class="f" name="admin_name" value="Naveed" required></div>
+        <div><label class="f">Owner Username *</label><input class="f" name="admin_username" value="naveed" required></div>
+        <div><label class="f">Owner Password * (min 8)</label><input class="f" name="admin_password" type="password" value="naveed@1234" required autocomplete="new-password"></div>
+        <div><label class="f">Confirm Password *</label><input class="f" name="admin_password_confirm" type="password" value="naveed@1234" required autocomplete="new-password"></div>
         <div style="grid-column:1/-1"><label style="display:flex;gap:8px;align-items:center"><input type="checkbox" name="https" checked> Site uses HTTPS (recommended — required for secure cookies)</label></div>
       </div>
       <div class="mt"></div>
