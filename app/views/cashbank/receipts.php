@@ -1,0 +1,7 @@
+<?php $title = __('Receipts'); ?>
+<form method="get" class="toolbar"><input type="hidden" name="r" value="cashbank/receipts"><input type="date" name="from" value="<?= e($from) ?>"><input type="date" name="to" value="<?= e($to) ?>"><button class="btn btn-primary" type="submit"><?= __('Filter') ?></button><span style="flex:1"></span><a class="btn btn-primary" href="<?= e(url('cashbank/receipts/new')) ?>"><?= __('+ New Receipt') ?></a></form>
+<div class="alert alert-info"><?= __('Total collected') ?><?= date_display($from) ?> → <?= date_display($to) ?>: <strong><?= money($sum) ?></strong></div>
+<div class="panel"><div class="table-wrap"><table class="tbl"><thead><tr><th><?= __('Receipt') ?></th><th><?= __('Date') ?></th><th><?= __('Customer') ?></th><th><?= __('Into') ?></th><th class="num"><?= __('Amount') ?></th><th><?= __('Reference') ?></th><th></th></tr></thead>
+<tbody><?php foreach ($p['rows'] as $r): ?><tr><td class="mono"><?= e($r['receipt_no']) ?></td><td><?= date_display($r['date']) ?></td><td><?= e($r['customer'] ?? '—') ?></td><td><?= e($r['account']) ?></td><td class="num"><?= money($r['amount']) ?></td><td><?= e($r['reference'] ?? '—') ?></td><td><a class="btn btn-outline btn-sm" href="<?= e(url('cashbank/receipts/' . (int)$r['id'])) ?>"><?= __('View/Print') ?></a></td></tr>
+<?php endforeach; ?><?php if (!$p['rows']): ?><tr><td colspan="6" class="muted"><?= __('No receipts in range.') ?></td></tr><?php endif; ?></tbody></table></div>
+<?= pager_html($p, 'cashbank/receipts', ['from' => $from, 'to' => $to]) ?></div>

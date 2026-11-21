@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 620" role="img" aria-label="CTC — Chishti Tobacco Company">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8e08a"/>
+      <stop offset="0.35" stop-color="#e7c95a"/>
+      <stop offset="0.62" stop-color="#c9a227"/>
+      <stop offset="0.85" stop-color="#8f6b12"/>
+      <stop offset="1" stop-color="#6d4f0a"/>
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d878"/>
+      <stop offset="1" stop-color="#a67c1a"/>
+    </linearGradient>
+    <clipPath id="topHalf"><rect x="0" y="0" width="940" height="212"/></clipPath>
+    <clipPath id="bottomHalf"><rect x="0" y="212" width="940" height="180"/></clipPath>
+  </defs>
+
+  <!-- left tobacco leaf -->
+  <g transform="translate(78,238) rotate(-18)">
+    <path fill="url(#goldSoft)" stroke="#5e4307" stroke-width="2.4"
+      d="M0,-62 C26,-40 34,8 0,66 C-34,8 -26,-40 0,-62 Z"/>
+    <path fill="none" stroke="#5e4307" stroke-width="2.2" d="M0,-54 C2,-10 2,22 0,58"/>
+    <path fill="none" stroke="#5e4307" stroke-width="1.4" d="M0,-30 C12,-24 18,-14 22,-4 M0,-30 C-12,-24 -18,-14 -22,-4 M0,-4 C13,2 19,12 22,24 M0,-4 C-13,2 -19,12 -22,24 M0,24 C11,29 16,36 18,44 M0,24 C-11,29 -16,36 -18,44"/>
+  </g>
+  <!-- right tobacco leaf -->
+  <g transform="translate(862,238) rotate(18)">
+    <path fill="url(#goldSoft)" stroke="#5e4307" stroke-width="2.4"
+      d="M0,-62 C26,-40 34,8 0,66 C-34,8 -26,-40 0,-62 Z"/>
+    <path fill="none" stroke="#5e4307" stroke-width="2.2" d="M0,-54 C2,-10 2,22 0,58"/>
+    <path fill="none" stroke="#5e4307" stroke-width="1.4" d="M0,-30 C12,-24 18,-14 22,-4 M0,-30 C-12,-24 -18,-14 -22,-4 M0,-4 C13,2 19,12 22,24 M0,-4 C-13,2 -19,12 -22,24 M0,24 C11,29 16,36 18,44 M0,24 C-11,29 -16,36 -18,44"/>
+  </g>
+
+  <!-- Monogram: gold top half, black bottom half -->
+  <g font-family="Georgia,'Times New Roman',serif" font-weight="bold" font-size="235" text-anchor="middle">
+    <text x="470" y="300" letter-spacing="6" fill="url(#gold)" stroke="#3a2c05" stroke-width="2" clip-path="url(#topHalf)">CTC</text>
+    <text x="470" y="300" letter-spacing="6" fill="#0d0d0d" clip-path="url(#bottomHalf)">CTC</text>
+  </g>
+
+  <!-- Company name -->
+  <text x="470" y="402" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="bold" font-size="41" letter-spacing="7" fill="#0d0d0d">CHISHTI TOBACCO</text>
+  <text x="470" y="452" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="bold" font-size="41" letter-spacing="23" fill="#0d0d0d">COMPANY</text>
+
+  <!-- Gold flourish divider -->
+  <g stroke="url(#gold)" fill="url(#gold)" stroke-width="3" stroke-linecap="round">
+    <path fill="none" d="M120,522 C230,508 330,508 415,522 M525,522 C610,508 710,508 820,522"/>
+    <circle cx="120" cy="522" r="4" stroke="none"/>
+    <circle cx="820" cy="522" r="4" stroke="none"/>
+    <!-- center ornament: fleur flourish -->
+    <path stroke="#3a2c05" stroke-width="1.6" d="M470,496 c-9,9 -9,22 0,31 c9,-9 9,-22 0,-31 Z"/>
+    <path stroke="#3a2c05" stroke-width="1.6" d="M470,527 c-22,-2 -34,10 -38,26 c15,-3 26,-1 38,-13 c12,12 23,10 38,13 c-4,-16 -16,-28 -38,-26 Z"/>
+    <circle cx="470" cy="491" r="3.2" stroke="#3a2c05" stroke-width="1.2"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+"$done item(s) transferred."
+"Attendance saved for $date."
+"Draft payroll generated for $created employee(s). Review and click Pay."
+"Opening balances posted: $posted entries ($skipped already posted)."
+"Period {$p['name']} is now $new."
+"User $username created. They must change their password at first login."
+'Amount must be positive.'
+'Claim not found.'
+'Claim not found.'
+'Claim not found.'
+'Consumption issue cancelled — stock returned to RM warehouse if it had posted.'
+'Consumption submitted — Owner/Admin must approve it before stock moves.'
+'No pending approval request for this order.'
+'Only Owner/Admin can approve purchase orders.'
+'Only Owner/Admin can record opening stock.'
+'Only finished products can be issued to salesmen — raw materials are never issued as saleable stock.'
+'Raw materials and packaging materials cannot be sold. Only finished goods can be invoiced.'
+'Select the cash/bank account to pay from.'
+'The claim must be approved and posted before payment can be recorded.'

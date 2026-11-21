@@ -1,0 +1,9 @@
+# Secrets and runtime data — NEVER commit these
+config/config.php
+storage/*.sqlite
+storage/backups/*.sql
+storage/logs/*.log
+storage/uploads/*
+install/.installed
+.installed
+*.zip

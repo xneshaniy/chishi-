@@ -1,0 +1,245 @@
+Total Deductions
+Total Equity
+Total Expenses
+Total Expenses:
+Total Income
+Total Income:
+Total Liabilities
+Total Loans (active)
+Total Outstanding
+Total Payable
+Total Production Cost
+Total Running Cost
+Total bonus value issued (never charged)
+Total collected
+Total cost = materials (auto) + labor + overhead. Finished goods are received at (total ÷ produced qty) so inventory valuation is exact.
+Total credit issued (payable)
+Total outstanding
+Total outstanding (open invoices)
+Total outstanding across approved advances:
+Total recovered
+Totals
+Toyota / Suzuki / Hino
+Transfer
+Transfer cost follows the configured costing method (
+Transfer request submitted — Owner/Admin must approve it before any ledger/bank entry posts.
+Trial Balance
+Type
+Type *
+Type CLOSE
+Type CLOSE to confirm.
+Type:
+Uncleared / pending items (timing differences)
+Unit
+Unit Cost
+Unit Cost (Rs)
+Units Produced
+Units:
+Unpaid Payroll
+Upload new logo (PNG/JPG/SVG/WebP, max 2 MB)
+User
+User not found.
+User updated.
+Username
+Username *
+Users & Roles
+Value
+Valued at
+Variance
+Variance = counted − expected. Negative variance =
+Vehicle
+Vehicle added.
+Vehicle not found.
+Vehicle —
+Vehicles
+Vendor
+Vendor / Workshop
+Via
+View
+Voucher
+Vouchers
+WH-MAIN
+Warehouse
+Warehouse *
+Warehouse added.
+Warehouse and reason are required.
+Warehouse code already exists.
+Warehouse required.
+Warehouse:
+Warehouses
+Warehouses (
+Waste
+Waste / Reject Qty
+Waste Qty
+Website
+Weekly
+Weighted-average / FIFO
+When
+Year
+Year-end procedure.
+You can only create invoices for your assigned customers.
+You can only file claims for your customers.
+You cannot deactivate yourself.
+You don't have permission to do that (
+Your session expired due to inactivity. Please sign in again.
+'s warehouse is created automatically on first save.
+accounting
+active employee(s) have no payslip for
+already posted.
+and
+auto
+below
+blank = deduct full remaining
+by
+cash_bank
+completed
+config/config.php
+cost of each material when you post completion.
+cost value
+cost.
+counted
+ctc_erp_YYYYMMDD_HHMMSS.sql
+customer bonus invoices
+customers
+dashboard
+database/schema.mysql.sql
+deduct automatically from this salary (full outstanding, or the employee's monthly deduction cap).
+distribution
+due in the period deduct automatically. Loans never touch advances accounting. Nothing posts until Owner/Admin approves each payment.
+e.g. 10 sticks / 50 cartons
+e.g. 2 cartons crushed in transit; short-dated sticks in carton #4521
+e.g. 5660
+e.g. BATCH-2026-001
+e.g. Cigarettes, Mouth Freshener…
+e.g. Customer 10+1 Free
+e.g. Gawalmandi
+e.g. HBL Main Account / Factory Petty Cash
+e.g. Insurance Expense
+e.g. JUSTI Number One 10s
+e.g. LEB-1234
+e.g. LESCO, SNGPL, landlord, driver
+e.g. Machine Operator
+e.g. Month-end accrual — March salaries
+e.g. October electricity bill, Wapda ref 12345
+e.g. PSO Gawalmandi
+e.g. Production
+e.g. Standard 10s blend v1
+e.g. Sunday settlement
+e.g. Van replenishment for morning route
+e.g. Vehicle Insurance
+e.g. accountant1
+e.g. cash deposit to HBL main
+e.g. damaged cartons, count variance, wastage…
+e.g. damaged cigarettes, short-dated stock
+e.g. festive offer for retail shops
+e.g. medical emergency
+e.g. medical emergency, house deposit
+e.g. shopkeeper demands competitor match; festive offer
+e.g. short by Rs 200 — commiss on held / reason noted
+e.g. target achievement, festival incentive
+e.g. tyre change, engine oil, brake pads
+e.g. weekend route return
+each row has a
+employees
+enter the
+entries
+excess
+expenses
+factory, salary, fuel, office, owner drawings…
+failed logins (24h)
+flow through automatically (still audited).
+for the total value. Use for your starting inventory only — it posts a single journal for the whole batch.
+free
+hrs)
+in the source) in
+incl. opening
+index.php
+installments
+inventory
+invoices, tax
+issue rate × units issued on credit
+leave blank to skip
+link (Ctrl+P → Save as PDF).
+litres
+logout
+makes such sales require Owner/Admin approval.
+net pay
+not
+note (required to reject)
+of
+of bonus units at issue time (salesman stock and customer invoices).
+open production orders
+opening-balance journal entr
+optional
+owner/admin decides in the Admin Console
+payments, salary, loans, transfers…
+payroll
+payslip(s) in draft/approval
+payslip(s) ·
+pending
+php /home/USER/public_html/bin/backup.php
+price sold below company issue rate
+production
+purchases
+quantity for each product — variances are queued as a pending adjustment
+receipts)
+reports
+requires Owner/Admin approval — disburses after approval
+sales
+salesman bonus issues
+salesmen
+settings
+shortage
+sold above issue rate
+stock
+stock in + journal posted on save
+stock out + journal posted on save
+storage/backups/
+suppliers
+the issue rate are marked red. Setting a product's
+the same way.
+this month
+to
+to the new database or re-run the installer into it.
+units
+users
+vans are stock locations — not sales until invoiced
+vehicles
+via
+via phpMyAdmin (Import).
+web-downloadable; copy them via Hostinger File Manager or FTP/SFTP.
+ ·  Tax:
+· Bonus:
+· By
+· Date
+· Difference:
+· Driver:
+· Generated
+· Includes all posted purchase invoices, supplier payments and opening balance. Print or “Save as PDF” from the print dialog.
+· Paid:
+· Software: JUSTI NUMBER ONE ERP
+· Tax:
+· This month
+· Total Credit:
+· Total Debits
+اردو
+— Manager/Accountant access · approvals are handled by Owner/Admin in the Admin Console.
+— Owner/Admin only · every payment, bonus, discount and restricted transaction needs your approval.
+— Rs
+— both are recorded in the settlement history.
+— choose posted invoice —
+— counter sale —
+— direct GRN —
+— no BOM (manual inputs) —
+— none —
+— quantities pre-filled from the PO.
+— select account —
+— select material —
+— select product —
+— select —
+— stock will not move and no journal posts until approval. Below the threshold, restricted
+− Cheques issued, cleared
+− Expenses
+✔ Approvals Inbox
+🖨 Print
+🖨 Print / Save as PDF

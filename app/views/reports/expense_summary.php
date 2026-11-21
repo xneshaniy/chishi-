@@ -1,0 +1,7 @@
+<?php $title = __('Expense Summary'); ?>
+<form method="get" class="toolbar"><input type="hidden" name="r" value="reports/expense-summary"><input type="date" name="from" value="<?= e($from) ?>"><input type="date" name="to" value="<?= e($to) ?>"><button class="btn btn-primary" type="submit"><?= __('Filter') ?></button><a class="btn btn-outline" href="<?= e(url('reports/expense-summary', ['from' => $from, 'to' => $to, 'export' => 'csv'])) ?>"><?= __('CSV') ?></a><button class="btn btn-outline no-print" type="button" onclick="window.print()"><?= __('🖨 Print') ?></button></form>
+<div class="panel print-area"><h2><?= __('Posted Expenses by Category —') ?><?= e(date_display($from)) ?> → <?= e(date_display($to)) ?></h2>
+<div class="table-wrap"><table class="tbl"><thead><tr><th><?= __('Category') ?></th><th class="num"><?= __('Vouchers') ?></th><th class="num"><?= __('Amount') ?></th><th class="num"><?= __('% of Total') ?></th></tr></thead>
+<tbody><?php foreach ($rows as $r): ?><tr><td><?= e($r['label']) ?></td><td class="num"><?= (int)$r['n'] ?></td><td class="num"><?= number_format($r['total'], 2) ?></td><td class="num"><?= $sum > 0 ? number_format($r['total'] / $sum * 100, 1) . '%' : '—' ?></td></tr><?php endforeach; ?>
+<?php if (!$rows): ?><tr><td colspan="4" class="muted"><?= __('No posted expenses in range.') ?></td></tr><?php endif; ?></tbody>
+<tfoot><tr><th><?= __('TOTAL') ?></th><th></th><th class="num"><?= number_format($sum, 2) ?></th><th>100%</th></tr></tfoot></table></div></div>

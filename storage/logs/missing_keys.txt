@@ -1,0 +1,135 @@
+   ┬╖ Generated
+   ┬╖ Software: JUSTI NUMBER ONE ERP
+  + New Asset
+  + New Maintenance Record
+  Accountant
+  After saving, the record goes to Owner/Admin for approval (Admin Console ΓåÆ Approvals). No expense journal posts, and no cash/bank moves, until it is approved. The approved expense uses category "Factory Maintenance & Repairs" and posts exactly once.
+  All departments
+  AMOUNT
+  Amount in words
+  AMOUNT PAID
+  AMOUNT RECEIVED
+  Approved by
+  Asset
+  Asset / Machine *
+  Asset added.
+  Asset ID / Code (optional)
+  Asset ID:
+  Asset name is required.
+  Asset No
+  Asset not found.
+  Asset number already exists.
+  Asset updated.
+  Assets
+  Assets on Register
+  Attachment must be a JPG/PNG/WebP/GIF image or a PDF.
+  Attachment too large (max 5 MB).
+  Attachment ΓÇö invoice / receipt / repair photo / PDF (optional)
+  Attachment:
+  Awaiting Approval
+  Back to Expenses
+  Back to Invoices
+  Back to Maintenance
+  Back to Payments
+  Back to Receipts
+  Cash / Bank Account *
+  Category:
+  Checked by
+  Costs cannot be negative.
+  Could not save the attachment.
+  Customer signature
+  Daily Settlement
+  Date Problem Occurred *
+  Detail ΓÇö every job in range
+  DOCUMENT
+  e.g. Cartoning Machine #2
+  Edit Asset
+  Edit Maintenance Asset
+  Expense linked
+  EXPENSE VOUCHER
+  Factory Maintenance & Repair Record
+  Factory Maintenance & Repairs
+  goes to Owner/Admin for approval before any payment posts
+  Jobs
+  Jobs in Range
+  Journal posted
+  Labour
+  Labour charges
+  Location
+  Location:
+  Machine
+  Machine / Equipment Name *
+  Machine name and problem description are required.
+  MAINTENANCE / REPAIR RECORD
+  Maintenance approved ΓÇö expense posted and cash/bank updated exactly once.
+  Maintenance Assets
+  Maintenance Cost This Month
+  Maintenance record not found.
+  Maintenance record saved (no cost ΓÇö no payment required).
+  Maintenance record saved ΓÇö Owner/Admin must approve it before the expense posts and cash/bank is updated.
+  Maintenance reversed ΓÇö expense reversed and a reversal journal was posted.
+  Manager
+  Method:
+  New Maintenance Asset
+  No assets registered yet.
+  No maintenance in this range.
+  No maintenance records in this range.
+  No pending approval request found for this record.
+  No records.
+  Only Owner/Admin can reverse a posted maintenance record.
+  Other expenses
+  Owner / Admin
+  paid
+  Paid from:
+  PAID TO / FOR
+  Part
+  Parts
+  Parts Total
+  PAY TO
+  Payment Method
+  Payment method:
+  Payment status:
+  PAYMENT VOUCHER
+  Posted Cost
+  Posted to Ledger
+  Prepared by
+  Previous history for this asset
+  Print Settlement
+  Problem
+  Problem / Damage
+  Problem / Damage Description *
+  Problem date:
+  Purchase Invoice
+  PURCHASE INVOICE / GRN
+  RECEIPT
+  Received by
+  RECEIVED FROM
+  Received into:
+  RECORD NO
+  Recorded by:
+  Reference / Notes
+  Register New Asset
+  Repair / Maintenance Work Performed
+  Repair / Work Performed
+  Repair Jobs
+  Run
+  Save Asset
+  Save Maintenance Record
+  Select the cash/bank account paid from (or choose "On credit/payable").
+  Spare Part
+  Spare parts total
+  Spare Parts Used
+  SUPPLIER
+  Supplier invoice:
+  Technician / Repair Shop
+  Technician / Repair shop:
+  Thermal 80mm
+  TOTAL COST
+  TOTAL MAINTENANCE COST
+  Total Maintenance Cost (Range)
+  Total Repair Cost
+  Total Repair Cost (All Time)
+  View/Print
+  VOUCHER
+  Work Date
+  Work date:

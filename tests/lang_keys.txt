@@ -1,0 +1,67 @@
+Total Raw Material Qty
+Raw Material Stock Value
+Used in Production
+Low Stock Items
+Raw Material Stock — kind: raw & packaging only
+(separate from Finished Goods — never mixed)
+SKU
+Product
+Kind
+Purchased
+On Hand
+Used in Prod
+Used Today
+Value
+Reorder
+Status
+LOW
+OK
+No raw/packaging products on file. Create products with kind “Raw” or “Packaging”.
+Total Finished Qty
+Finished Product Stock Value
+Produced (All Time)
+Finished Product Stock
+kind = finished only — ready-to-sell products, separate from raw materials
+Produced
+Issued Today
+Sold Today
+Returns Today
+No finished products on file.
+Date
+Opening → Purchases → Consumption → Adjustments → Closing (raw & packaging only)
+CSV
+🖨 Print
+Purchased Today
+Adjustments (net)
+Opening
+Purchases
+Consumed
+Adjustments
+Closing
+Opening = balance at the start of
+Opening → Produced → Issued to salesmen → Sold → Returns → Closing
+Issued to Salesmen
+Sold
+Returns
+Raw Material Purchases
+All
+Posted
+Pending Approval
+Rejected
++ New Raw Material Purchase
+Raw Material Qty Purchased (Range)
+Value of Raw Materials (Range)
+Invoices (posted)
+total
+Invoice #
+Supplier
+Qty
+Rate
+Line Total
+Payment
+Remaining Stock (now)
+No raw material purchases in this range.
+Raw Material Stock
+Raw Material Used Today
+Finished Products Produced Today
+Finished Products Issued Today

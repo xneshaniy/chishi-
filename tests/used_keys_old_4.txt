@@ -1,0 +1,271 @@
+Product
+Product Categories
+Product Name *
+Product created.
+Product not found.
+Product updated.
+Product, name and output qty are required.
+Product, warehouse and planned quantity (>0) are required.
+Production Orders
+Production Report
+Production completed — finished goods received into stock at actual cost.
+Products
+Profit & Loss
+Provide payee, account and a positive amount.
+Purchase
+Purchase Bonus (supplier free goods)
+Purchase Bonus Received
+Purchase Invoices / GRN
+Purchase Orders
+Purchase Price (Rs)
+Purchase order created (approved).
+Purchase reversed — stock removed (if still on hand) and a reversal journal posted.
+Qty
+Qty Produced *
+Qty Sold
+Qty per batch
+Quantities Returned (split paid / bonus — bonus never creates payable)
+Quantities to return required.
+Quick Actions
+Quick Links
+RESTRICTED
+Rate
+Rate (Rs)
+Rate the salesman pays the company for stock issued to him
+Raw Materials
+Reason
+Reason *
+Reason for discount / bonus
+Reason:
+Receipt
+Receipt posted — Dr Cash/Bank, Cr Receivable.
+Receipts
+Receipts from customers
+Receive Goods
+Receive Goods (GRN)
+Receive Into *
+Receive Payment From Salesman
+Receive Unsold Stock From
+Received Into *
+Received from customer
+Receiving against
+Recent Bonuses
+Recipe
+Recipe / BOM
+Recipe Name *
+Recipes define what each finished good consumes.
+Reconciliation Summary
+Record Bonus
+Record Cheque
+Record Count → Create Adjustment
+Record Expense
+Record Manual Repayment
+Record Repayment
+Recovered
+Ref
+Reference
+Reference (cheque / slip no)
+Reg. No
+Registration & Banking
+Registration No *
+Registration number already exists.
+Registration number required.
+Reject
+Related Invoice (optional)
+Release
+Reorder Level
+Repayment recorded — Dr Cash/Bank, Cr Employee Loans; installments marked paid.
+Reports Hub
+Request Advance (goes to Admin)
+Request Loan (goes to Admin for approval)
+Request Salary Advance
+Requested
+Requested By
+Requires Owner/Admin approval
+Restore procedure
+Restricted schemes and bonus issues above the threshold require
+Return Against
+Return Date
+Return No.
+Return Qty
+Return Stock to Warehouse
+Return Stock —
+Return reversed.
+Returned stock value
+Returns restore stock and post reversal journals.
+Reverse
+Reverse Entry
+Reverse Invoice
+Reversed
+Review All (
+Role
+Role not found.
+Roles
+Roles & Permissions
+Roles (union of permissions applies)
+Roman
+Rows where the salesman sold
+Rs
+SALARY PAYSLIP
+SKU
+SKU *
+SKU / Product
+STRN (Sales Tax)
+SYS
+Salary
+Salary Advances
+Salary Rate (Rs / month, week, day, hour or fixed)
+Salary Type
+Salary Type:
+Salary payment submitted — Owner/Admin must approve it before the journal posts.
+Sale
+Sale Price (Rs) — company shop price
+Sales
+Sales Invoices
+Sales Orders
+Sales Returns
+Sales Stock Location
+Sales Summary
+Sales Summary by
+Sales Tax
+Sales Tax Rate (%)
+Sales This Month
+Sales Today
+Sales below this price require Owner/Admin approval
+Sales order created. Create the invoice when delivering.
+Sales return posted — stock restocked and journal created.
+Sales stock location:
+Salesman
+Salesman (optional)
+Salesman (van/stock)
+Salesman *
+Salesman Bonus Issued
+Salesman Bonus Issues — Paid vs Free
+Salesman Issue Rate (Rs)
+Salesman Outstanding (owed to company)
+Salesman Payable:
+Salesman Performance
+Salesman Performance — This Month
+Salesman Price Difference — Issue Rate vs Selling
+Salesman Stock & Settlement
+Salesman and amount are required.
+Salesman not found.
+Salesman return posted — stock restocked, his ledger credited.
+Salesmen
+Salesmen always deliver from their van stock.
+Salesmen carry stock as a warehouse location. Issues = transfers (not sales).
+Save
+Save & Post
+Save (Pending Approval)
+Save Attendance
+Save BOM
+Save Company Profile
+Save Customer
+Save Employee
+Save Permissions
+Save Rules
+Save Settlement
+Save Supplier
+Save as Draft
+Scheme / Product
+Scheme name already exists.
+Scheme name required.
+Search
+Search SKU / name…
+Search code / name / designation / phone…
+Search code / name / phone / area…
+Search code / name / phone…
+Search loan no / employee / reason…
+Search requester / reason…
+Search users…
+Search…
+Select a bank account to see the reconciliation summary.
+Select a posted invoice.
+Select all
+Select the Invoice to Return Against
+Select the cash/bank account paid from (or choose “On credit/payable”).
+Select the cash/bank account used for payment.
+Selecting a BOM pre-fills the material consumption lines at planned scale. Materials are consumed (stock out) when the order is
+Selling
+Settings → Opening Balances
+Settle
+Settle —
+Settlement History
+Settlement saved. Variance = counted − expected cash.
+Shop / Customer Name *
+Show
+Sign In
+Sign In —
+Sign in to Admin Console
+Sign in to Management Console
+Size
+Sold
+Source
+Source warehouse (and salesman sales warehouse) required.
+Staff sign-in →
+Statement
+Statement —
+Station
+Status
+Status:
+Stock Adjustments
+Stock Currently With Salesman
+Stock Ledger
+Stock Qty
+Stock Transfer
+Stock Transfer (location change — no sale, no journal)
+Stock Valuation
+Stock Value
+Stock with salesmen is company inventory (not COGS) until sold. Collection counts receipts from the salesman's assigned customers only.
+Submit for Approval
+Subtotal
+Subtotal:
+Supplier
+Supplier *
+Supplier / Company Name *
+Supplier Aging
+Supplier Code *
+Supplier Payable
+Supplier Statement —
+Supplier created.
+Supplier not found.
+Supplier payments debit Accounts Payable. Owner drawings debit the Drawings equity account (never an expense) — your profit report stays clean.
+Supplier required.
+Supplier updated.
+Supplier, warehouse and at least one item are required.
+Supplier's own bill number
+Suppliers
+Suppliers with Opening Balance (
+System Qty
+System accounts (used by auto-posting) are protected from deletion. P&L and Balance Sheet derive from these codes.
+TOTAL
+TOTAL NET PAID
+TOTAL STOCK VALUE
+TOTAL:
+TOTALS
+Tax
+Tax %
+Tax Collected
+Team performance · Reports · Journals
+Terms & Conditions
+Terms:
+The category's linked account receives the debit when an expense is posted. Owner drawings categories link to the Drawings equity account.
+The owner role always has full access and cannot be edited.
+The page you requested does not exist.
+Their Invoice / Bill No
+Their Ref
+Then enable Hostinger weekly backups too. Keep at least one copy off-site (Google Drive / PC).
+This Month Sales
+This Year Sales
+This cannot be undone from the UI (you would need to reverse the CL entries manually).
+This form was already submitted. Loading the existing invoice.
+This user must change their password at next login.
+To
+To Account *
+To Warehouse *
+Today's Sales
+Toggle
+Total
+Total Assets
+Total Cost
+Total Debit:

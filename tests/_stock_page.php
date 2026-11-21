@@ -1,0 +1,23 @@
+<?php
+$base = 'http://127.0.0.1:8080';
+$c = curl_init($base . '/index.php?r=auth%2Flogin');
+curl_setopt_array($c, [CURLOPT_RETURNTRANSFER => true, CURLOPT_HEADER => true]);
+$raw = curl_exec($c);
+$len = (int)curl_getinfo($c, CURLINFO_HEADER_SIZE);
+preg_match_all('/^Set-Cookie:\s*([^;]+)/im', substr($raw, 0, $len), $cm);
+$cookie = $cm[1][0] ?? '';
+$body = substr($raw, $len);
+preg_match('/name="csrf" value="([^"]+)"/', $body, $m);
+$ch = curl_init($base . '/index.php?r=auth%2Flogin');
+curl_setopt_array($ch, [CURLOPT_RETURNTRANSFER => true, CURLOPT_HEADER => true, CURLOPT_COOKIE => $cookie, CURLOPT_POSTFIELDS => http_build_query(['csrf' => $m[1], 'username' => 'owner', 'password' => 'owner1234'])]);
+$raw2 = curl_exec($ch);
+$len2 = (int)curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+$body2 = substr($raw2, $len2);
+preg_match_all('/^Set-Cookie:\s*([^;]+)/im', substr($raw2, 0, $len2), $cm2);
+$ownerCookie = $cm2[1][0] ?? $cookie;
+echo "logged in; cookie=$ownerCookie\n";
+$c2 = curl_init($base . '/index.php?r=' . rawurlencode('reports/company-stock'));
+curl_setopt_array($c2, [CURLOPT_RETURNTRANSFER => true, CURLOPT_HEADER => true, CURLOPT_COOKIE => $ownerCookie]);
+$raw3 = curl_exec($c2);
+echo "body len=" . strlen($raw3) . "\n";
+echo $raw3;

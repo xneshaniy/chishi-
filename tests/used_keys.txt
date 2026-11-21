@@ -1,0 +1,3489 @@
+ (Dr Inventory / Cr Capital).
+ (run installer / seed)
+ / damaged 
+ / rejected 
+ KB, 
+ already posted).
+ and released for production.
+ as DRAFT.
+ by 
+ created
+ created. They must change their password at first login.
+ does not exist.
+ entries (
+ has been APPROVED by Admin.
+ has been REJECTED by Admin.
+ is CLOSED. Posting is not allowed.
+ is a header account — posting not allowed.
+ is at zero in all warehouses
+ is inactive.
+ is now 
+ item(s) transferred.
+ kg).
+ on 
+ on hand 
+ only.
+ overdue since 
+ paid
+ paid into company account
+ posted for entry #
+ posted — stock restocked
+ products, value Rs 
+ request of Rs 
+ requested
+ rows). Restore: mysql DB < file.sql after importing database/schema.mysql.sql.
+ units
+ units — stock received
+ variances) is pending approval.
+ · Approved.
+ · Decided 
+ · Generated
+ · Method: 
+ · Party: 
+ · Reason: 
+ · Rejected.
+ · Software: JUSTI NUMBER ONE ERP
+ · Status: Pending Approval.
+ · Tax:
+ · good 
+ — Manager/Accountant access · approvals are handled by Owner/Admin in the Admin Console.
+ — Owner/Admin only · every payment, bonus, discount and restricted transaction needs your approval.
+ — accepted Rs 
+ — archive it instead.
+ — filtered
+ — nothing to pay. Reverse it first if needed.
+ — suggested order ≈ 
+ ≤ reorder level 
+#
+% of Total
+'s warehouse is created automatically on first save.
+(Finished)
+(Raw Material)
+(check “Bonus” for supplier free goods — they add stock at zero cost and never increase the payable)
+(company-paid expenses excluded).
+(manual)
+(quantities & cost) is handled under
+(required when bank amount > 0)
+(separate from Finished Goods — never mixed)
+) exceeds remaining payable (Rs 
+). Contact your administrator if you believe this is wrong.
+). Reject and re-request with the correct amount.
+). The original is marked REVERSED.
+). Use this for factory→warehouse, warehouse→salesman van, etc.
++ Add Line
++ Add Material
++ Add Part
++ Add Product
++ Add another material
++ All posted GL movements (book)
++ Cheques received, cleared (per cheque register)
++ Daily Raw Material Usage
++ Goods Gift
++ Issue to Factory
++ Manual Journal
++ Money Gift
++ New Account
++ New Adjustment
++ New Asset
++ New BOM / Recipe
++ New Bonus
++ New Category
++ New Cheque
++ New Claim
++ New Claim Receipt
++ New Company Expense
++ New Customer
++ New Employee
++ New Expense
++ New Invoice
++ New Loan
++ New Maintenance Record
++ New Order
++ New PO
++ New Payment
++ New Product
++ New Production Order
++ New Raw Material Purchase
++ New Receipt
++ New Return
++ New Supplier
++ New Transfer
++ New User
++ New Vehicle
++ Receive Goods (GRN)
++ Record Income
+, positive =
+, which also posts the Dr Inventory / Cr Capital entry automatically.
+. Backups are
+. Create the fiscal year first (Settings → Financial Year).
+. Income & expense accounts carry nil balance into next year.
+. Income & expense accounts now carry nil balance into next year.
+/ C
+1 MAN (Maund) = (KG)
+1 TON = (KG)
+1–30 Days
+1–30 days overdue
+31–60 Days
+31–60 days
+403 — Access denied
+404 — Page not found
+61–90 Days
+61–90 days
+= Total Credits
+A journal entry needs at least two lines.
+A journal line cannot have both debit and credit.
+A payment for this payslip is already awaiting approval.
+A reason is required to archive a record.
+A reason is required to cancel.
+A reason is required to delete a record.
+A reason is required to delete a user.
+A reason is required to delete a warehouse.
+A reason is required to restore a record.
+A rejection reason is required.
+A unique receipt number is generated from the journal voucher.
+ADMIN CONSOLE
+ADVANCE AMOUNT
+ADVANCE PAYMENT VOUCHER
+ALL SALESMEN (COMBINED)
+AMOUNT
+AMOUNT IN WORDS
+AMOUNT PAID
+AMOUNT RECEIVED
+APPROVAL REQUEST
+APPROVED
+ASSETS
+Above-Issue-Rate Margin
+Absent
+Accepted / Damaged / Rejected
+Accepted:
+Access denied (403)
+Account
+Account Code *
+Account Name
+Account Name *
+Account No
+Account No / IBAN
+Account Title
+Account and a positive amount are required.
+Account code already exists.
+Account created.
+Account created. If you set an opening balance, post it via Settings → Opening Balances.
+Account deactivated.
+Account id 
+Account reactivated.
+Accountant
+Action
+Action e.g. post, reverse
+Activate
+Activate this profile?
+Active
+Active (account + profile)
+Active Salesmen
+Active Users
+Active Warehouses (
+Activity History
+Actual consumption is valued at the current
+Add
+Add Bonus Goods
+Add Bonus Scheme
+Add Branch
+Add Branch / Factory
+Add Category
+Add Employee
+Add Expense
+Add Fuel Log
+Add Goods
+Add New Product
+Add Product Line
+Add Salesman
+Add Scheme
+Add Vehicle
+Add Vehicle Expense
+Add Warehouse
+Add a note for the requester…
+Add anyway
+Add at least one item line.
+Add at least one item.
+Add at least one material line.
+Address
+Adjustment already processed.
+Adjustment created — pending approval. Stock moves only after approval.
+Adjustment not found.
+Adjustment processed.
+Adjustments
+Adjustments (net)
+Adjustments affect stock and post journals only after approval.
+Admin Console
+Admin Console — Chishti Tobacco Company
+Adv. Ded.
+Advance Amount
+Advance History
+Advance Ledger
+Advance Outstanding
+Advance Payment
+Advance Receivable Ledger
+Advance Recovered
+Advance Voucher —
+Advance can be paid from status 
+Advance cannot be disbursed from status 
+Advance deducts automatically from future salary (net never goes negative).
+Advance not found
+Advance not found.
+Advance outstanding:
+Advance payments for every person in the ERP (salesmen, labour, employees)
+Advance processed.
+Advance request cancelled — nothing was paid.
+Advance request submitted — disburses only after Owner/Admin approval.
+Advance requests above this amount from non-Owner/Admin users are rejected before approval. Owner/Admin can always request any amount (still approval-gated).
+Advanced — Add Warehouse (Owner/Admin only)
+Advances
+Advances Ded.
+Advances Outstanding
+Advances Received
+Advances outstanding
+Advances received / recovered / outstanding
+Advances reduce salary. All advance payments require Owner/Admin approval before posting.
+After grinding is done
+After saving, the record goes to Owner/Admin for approval (Admin Console → Approvals). No expense journal posts, and no cash/bank moves, until it is approved. The approved expense uses category "Factory Maintenance & Repairs" and posts exactly once.
+Against PO
+Against Purchase Invoice (optional)
+Aging of Outstanding (FIFO allocation)
+Aging of Payables (FIFO allocation)
+Ahmedpur → Jampur
+All
+All Advances
+All Employees
+All Gifts —
+All Loans
+All People
+All Products
+All Purchases / GRN
+All Reports
+All Requests
+All active employees (both frequencies)
+All activity
+All batches
+All categories
+All caught up
+All departments
+All designations
+All employees
+All figures pull from live transactions. No invented numbers.
+All finished products
+All job titles
+All kinds
+All materials
+All outgoing payments go through the existing Payment Approval — no cash/bank moves until Owner/Admin approves. Pick from preset company expense categories or add a custom one in Expense Categories.
+All products
+All provinces
+All reports →
+All salesmen
+All salesmen vans combined
+All statuses
+All suppliers
+All types
+All users
+All warehouses
+All-time
+All-time other income
+Allocation: receipts are applied FIFO (oldest invoice first). Invoices without a due date are assumed due 30 days after invoice date.
+Allocation: supplier payments apply FIFO against purchase invoices. Invoices without due date are assumed due 30 days after the GRN date.
+Allow direct posting to this account
+Allowances
+Already Returned
+Already cancelled.
+Already decided (
+Alt Phone
+Amount
+Amount (PKR) *
+Amount (Rs)
+Amount (Rs) *
+Amount Outstanding
+Amount Paid
+Amount Paid So Far
+Amount Received (Rs) *
+Amount and account are required
+Amount and account required.
+Amount and cash/bank account are required.
+Amount and payment account are required.
+Amount exceeds outstanding balance (
+Amount exceeds outstanding claim balance (
+Amount exceeds the remaining balance (Rs %s).
+Amount exceeds the remaining payable (
+Amount in words
+Amount in words:
+Amount must be positive.
+Amount received (Rs) *
+An approval decision already exists for this document.
+An employee with this CNIC already exists (#
+Any income outside sales: rent, commission, scrap sales, interest, deposits... It is recorded as pending and Owner/Admin approves it exactly once before it posts to the ledger (Dr Cash/Bank → Cr Other Income).
+Apply
+Approval
+Approval Rules
+Approval needed: 
+Approval request not found
+Approvals Inbox
+Approvals Pending
+Approvals are decided by Owner/Admin in the Admin Console (/admin/approvals).
+Approvals post the source document exactly once when approved. Rejections never touch balances. Requesters cannot approve their own requests.
+Approve
+Approve & Post
+Approve and apply this adjustment? Stock and journals will be posted.
+Approve and post this income to the ledger?
+Approved
+Approved / Pending / Rejected
+Approved By
+Approved By:
+Approved Claim Amount
+Approved Food
+Approved Payments
+Approved Today
+Approved Vehicle / Petrol·Diesel
+Approved advances deduct automatically from the next salary run (capped so net cannot go negative). Loans use a separate ledger (Loans screen).
+Approved by
+Approved by:
+Approved expenses paid from collected money on this date:
+Approved expenses paid from collection
+Approved expenses paid from collections
+Approved — journal posted exactly once.
+Approving posts the source document exactly once. Rejecting does not touch any balances. The requester is notified either way.
+Archive
+Archive Warehouse
+Archive or deactivate the warehouse instead.
+Archive this warehouse? It will be hidden from daily lists; history is preserved and can be restored any time.
+Archived
+Archived Warehouses (
+Archived records are hidden from normal lists. They keep all their relationships, history and reporting data. Use Restore to bring them back, or Delete only when every incoming reference count is zero.
+Archived records — stored here, hidden from daily use. Restore to reactivate (all history preserved), or delete after every incoming reference is 0.
+Archives
+Are you sure you want to approve this document?
+Area
+Area / Locality
+Area / Route
+Area:
+As of
+Asset
+Asset / Machine *
+Asset Category
+Asset ID / Code
+Asset ID / Code (optional)
+Asset ID:
+Asset No
+Asset Photo
+Asset added.
+Asset name is required.
+Asset not found.
+Asset number already exists.
+Asset updated.
+Assets
+Assets on Register
+Assigned Area
+Assigned Customers
+Assigned Salesman
+At least two lines required.
+Attachment
+Attachment must be a JPG/PNG/WebP/GIF image or a PDF.
+Attachment too large (max 5 MB).
+Attachment — invoice / receipt / repair photo / PDF (optional)
+Attachment:
+Attendance
+Attendance Board
+Attendance History
+Attendance Report
+Attendance Reports
+Attendance could not be saved.
+Attendance must be Present, Absent or Half Day.
+Attendance saved for 
+Attendance saved for %d people for %s.
+Attendance saved.
+Attendance updated — 
+Attendance —
+Audit Log
+Audit Trail
+Auth::requireArea()
+Authorized Owner/Admin personnel only · All access is logged ·
+Authorized Signatory
+Authorized sign-in: Owner/Admin, Manager and Accountant only — All access is logged — Software support: CTC IT Department
+Auto (e.g. BATCH-2026-001)
+Auto — system default (Cash/Bank)
+Automated backups (recommended)
+Available
+Available → Remaining after this entry
+Avg Cost
+Awaiting Admin Approval
+Awaiting Admin approval
+Awaiting Approval
+Awaiting Owner/Admin
+Awaiting Owner/Admin approval
+Awaiting Owner/Admin decision
+Awaiting approval:
+BILL TO
+BONUS
+Back
+Back in stock
+Back to Account
+Back to Approvals
+Back to Archives
+Back to Assets
+Back to Company Expenses
+Back to Complete Overview
+Back to Daily Settlement
+Back to Dashboard
+Back to Employees
+Back to Expenses
+Back to Gifts
+Back to Invoices
+Back to Journal
+Back to List
+Back to Loans
+Back to Maintenance
+Back to Notifications
+Back to Payments
+Back to Production
+Back to Receipts
+Back to Salesmen
+Back to Vehicles
+Back to employee
+Back to salary
+Back to salesman
+Backup & Restore
+Backup created: 
+Backup deleted.
+Balance
+Balance (Dr−Cr)
+Balance (Rs)
+Balance (payable)
+Balance Sheet
+Balance Sheet — as of
+Balance brought forward
+Balance — Payable (+) / Refundable
+Bank
+Bank (Rs)
+Bank / Account No
+Bank Account
+Bank Account *
+Bank Account:
+Bank Amount Received
+Bank Amount Received (Rs)
+Bank Balance
+Bank Collected
+Bank In (range)
+Bank Name
+Bank Name (printed on invoices)
+Bank Payments
+Bank Received
+Bank Received (Rs)
+Bank Received By Company
+Bank Reconciliation
+Bank Reference / Transaction No.
+Bank Transfer
+Bank Transfers
+Bank account
+Bank account, cheque number and amount are required.
+Bank deposits / transfers handed over
+Bank deposits / transfers received
+Bank received by company
+Basic
+Basic Salary / Wages
+Batch
+Batch No
+Batch No.
+Batch No:
+Below-Issue-Rate Loss
+Bill Ref
+Bill of materials saved.
+Bills of Materials
+Biodata
+Biodata / Documents
+Bonus
+Bonus & Free Stock
+Bonus & Free Stock Report
+Bonus & Payable Summary
+Bonus (free) goods never reduce goods payable; good-condition returns are credited automatically.
+Bonus / Free Goods
+Bonus / Free Qty
+Bonus / free goods (units · value)
+Bonus / free quantity — enable with the checkbox in each row
+Bonus Amount (Rs) *
+Bonus Approval Threshold (Rs) — any bonus above this needs Admin approval
+Bonus Cost
+Bonus Given
+Bonus History
+Bonus Issued
+Bonus Qty
+Bonus Quantity *
+Bonus Rcvd
+Bonus Return
+Bonus Scheme:
+Bonus Schemes & Rules
+Bonus approval threshold saved.
+Bonus can be paid from status 
+Bonus cost to company
+Bonus goes through the existing Owner/Admin approval workflow before any cash is paid.
+Bonus goods
+Bonus goods move from main warehouse to the salesman’s stock. Stock reduces. Payable does NOT change — free goods, paid by the company as promotion expense.
+Bonus goods posted — stock moved, payable unchanged (free goods).
+Bonus not found.
+Bonus payouts: create an Expense with category “Sales Commission” to post the journal (Dr Commission Expense / Cr Cash-Bank).
+Bonus reason
+Bonus recorded (pending). Pay it via Expenses → category “Sales Commission” to post the journal.
+Bonus requested — awaiting Owner/Admin approval.
+Bonus scheme
+Bonus scheme added.
+Bonus —
+Bonus/discount authorised by:
+Bonuses
+Bonuses & Deductions
+Book Balance
+Book balance (per ERP)
+Book balance = opening + all posted GL movements on the linked account.
+Branch
+Branch added.
+Branch code already exists.
+Branches (
+Branches / Factories
+Breakdown —
+Bundle
+Bundles
+Bundles per Packet (0 = not used)
+Buy Raw Material
+Buy stock
+By
+By Kind
+By Material — %s — %s
+By Recipient
+By Warehouse
+CANCELLED
+CLAIM RECEIPT
+CNIC
+CNIC Back
+CNIC Front
+CNIC Number
+CNIC Pictures
+COGS
+COMPLETE POSITION
+COMPLETE SALESMAN STATEMENT
+CSV
+Cancel
+Cancel Loan
+Cancel Request
+Cancel expense
+Cancel gift
+Cancel this PO?
+Cancel this advance request?
+Cancel this company expense? This reverses its ledger entry.
+Cancel this consumption? Posted stock will be returned to RM warehouse.
+Cancel this expense
+Cancel this gift
+Cancel this gift? It will be recorded as cancelled (stock NOT deducted).
+Cancel this loan? The record stays in history.
+Cancel this order?
+Cancel this usage entry? Stock will be returned exactly once.
+Cancellation keeps the record for history. Reason is required and the audit log records who cancelled it.
+Cancelled
+Cancelled loans cannot be edited.
+Cancelled loans cannot receive repayments.
+Cancelling a posted expense reverses its ledger posting automatically; cancelling a pending expense just records it as rejected. The record stays for history either way.
+Cannot archive the default warehouse.
+Cannot deactivate the default warehouse.
+Cannot deactivate the last active Owner/Admin account.
+Cannot delete the default warehouse.
+Cannot delete the last active Owner/Admin account.
+Cannot delete: linked by 
+Cannot remove the default flag from the default warehouse. Mark another warehouse as default first.
+Cannot return more than the quantity processed at Jampur.
+Capital
+Capital & Drawings
+Capital Transactions
+Cash
+Cash & Bank Accounts
+Cash & Bank Opening Balances (
+Cash (Rs)
+Cash (paid now)
+Cash + bank must equal the amount.
+Cash / Bank Account
+Cash / Bank Account *
+Cash Account
+Cash Account *
+Cash Amount Received (Rs)
+Cash Balance
+Cash Collected
+Cash Collected (his customers)
+Cash Counted
+Cash Counted (Rs)
+Cash Deposited by Salesman
+Cash Flow
+Cash Flow Statement —
+Cash In (range)
+Cash In Today
+Cash Out Today
+Cash Paid
+Cash Paid:
+Cash Payments
+Cash Received
+Cash Received (Rs)
+Cash Received By Company
+Cash Sale
+Cash counted (physical)
+Cash handed over to company
+Cash payment — pay now
+Cash received by company
+Cash – Bank Transfers
+Cash ↔ Bank / Bank ↔ Bank Transfer
+Cash ↔ Bank Transfers
+Cash/Bank
+Cash/bank account not found
+Categories
+Category
+Category *
+Category Name *
+Category added.
+Category and a positive amount are required.
+Category name required.
+Category, item name and a positive amount are required.
+Category-wise
+Category:
+Central / Main
+Change
+Change Photo
+Changed By
+Charges
+Charges (Rs)
+Charges Status
+Charges status updated.
+Chart of Accounts
+Chase customers
+Checked by
+Cheque / slip / bill no
+Cheque No *
+Cheque No.
+Cheque Register
+Cheque recorded (pending).
+Cheque updated.
+Chishti Tobacco Co.
+Chishti Tobacco Company
+Chishti Tobacco Company · Managers & Accountants
+Chishti Tobacco Company · Owner & Admin only
+Choose JPG, JPEG, PNG or WebP up to 2 MB.
+Choose a unit that this product is configured for (piece/katta/bundle/packet).
+Choose the bank account for the bank portion.
+Choose the company account that paid.
+Choose the customer, or enter who paid (person / shop name).
+Choose two different accounts and a positive amount.
+Choose two different warehouses.
+City
+City / District
+City:
+Claim
+Claim #
+Claim Amount
+Claim Amount (Rs)
+Claim Goods
+Claim Goods Payment
+Claim No
+Claim No:
+Claim Rate
+Claim Rate (Rs)
+Claim goods
+Claim has no items.
+Claim not found
+Claim not found.
+Claim payment — Rs 
+Claim received — 
+Claim received — Owner/Admin must approve it before stock moves or any payable/cash entry posts.
+Claim registered — pending approval.
+Claim updated.
+Claims
+Claims — 
+Clear all
+Click Edit on a row to change name / branch / type. Delete asks for a confirmation and a reason — warehouses linked to stock, transactions or salesmen cannot be deleted; deactivate or archive them instead.
+Click a card to open the full profile with tabs.
+Close %s? All income/expense accounts roll into Retained Earnings.
+Close Year
+Closed
+Closing
+Closing Balance
+Closing Cash & Bank
+Closing Position
+Closing Stock
+Closing entries posted: 
+Closing transfers all income & expense balances to Retained Earnings (two closing journal entries, dated on the FY end date) and closes every period of the year.
+Code
+Code *
+Code and name are required.
+Code and name required.
+Code:
+Collected
+Collection
+Collection / Recovery
+Collection History
+Collection Report
+Collection recorded — hand over to company via the Payments tab.
+Collections
+Collections & Handovers (Hisab)
+Collections & Payments
+Collections This Settlement
+Collections Today
+Collections — 
+Combined Summary (informational only)
+Combined list of every person in the ERP (salesmen, labour, employees)
+Comm. %
+Commission
+Commission %
+Commission & Bonuses
+Commission = posted sales this month × commission %. Pay via Expenses → “Sales Commission” to record it in the ledger.
+Commission Preview —
+Company
+Company Expense
+Company Expenses
+Company Expenses Paid for Salesman
+Company Expenses Report
+Company Expenses —
+Company Logo
+Company Name
+Company Profile
+Company Profile & Logo
+Company Stock Daily
+Company expense cancelled — record kept for history.
+Company expense not found.
+Company expense recorded — pending Owner/Admin approval.
+Company expense updated.
+Company logo
+Company owes the salesman.
+Company pays (cash / bank)
+Company pays: the selected company cash/bank account is debited through the normal approval system. Salesman pays from collection: no company cash moves — the approved amount is deducted from his collections in the Hisab settlement instead.
+Company profile saved.
+Company stock breakdown →
+Company total (no double count)
+Compares against the estimated
+Complete
+Complete Financial Ledger
+Complete Jampur History
+Complete Ledger
+Complete Overview
+Complete Overview — 
+Complete Production
+Complete live financial and stock position — no separate reports needed. Everything derives from the same transactions.
+Compute
+Computer-generated claim receipt —
+Computer-generated payslip —
+Computer-generated voucher —
+Condition
+Configured Schemes (
+Confirm
+Confirm & Approve
+Confirm Approval
+Confirm Rejection
+Consume Qty
+Consumed
+Consumed Today
+Consumption
+Consumption Report
+Consumption Voucher —
+Consumption failed: 
+Consumption issue cancelled — stock returned to RM warehouse if it had posted.
+Consumption issue cannot be cancelled from status 
+Consumption issue cannot be posted from status 
+Consumption issue not found.
+Consumption issued — 
+Consumption submitted — Owner/Admin must approve it before stock moves.
+Contact
+Contact Number
+Contact number
+Conversion used by default: 10 Packets = 1 Bundle. 2 Bundles = 20 Packets. The base unit (Packet) is configured first; Bundle is configured from that ratio.
+Converted automatically to packs / bundles when stock is published.
+Correction
+Cost
+Cost (Rs) *
+Cost / Unit
+Cost / kg
+Cost Value
+Cost reflects actual issue cost tracked at sale time (weighted-average / FIFO per settings). Margin = sales − COGS.
+Cost-layer rows
+Costs cannot be negative.
+Could not record grinding: 
+Could not record return: 
+Could not save the attachment.
+Could not send material: 
+Count
+Count Stock
+Count the physical cash
+Counted
+Counted Cash (optional)
+Counted Qty
+Create Account
+Create Accountant / Manager
+Create Order
+Create PO
+Create Profile
+Create Return
+Create User
+Create a fresh empty database in Hostinger → Databases, assign the user.
+Created
+Created By
+Creates a timestamped SQL dump of all tables (data only — the empty schema lives in
+Credit
+Credit (Rs)
+Credit (payable)
+Credit / Payable (not paid yet)
+Credit Limit
+Credit Limit (Rs)
+Credit Limit:
+Credit Sale
+Credit for returns
+Credit sales need a salesman — pick one, or use Cash Sale.
+Current
+Current / not yet due
+Current Stock
+Current View
+Current balance sheet equity
+Current salary: 
+Current user
+Customer
+Customer *
+Customer Aging
+Customer Claims
+Customer Claims (his customers)
+Customer Code *
+Customer Collections Today
+Customer Free Goods
+Customer Free Goods (invoice bonus lines)
+Customer Payment Received
+Customer Receivable
+Customer Sales &amp; Collections
+Customer Statement —
+Customer and description are required.
+Customer claims filed by your customers, and supplier claim goods from purchases. Existing claims records are reused — nothing duplicated.
+Customer created.
+Customer not found.
+Customer payment
+Customer payment — Rs 
+Customer signature
+Customer updated.
+Customer: 
+Customers
+Customers Owe You
+Customers with Opening Balance (
+D
+DAILY
+DAILY SALESMAN SETTLEMENT
+DOCUMENT
+Daily
+Daily Expense
+Daily Expenses
+Daily Production
+Daily Production Entry
+Daily RM usage entries
+Daily Raw Material Usage
+Daily Sales
+Daily Sales Report
+Daily Sent to Jampur
+Daily Settlement
+Daily Settlement —
+Daily Settlement — 
+Daily expenses
+Daily usage saved — stock updated.
+Daily van stock report →
+Damaged
+Damaged (not stocked):
+Damaged (qty)
+Damaged Qty
+Damaged and rejected lines never enter saleable stock or stock valuation. Only accepted quantities were (or will be) received into
+Dashboard
+Dasti – Manual Journal
+Date
+Date *
+Date / Time
+Date Problem Occurred *
+Date is required.
+Date range
+Date:
+Day
+Day Book
+Days Overdue
+Deactivate
+Deactivate Account
+Deactivate the user instead.
+Deactivate this account? The user will not be able to log in or be paid until reactivated.
+Deactivate this profile? It stays inactive until an Owner/Admin reactivates it.
+Deactivate this user? They will not be able to log in until reactivated.
+Deactivate this warehouse? It stays in the system with full history.
+Debit
+Debit (Rs)
+Debit (receivable)
+Decided By
+Decision
+Decision Note
+Decisions
+Deducted
+Deducted automatically from future salary runs; capped at the outstanding balance. Approved by Owner/Admin — this voucher prints once.
+Deduction History
+Deduction References
+Deduction recorded.
+Deductions
+Deductions are handled by wage/payroll for employees only.
+Default issue warehouse
+Delete
+Delete permanently? Only allowed when nothing references this record.
+Delete this backup file?
+Delete this document?
+Delivery Date
+Department
+Department (optional)
+Department:
+Deposit Into *
+Deposited Into
+Describe the repair work done…
+Description
+Description *
+Description / Bill Details
+Description / Notes
+Description / Reference
+Description / reason
+Description and a positive cost are required.
+Description and amount are required.
+Description and cost required.
+Designation
+Designation:
+Desktop Notifications
+Destination Warehouse
+Detail
+Detail — every job in range
+Details
+Details →
+Details:
+Diesel / Fuel
+Diesel Expense
+Diff/Unit
+Difference
+Direction
+Disc.
+Discount
+Doc
+Document #
+Document Date
+Document Type
+Document deleted.
+Documents
+Documents & Photos
+Documents uploaded.
+Dr Inventory / Cr Owner Capital
+Draft
+Draft journal saved. Review and post it.
+Draft payroll generated for %d employee(s) — %s. Review and click Pay.
+Drawing
+Driver
+Driver Name
+Due
+Due / Clearing Date
+Due Date
+Due Date (credit)
+Duplicate submission detected — the invoice was already saved.
+Duplicate submission detected — the payment was already recorded.
+Duplicate submission detected — this entry was already recorded.
+Duplicate submission detected.
+EQUITY
+ERP
+EXPENSE VOUCHER
+EXPENSES
+Earned
+Earned (all periods)
+Earnings
+Edit
+Edit Asset
+Edit Company Expense
+Edit Employee
+Edit Loan
+Edit Maintenance Asset
+Edit Management Profile
+Edit Permissions
+Edit Permissions —
+Edit Product
+Edit Profile
+Edit Salary
+Edit User
+Effective
+Effective From
+Eligible Claim
+Eligible Claim Amount:
+Eligible Claim: Rs
+Email
+Employee
+Employee *
+Employee Bonus
+Employee Bonuses
+Employee ID
+Employee Loan
+Employee Loans
+Employee Photo
+Employee Salary Expense
+Employee Signature
+Employee added. Employee ID: %s
+Employee added. Employee ID: %s. Owner/Admin approval is required before the profile becomes active.
+Employee name is required.
+Employee not found.
+Employee payment
+Employee profile created
+Employee profile tabs
+Employee saved.
+Employee updated.
+Employee:
+Employees
+Employment Status
+Empty.
+English
+Enter a positive amount (or quantity and rate).
+Enter at least one material with a quantity.
+Enter at least one product with a produced quantity.
+Enter quantity to return per line (max = sold − already returned)
+Enter what the factory consumed today, in KG only. Saving deducts stock exactly once. Saving again the same day for the same material updates the entry (with an audit record).
+Entity
+Entity e.g. sales_invoices
+Entries
+Entries must balance (Σ debit = Σ credit) — the server rejects unbalanced entries. Posted entries are immutable; correct them by reversal.
+Entries — %s
+Entries — %s — %s
+Entry
+Entry No
+Entry is not balanced — cannot post.
+Evening Settlement Entry
+Event
+Every attendance entry recorded or updated is listed here — who did it, what changed, and when.
+Every outgoing payment from the ERP — approve or reject from one place. Approved documents post exactly once; rejected ones never touch balances.
+Every outgoing payment requires your approval.
+Everyone has a payslip for this period. ✔
+Everything at once
+Everything you need for today — numbers big enough to see from across the room.
+Example: 2 TON + 100 KG =
+Existing Backups (
+Expected
+Expected Cash (from receipts)
+Expected Delivery
+Expected Repayment
+Expected repayment date
+Expense
+Expense Categories
+Expense Category *
+Expense Date *
+Expense History
+Expense Summary
+Expense Title / Item Name *
+Expense approved — posted to the ledger exactly once.
+Expense can be posted from status 
+Expense category "Factory Maintenance & Repairs" is not configured.
+Expense category not found
+Expense item / title is required.
+Expense linked
+Expense not found
+Expense not found.
+Expense recorded — Owner/Admin must approve it before it posts to the ledger.
+Expense recorded.
+Expense reversed — a reversal journal was posted.
+Expense submitted for approval.
+Expenses
+Expenses (Month)
+Expenses (approved)
+Expenses (range)
+Expenses are recorded as
+Expenses paid by the company
+Expenses paid directly by company
+Expenses — 
+Expiry Date
+Explicit loss
+Export CSV
+Extra
+Extra details
+FACTORY CONSUMPTION VOUCHER
+FG Stock
+FG enters stock in configured packaging units
+Factory
+Factory + Salesmen →
+Factory CSV
+Factory Consumption
+Factory Consumption Approval
+Factory Finished Stock —
+Factory Maintenance & Repair Record
+Factory Maintenance & Repairs
+Factory Management · Sales & Distribution · Accounting
+Factory Use
+Factory closing (all finished lines)
+Factory consumption posted
+Factory consumption posted — RM stock deducted (
+Factory issue lines
+Factory produced (day)
+Failed: 
+File
+File Claim
+File could not be saved. Use JPG, JPEG, PNG or WebP up to 2 MB.
+Filter
+Final Balance
+Financial Year & Periods
+Finished Goods
+Finished Product
+Finished Product *
+Finished Product Daily
+Finished Product Stock
+Finished Product Stock Value
+Finished Units Produced
+Finished goods are stored in the product unit. Packets and Bundles are exact conversions — when configured, the closing stock is shown in both. Defaults apply to every FG product without its own override (Products → Edit → Packaging).
+Fiscal Year Closing
+Fiscal Years
+Fiscal period for 
+Fiscal year already closed.
+Fiscal year closed
+Fiscal year closed. Closing entries posted: 
+Fiscal year not found
+Food
+Food / Meals
+Food Expense
+Footer Note (e.g. “Goods once sold will not be taken back…”)
+Free bonus (not payable)
+From
+From Account *
+From Warehouse *
+From the Collections tab — cash + bank
+From warehouse:
+Fuel (L)
+Fuel Cost
+Fuel log added.
+Full Account
+Full Address
+Full Name
+Full Name *
+Full Salary Ledger
+Full access (locked)
+Full name
+Full name and at least one authorized role are required.
+Full name is required.
+Full name of the person
+Full remaining
+Fully Paid
+Fully Settled
+Fully paid
+GL Account
+GL Account (optional)
+GL Movement
+GRAND TOTAL
+GRN
+GRN Date
+General Ledger
+Generate Backup Now
+Generate Database Backup
+Generate Draft Payroll
+Generate Payroll
+Generated
+Generated:
+Gift
+Gift #
+Gift Reports
+Gift Type
+Gift amount must be positive.
+Gift cancelled.
+Gift date *
+Gift not found.
+Gifts
+Gifts by Month
+Gifts in period
+Give Advance
+Give Bonus
+Give Bonus Goods
+Go to ERP Dashboard
+Good
+Good / Accepted
+Good / Accepted (qty)
+Good Qty
+Good Returned
+Good Value
+Goods
+Goods & Stock
+Goods Gift
+Goods Gifts (pieces)
+Goods Issue
+Goods Issue Value
+Goods Issued
+Goods Issued (Payable)
+Goods Issued / Stock Received
+Goods Issued / Stock Received — 
+Goods Issued Today
+Goods Issued to Salesman
+Goods Movement
+Goods Payable
+Goods Payable (kept separate)
+Goods Payable (what he owes you)
+Goods Payable Balance
+Goods Received Note / Purchase Invoice
+Goods Return
+Goods Returned
+Goods Returns
+Goods Returns Accepted Today
+Goods Sold
+Goods and cash accounts reconcile. Nothing is owed.
+Goods come from FG stock. Stock is NOT deducted until Owner/Admin approves — the approval itself deducts it exactly once.
+Goods gift recorded — stock deducted only after Owner/Admin approval.
+Goods issued to 
+Goods issued to salesman — stock transferred, history updated.
+Goods issued, returns, collections, handovers and approved expenses for the day — everything live from transactions.
+Goods payable and advances, minus salary remaining. Salary is never settled against goods.
+Goods payable by salesmen
+Goods received — stock updated and journal posted.
+Goods returned
+Goods returned (good units · value)
+Goods returned and accepted (credit)
+Goods returned by 
+Goods returned to suppliers for credit — from the same Purchase → Claim Goods module.
+Grand Total
+Grand Total Produced
+Grinding Charges
+Grinding Charges (Rs)
+Grinding Charges per KG (Rs, optional)
+Grinding Completed
+Grinding Date
+Grinding Done
+Grinding Loss
+Grinding Party
+Grinding Party / Factory Name *
+Grinding date is required.
+Grinding party / factory name is required.
+Grinding recorded.
+Gross Earnings
+Gross Margin
+Gross Sales
+Group
+Guest
+Half Day
+Half Days
+Handed Over
+Handed Over Today
+Handover to Company
+Handover to Company Today
+Handovers
+Has expiry date / batch tracking
+Hisab
+History
+Home address
+Hostinger Premium supports Cron Jobs (hPanel → Advanced → Cron Jobs). Add a daily job running:
+Hours
+Hours default to 8.00 per present day — used for hourly-pay staff and overtime.
+How It Works
+IBAN
+ID
+INCOME
+INVOICE
+IP
+ISSUED BY — SALESMAN
+ISSUED TO
+Identity
+If you set an opening balance it is added to the book balance; the offset (Owner Capital) is posted from Settings → Opening Balances.
+Import
+In Range
+Inactive
+Inactive / Sold
+Income Statement —
+Income approved — posted to the ledger exactly once.
+Income recorded — Owner/Admin must approve it before it posts to the ledger.
+Initial mark
+Installment Amount (Rs) *
+Installment Schedule
+Installment Type
+Insufficient FG stock — gift cannot be issued.
+Insufficient FIFO layers for product %d in warehouse %d.
+Insufficient stock for 
+Insufficient stock for %s in %s (on hand %.3f, requested %.3f).
+Insufficient stock: %.3f KG available to add to today's usage.
+Insufficient stock: %.3f pieces available, requested %.3f.
+Insufficient stock: %s — %.3f KG available in the selected warehouse.
+Into
+Invalid attendance status.
+Invalid frequency.
+Invalid gift quantity.
+Invalid person type.
+Invalid repayment date.
+Inventory → Opening Stock
+Invested − withdrawn
+Investment
+Invoice
+Invoice #
+Invoice / Receipt Photo or Document
+Invoice / salesman…
+Invoice / supplier / their ref…
+Invoice Date
+Invoice Discount (Rs)
+Invoice Discount (Rs, whole invoice)
+Invoice Footer & Terms
+Invoice failed: 
+Invoice not found.
+Invoice posted — stock deducted, journal created.
+Invoice reversed — stock restored and a reversal journal was posted.
+Invoice saved as PENDING — Owner/Admin must approve before stock moves and the journal posts.
+Invoices
+Invoices (posted)
+Issue
+Issue Date
+Issue No
+Issue No.
+Issue Rate
+Issue has no items.
+Issue is awaiting Owner/Admin approval — approve it in the Admin Console first.
+Issue lines must have paid or bonus quantity.
+Issue not found.
+Issue qty must be positive.
+Issue to Salesman
+Issue was rejected/reversed.
+Issued
+Issued (range)
+Issued Bonus
+Issued By
+Issued By:
+Issued Paid
+Issued Payable
+Issued Today
+Issued by
+Issued to Salesmen
+Issued to salesmen (day)
+Issued to supplier/other
+Issues
+Issues This Settlement
+Issuing goods to a salesman is a stock transfer, not a customer sale. Stock decreases from Main Warehouse and increases in the salesman van.
+Item
+Item-wise
+Items
+Items at/below reorder level:
+Items — Good / Accepted · Damaged · Rejected (claim rate per accepted unit)
+JPG / PNG / WebP / PDF, max 5 MB
+JPG / PNG / WebP, max 2 MB
+JPG / PNG / WebP, max 2 MB.
+JPG, JPEG, PNG or WebP. Stored permanently (thumbnail).
+JUSTI NUMBER ONE
+JUSTI NUMBER ONE ERP
+Jampur Grinding
+Jampur Grinding Report
+Jampur Records
+Jampur Reports
+Job Title
+Job Title *
+Job Title / Position
+Jobs
+Jobs in Range
+Join Date
+Join Date:
+Joined
+Joined Company
+Joining Date
+Journal
+Journal Entries
+Journal entry not found
+Journal entry not found.
+Journal posted
+Journal posted.
+Journal reversed
+KB
+KG
+KG (base unit)
+KG Equivalent
+Katta (Pack)
+Kind
+Kinds of Work
+LIABILITIES
+LIABILITIES + EQUITY
+LOW STOCK 
+Labor
+Labor + Overheads
+Labor Cost (Rs)
+Labor+OH
+Labour
+Labour Charges
+Labour charges
+Language
+Last Login
+Latest Audit Events
+Latest Payslip
+Leave
+Leave blank or keep default to pay in full; enter less for a partial payment.
+Leave blank to inherit the company default (Set in Settings → Units & Packaging). Stock is stored in the product unit; Packets and Bundles are an exact conversion display.
+Ledger
+Ledger Balance (opening + all posted journals)
+Ledger History
+Ledger —
+Line Claim
+Line Detail
+Line Memo
+Line Notes
+Line Total
+Lines
+Linked Expense
+Linked GL Account *
+Linked data
+Linked records
+Liters *
+Liters and cost are required.
+Litres
+Loading…
+Loan
+Loan #
+Loan Amount
+Loan Amount (Rs) *
+Loan Date
+Loan Ded.
+Loan Installments
+Loan No
+Loan amount must be positive.
+Loan cancelled — record kept for history.
+Loan cannot be disbursed from status 
+Loan date *
+Loan not found
+Loan not found.
+Loan recorded.
+Loan request submitted — Owner/Admin approval required before disbursement.
+Loan updated.
+Loans
+Loans Ded.
+Loans:
+Location
+Location:
+Login Account
+Login accounts are limited to Owner/Admin, Manager and Accountant. Employees, Labour and Salesmen are managed as records and cannot sign in.
+Logo
+Logo must be PNG, JPG, SVG or WebP.
+Logo too large (max 2 MB).
+Loss
+Loss (KG)
+Loss cannot be negative.
+Low Stock
+Low Stock Items
+MAINTENANCE / REPAIR RECORD
+MANAGEMENT CONSOLE
+MY APPROVAL REQUEST
+Machine
+Machine / Equipment Name *
+Machine / vehicle
+Machine contains…
+Machine name and problem description are required.
+Main Sections
+Main branch / head office
+Main navigation
+Maintenance
+Maintenance & Repairs
+Maintenance Assets
+Maintenance History
+Maintenance Repair
+Maintenance approved — expense posted and cash/bank updated exactly once.
+Maintenance record not found
+Maintenance record not found.
+Maintenance record saved (no cost — no payment required).
+Maintenance record saved — Owner/Admin must approve it before the expense posts and cash/bank is updated.
+Maintenance recorded.
+Maintenance reversed — expense reversed and a reversal journal was posted.
+Make
+Make / Model
+Make Product
+Manage accounts →
+Manage →
+Management Console
+Management Console — Chishti Tobacco Company
+Management Team
+Manager
+Manager files via PO (admin posts)
+Manager view — you can track every request, status, approval history and rejection reasons here. Only Owner/Admin can approve or reject payments; your own submitted requests appear alongside all others.
+Managers & Accountants only · All access is logged ·
+Managers and Accountants cannot open this console — server-side enforced in
+Manual Journal Entry
+Manual journal posted
+Margin
+Mark Attendance
+Mark all read
+Mark as default
+Mark paid
+Mark pending
+Mark read
+Mark unread
+Marked
+Marked: %d saved, %d unchanged/failed
+Material
+Material Cost
+Material Returned to Ahmedpur
+Material sent to Jampur for grinding. Ahmedpur stock deducted.
+Materials
+Materials & Packaging
+Maximum Salary Advance (Rs) — 0 = no limit
+Maximum advance allowed for non-admin requesters:
+Memo
+Memo / Narration
+Method
+Method:
+Mileage
+Mileage (km)
+Minimum Selling Price
+Minimum Selling Price (Rs) — Approvals if below
+Model
+Module
+Money
+Money + Goods
+Money Gift
+Money Gifts
+Money Movement
+Money gift recorded — pending Owner/Admin approval.
+Money gifts are recorded as an expense (Gifts category) and posted by the Owner/Admin exactly once on approval — no cash/bank moves until approved.
+Money handed over to company (all-time)
+Money paid today
+Money received today
+Money still owed
+Money the salesman collected from his customers (van receipts). No GL entry until handover to company.
+Month
+Month *
+Month Sales
+Monthly
+Monthly Deduction Cap (Rs) — optional
+Monthly Deduction:
+Monthly Report
+Monthly Salary
+Monthly Usage (posted)
+Monthly employees only
+More options (admin)
+NET PAY
+NET PROFIT / (LOSS)
+NTN
+NTN (optional)
+NTN:
+Name
+Name *
+Name / Type
+Name and GL account required.
+Name is required.
+Name required.
+Narration
+Needs your attention
+Net Cash
+Net Cash Movement
+Net Change
+Net Days
+Net Difference
+Net Movement
+Net Paid
+Net Pay
+Net Pay:
+Net Payable Days
+Net inflow today
+Net outflow today
+New Accountant / Manager
+New BOM / Recipe
+New Bill of Materials
+New Bonus
+New Bonus / Incentive
+New Cash / Bank Account
+New Cash/Bank Account
+New Cheque
+New Claim
+New Claim Receipt
+New Company Expense
+New Customer Claim
+New Customer Receipt
+New Employee Loan
+New Expense
+New Expense Category
+New GL Account
+New General Ledger Account
+New Goods Gift
+New Loan
+New Loan Record
+New Maintenance Asset
+New Manual Journal
+New Money Gift
+New Password (leave blank to keep current)
+New Payment
+New Purchase Order
+New Sale
+New Sales Invoice
+New Sales Order
+New Sales Return
+New Stock Adjustment
+New Stock Adjustment (pending approval)
+New Transfer
+New Vehicle
+New employee added — 
+New sale — 
+No
+No active warehouses yet.
+No activity yet.
+No adjustments yet.
+No advance has been recorded for this person yet.
+No advance yet
+No advances yet.
+No advances.
+No approval needed for money IN. Dr Cash/Bank, Cr Salesman Receivable — ledger credited.
+No approved expenses in this period.
+No archived records.
+No assets registered yet.
+No attendance changes in this range.
+No attendance recorded.
+No audit events.
+No backups yet. Generate one before making changes.
+No bonus goods given yet.
+No bonuses or deductions yet.
+No bonuses recorded yet.
+No bonuses yet.
+No capital transactions yet.
+No cash/bank accounts yet.
+No charges recorded.
+No cheques recorded.
+No claim receipts in this period.
+No claims.
+No collections in range.
+No collections recorded on this date.
+No collections recorded yet. Add one above.
+No company expenses in this period.
+No completed production in this period.
+No customer bonus lines in range.
+No customer claims for your customers yet.
+No customers found.
+No data yet.
+No deductions recorded yet.
+No deductions yet.
+No documents uploaded yet.
+No documents uploaded.
+No employees found.
+No employees yet. Click “Add Employee” to register one.
+No entries in range.
+No entries in this period.
+No expenses in range.
+No expenses logged.
+No expenses yet.
+No factory consumption in this period.
+No finished products on file.
+No finished-goods warehouse found — create WH-MAIN or a default warehouse first.
+No finished-stock rows for this filter.
+No fiscal period covers 
+No fiscal year covers 
+No fuel logs.
+No gifts in this period.
+No gifts recorded yet.
+No goods issued on this date.
+No grinding recorded in this period.
+No grinding recorded yet.
+No handover recorded on this date. Use the Payments tab to record money received.
+No history in this period.
+No installments generated yet (created when Admin approves disbursement).
+No invoices in range.
+No issues yet.
+No ledger entries yet — first credit issue creates them.
+No loans match.
+No loans on file.
+No maintenance in this range.
+No maintenance records in this range.
+No management profiles yet. Create the first Accountant or Manager.
+No matching person found.
+No matching person found. Adjust the filters.
+No material sent to Jampur yet.
+No materials on this consumption issue.
+No movements in range.
+No notifications yet.
+No notifications.
+No orders.
+No other income recorded yet.
+No outstanding credit invoices — everyone is settled. ✔
+No outstanding supplier bills. ✔
+No paid salary in range.
+No payment account captured for this expense.
+No payment history yet — first payslip payment creates it.
+No payments in range.
+No payments recorded yet.
+No payout account captured for this advance.
+No payout account captured for this loan.
+No payout account captured for this payment.
+No payout account captured with this bonus - reject it and re-request with an account selected.
+No payout account was captured with this advance — reject it and re-request with an account selected.
+No payslips yet — first payroll run creates them.
+No payslips yet. Generate from Payroll Run.
+No payslips yet. Generate them from Payroll Run — payment is approval-gated as usual.
+No pending approval request for this order.
+No pending approval request found for this expense.
+No pending approval request found for this income.
+No pending approval request found for this record.
+No people match the filters.
+No posted claims in this period.
+No posted expenses in range.
+No production orders yet.
+No production records in this range.
+No products found.
+No products in this warehouse.
+No products match your filter. Try another search or add a new product.
+No purchase bonus recorded in range.
+No purchase orders.
+No purchases in range.
+No raw material purchases in this range.
+No raw/packaging products on file. Create products with kind “Raw” or “Packaging”.
+No receipts in range.
+No records in this range.
+No records.
+No repairs recorded for this asset yet.
+No repayments yet.
+No returns on this date.
+No returns recorded yet.
+No returns yet.
+No salary changes yet.
+No salary movements yet.
+No salary payments recorded yet.
+No salary payments yet.
+No salary set
+No sales on this date.
+No sales with an issue rate in this period.
+No salesman bonus issues in range.
+No salesman van stock movements for this filter.
+No salesmen found.
+No salesmen on file yet.
+No salesmen on file.
+No settlement signed off yet. The first one, once saved, will appear here with a printable receipt.
+No source warehouse (WH-MAIN) found.
+No supplier claim goods recorded yet.
+No suppliers found.
+No transactions in this range.
+No transfers.
+No usage entries for this date yet.
+No usage entries in this range.
+No users found.
+No variances found — stock matches system.
+No vehicles on file.
+No.
+Nobody matches the filters.
+None
+None in this period.
+None — set opening balance on Cash & Bank accounts.
+None — set opening balance on supplier records.
+None — set opening balance when creating/editing customers.
+Not permitted.
+Not uploaded
+Note
+Note (required for rejection)
+Notes
+Notes (optional)
+Notes (return reason / condition)
+Notes / Remarks
+Notes:
+Nothing here.
+Nothing pending. ✔
+Nothing remaining at Jampur.
+Nothing returned in this period.
+Nothing sent in this period.
+Nothing to return (quantities exceed invoiced/returned amounts).
+Notification
+Notification Sound
+Notifications
+Number of Installments
+OB
+OPENING
+ORDER
+OT
+OUT (−)
+OUT OF STOCK — 
+OVERDUE — 
+Off
+On
+On Hand
+On credit (expense payable)
+On hand:
+One or more materials exceed their available stock.
+One payment can split between cash and bank — the two amounts must add up to the total.
+One-time setup.
+Only Owner/Admin can approve purchase orders.
+Only Owner/Admin can change financial settings for existing profiles.
+Only Owner/Admin can change salary settings for existing profiles.
+Only Owner/Admin can permanently delete a user.
+Only Owner/Admin can permanently delete a warehouse.
+Only Owner/Admin can record opening stock.
+Only Owner/Admin can reverse a posted maintenance record.
+Only active loans can accept repayments.
+Only authorized users (Owner / Admin / Manager) can record payments.
+Only draft entries can be posted.
+Only draft or partially paid payslips can be submitted for payment.
+Only draft orders can be released.
+Only draft/released orders can be cancelled.
+Only finished products can be given as bonus.
+Only material that physically leaves Jampur increases Ahmedpur stock. Multiple partial returns from the same record are supported.
+Only pending advances can be cancelled.
+Only pending expenses can be edited.
+Only pending gifts can be cancelled.
+Only pending or posted expenses can be cancelled.
+Only posted entries can be reversed.
+Only raw material / packaging products can be consumed daily.
+Only raw materials and packaging can be sent for grinding.
+Only released orders can be completed.
+Open Payroll →
+Open Profile
+Open Salary Tab →
+Open Salesman Profile →
+Open Salesmen →
+Open salesmen
+Opening
+Opening = balance at the start of
+Opening Balance
+Opening Balance (Rs)
+Opening Balances
+Opening Cash & Bank
+Opening Stock
+Opening Stock (quantities & cost)
+Opening Type
+Opening balance
+Opening balance as of
+Opening balances post to the ledger only when you run
+Opening balances post to the ledger via
+Opening balances posted: 
+Opening goods issue value (issued this date)
+Opening stock posted - 
+Opening → Produced → Issued to salesmen → Sold → Returns → Closing
+Opening → Purchases → Consumption → Adjustments → Closing (raw & packaging only)
+Opening/closing are computed from the stock ledger (stock_movements) dated on this day; salesman vans and factory warehouses are disjoint, so the combined company total double-counts nothing. Live comment: every issue, sale, return and production move writes exactly one signed movement per warehouse.
+Optional
+Optional notes
+Optional notes…
+Optional remarks
+Optional — for walk-in cash, enter who paid below.
+Optional — leave as counter sale for over-the-counter sales. A salesman is required only for credit sales.
+Optional — leave as walk-in for over-the-counter orders.
+Optional — pick the shop, or enter who paid below.
+Order
+Order Date
+Order Total: Rs
+Order has no material inputs (create a BOM and attach it).
+Order not found.
+Order released for production.
+Orders Completed
+Original
+Original Loans
+Original loan amount (Rs) *
+Original loan amount cannot be reduced below the total already repaid.
+Original loan cannot be less than the total already repaid (Rs %s).
+Other
+Other (custom)
+Other Approved Expenses
+Other Deductions
+Other Documents
+Other Expense
+Other Expenses
+Other Income
+Other expenses
+Other income
+Other income not found
+Other income received this month
+Other income reversed — journal reversed.
+Outcome
+Output Qty
+Output Qty per batch *
+Outstanding
+Outstanding (excl. openings)
+Outstanding Goods Payment
+Outstanding amount: Rs 
+Outstanding payable
+Outstanding – Salesman Must Pay Company
+Outstanding — pay later (supplier payable)
+Outstanding:
+Over 90 Days
+Over 90 days
+Overdue
+Overdue Loans
+Overdue Payments
+Overhead
+Overhead Cost (Rs)
+Overtime
+Overtime (
+Overtime Rate (Rs/hr) — blank = auto 1.5×
+Owner (personal drawing)
+Owner / Admin
+Owner Capital (GL)
+Owner Drawing
+Owner Investment
+Owner accounts cannot be permanently deleted. Deactivate instead.
+Owner capital & drawings
+Owner capital investment posted — Dr Cash/Bank, Cr Owner Capital.
+Owner drawing posted — Dr Owner Drawings, Cr Cash/Bank.
+Owner money into business
+Owner money out (drawings)
+Owner put into business
+Owner puts money into the business. Dr Cash/Bank → Cr Owner Capital. Available to Owner/Admin only — it posts immediately.
+Owner took out (drawings)
+Owner withdraws money for personal use. Dr Owner Drawings → Cr Cash/Bank. Available to Owner/Admin only — it posts immediately.
+Owner-given gifts — money and goods from store stock. Approvals exactly like other owner-funded expenses. Not sales, not receivables.
+Owner/Admin approval
+Owner/Admin must approve before the advance is paid out. Deducts automatically from the next salary (full remaining, or cap with a monthly deduction).
+Owner/Admin only
+Owner/Admin only. Every archive, restore and delete is recorded in the audit log with who, when and the reason.
+P&L expense paid by the company — informational, NOT deducted from his collections
+P&L expense; not salesman debt and never settled against collections
+PAID TO / FOR
+PAY TO
+PAYMENT VOUCHER
+PENDING
+PENDING APPROVAL
+PERIOD
+PO No.
+PO Total: Rs
+PO cannot be approved from status 
+PURCHASE INVOICE / GRN
+Pack Size
+Packaging
+Packaging Conversion (FG) — optional
+Packaging Conversions (FG)
+Packet
+Packets
+Packets per Bundle
+Packets per Bundle (10 by default)
+Paid
+Paid (all periods)
+Paid By
+Paid By (person / shop name)
+Paid Charges
+Paid From
+Paid Goods Value
+Paid Qty
+Paid Return
+Paid from
+Paid from Bank
+Paid from Cash
+Paid from:
+Paid goods issued at issue-rate. Free bonus goods and returns are excluded/credited separately. Salary and expenses are never mixed in here.
+Paid products (qty × rate)
+Paid salary (posted journals),
+Paid so far
+Paid:
+Parent (optional)
+Parent claim not found
+Part
+Partial repayments allowed. Total repaid can never exceed the original loan amount.
+Partially Paid
+Partially Settled
+Partially paid
+Parts
+Parts Total
+Party
+Party Name
+Party Type
+Password
+Password change required
+Password must be at least 8 characters.
+Pay / Advance
+Pay / Give Advance
+Pay / Handover →
+Pay Balance
+Pay From
+Pay From *
+Pay Out From *
+Pay Out From:
+Pay Salary
+Pay Salary / Advance →
+Pay Toward Claim (partial or full)
+Pay via Payroll
+Payable
+Payee
+Payee / Vendor
+Payee Type *
+Payer / Description
+Payer / Source
+Payment
+Payment (Rs 
+Payment Approval
+Payment History
+Payment Method
+Payment Method *
+Payment Option *
+Payment Status
+Payment Type
+Payment amount must be positive.
+Payment by bank transfer:
+Payment could not be posted: 
+Payment failed: 
+Payment method
+Payment method:
+Payment not found
+Payment note
+Payment received and posted — Dr Cash/Bank, Cr Salesman Receivable; ledger updated.
+Payment received and posted — receipt %s generated.
+Payment recorded — 
+Payment request submitted — Owner/Admin must approve it before any cash/bank/ledger entry posts.
+Payment status:
+Payment submitted — Owner/Admin must approve it before it posts to the ledger.
+Payment — Supplier / Owner Drawing
+Payment:
+Payments
+Payments / Collection
+Payments / Collection - 
+Payments Against This Claim
+Payments Posted
+Payments are pending Owner/Admin approval until decided in Admin Console → Approvals.
+Payments post exactly once after Owner/Admin approval: Dr Accounts Payable — supplier, Cr Cash/Bank. The outstanding balance drops when each payment posts.
+Payments, transfers, expenses, salary and loans post only after Owner/Admin approval (Admin Console → Approvals). Ask Admin when something is pending.
+Payout account missing on payroll record.
+Payout account missing on this payment.
+Payroll
+Payroll Hours Grid
+Payroll Policy
+Payroll Run
+Payroll already generated for this period. Reverse it first.
+Payroll is 
+Payroll record not found
+Payroll record not found.
+Payroll reversed; advances and loans released to outstanding.
+Payroll-deducted installments show as DEDUCTed; manual repayments as PAID. Outstanding = amount − recovered.
+Payslip
+Payslip No:
+Payslip not found.
+Payslip payments approved by Owner/Admin are recorded here. Rejected requests never move money.
+Payslip —
+Payslips
+Pending
+Pending Approval
+Pending Approval:
+Pending Approvals
+Pending Charges
+Pending Payment Amount
+Pending Payments
+Pending Salary
+Pending Salary — No Payslip
+Pending approvals
+Pending cheques issued (not yet cleared)
+Pending cheques received (not yet cleared)
+Pending company expenses are decided in the Admin Console (/admin/approvals) — exactly once per approval. Approved cash/bank payments update balances; rejected ones never touch anything.
+Pending gift requests are decided in the Admin Console (/admin/approvals) — exactly once per approval.
+People
+People Gifted
+People Outstanding
+Per-Product Totals
+Period
+Period 
+Period (YYYY-MM)
+Period / Reason
+Period end before start.
+Period expenses:
+Period from
+Period purchases:
+Period total:
+Period:
+Periods —
+Permanently delete this archived warehouse? This cannot be undone.
+Permanently delete this user
+Permanently delete this warehouse? This cannot be undone.
+Permissions
+Permissions updated for 
+Person
+Person / Guest Name
+Person name is required.
+Personal record — loans and repayments tracked here are NOT part of company accounts.
+Personal record — loans and repayments tracked here are NOT part of company accounts. No ledger, P&amp;L, balance sheet, cash or bank balance is affected.
+Personal record — loans and repayments tracked here are NOT part of company sales, purchases, expenses, cash or bank accounts. No ledger, P&amp;L or balance sheet is affected.
+Person’s full name *
+Phone
+Phone:
+Photo
+Physical Stock Count
+Physical quantity
+Pick an expense category.
+Picture
+Pieces
+Pieces per Packet (1 = packet is the base unit)
+Pieces per Packet (base)
+Plan:
+Planned
+Planned Material Consumption
+Planned:
+Please Confirm
+Please add stock first.
+Point
+Post All Opening Balances
+Post Cash/Bank Openings
+Post Completion → Receive Finished Goods
+Post Customer Openings
+Post Drawing
+Post Entry
+Post GRN / Invoice
+Post Investment
+Post Invoice
+Post Opening Stock
+Post Payment
+Post Receipt
+Post Return
+Post Sales Return
+Post Supplier Openings
+Post Transfer
+Post a reversal of this journal? The original will be marked REVERSED and a mirror entry created.
+Post all pending vouchers and verify the Trial Balance first.
+Posted
+Posted Cost
+Posted Expenses by Category —
+Posted cash handover
+Posted expenses
+Posted to Ledger
+Posting
+Posting is blocked in closed periods. Close a period only after all its vouchers are entered and reconciled. Re-opening a closed period is possible here, but use it with care and audit trail.
+Posts
+Posts customer + supplier + cash/bank openings in one go. Safe to repeat — already-posted items are skipped.
+Prepared by
+Present
+Previous Settlements
+Previous history for this asset
+Price
+Print
+Print / Save as PDF
+Print Ledger
+Print Receipt
+Print Settlement
+Print Statement
+Print payslips:
+Printable Statement
+Problem
+Problem / Damage
+Problem / Damage Description *
+Problem date:
+Processed
+Processed (KG)
+Processed tobacco comes back
+Processing Loss / Difference (KG)
+Processing…
+Produced
+Produced (All Time)
+Produced quantity must be positive.
+Produced:
+Product
+Product *
+Product / Amount
+Product Categories
+Product Name *
+Product Picture
+Product and bonus quantity are required.
+Product created.
+Product not found.
+Product photo could not be saved. Use JPG, JPEG, PNG or WebP up to 2 MB.
+Product updated.
+Product, name and output qty are required.
+Product, warehouse and planned quantity (>0) are required.
+Production
+Production Date
+Production History
+Production Order
+Production Order (optional)
+Production Orders
+Production Report
+Production Reports
+Production completed — 
+Production completed — finished goods received into stock at actual cost.
+Production entry
+Production entry not found.
+Production entry reversed — stock adjusted back, audit recorded.
+Production entry saved — finished-goods stock updated.
+Production order 
+Production orders
+Production started — 
+Production — 
+Products
+Profile
+Profile Picture
+Profile activated.
+Profile created. Login: 
+Profile deactivated. It stays inactive until an Owner/Admin reactivates it.
+Profile not found.
+Profile photo could not be saved. Use JPG, JPEG, PNG or WebP up to 2 MB.
+Profile saved.
+Profit
+Profit & Loss
+Provide payee, account and a positive amount.
+Province
+Purchase
+Purchase / GRN
+Purchase / GRN invoices
+Purchase Bonus (supplier free goods)
+Purchase Bonus Received
+Purchase Date
+Purchase Invoice
+Purchase Invoices
+Purchase Invoices / GRN
+Purchase Orders
+Purchase Price (Rs)
+Purchase Raw Material
+Purchase Request
+Purchase approved.
+Purchase failed: 
+Purchase invoice has no items.
+Purchase invoice not found
+Purchase order created (approved).
+Purchase order not found
+Purchase request submitted — Owner/Admin must approve it before it is confirmed.
+Purchase reversed — stock removed (if still on hand) and a reversal journal posted.
+Purchase submitted — Owner/Admin must approve it before stock moves or any payable/cash entry posts.
+Purchased
+Purchased Today
+Purchases
+Purchases (Month)
+Purchases by Unit (today)
+Qty
+Qty (KG)
+Qty (as purchased)
+Qty Produced
+Qty Produced *
+Qty Sold
+Qty per batch
+Quantities Returned (split paid / bonus — bonus never creates payable)
+Quantities to return required.
+Quantity
+Quantity *
+Quantity Received After Grinding (KG) *
+Quantity Returned (KG) *
+Quantity Sent (KG) *
+Quantity must be positive.
+Quantity received after grinding must be positive.
+Quantity to Produce *
+Quantity used must be at least 0.001 KG.
+Quick Actions
+Quick Links
+RECEIPT
+RECEIVED FROM
+RECEIVED FROM (SALESMAN)
+RECORD NO
+REJECTED
+REMAINING PAYABLE TO COMPANY
+REMAINING PAYABLE TO COMPANY (all-time)
+RM Consumed (KG)
+RM Cost
+RM Warehouse
+Rate
+Rate (Rs)
+Rate must be positive.
+Rate per Unit (Rs)
+Rate the salesman pays the company for stock issued to him
+Raw Material
+Raw Material *
+Raw Material Consumption Report
+Raw Material Daily
+Raw Material Purchase
+Raw Material Purchased (range)
+Raw Material Purchases
+Raw Material Stock
+Raw Material Stock Value
+Raw Material Stock — kind: raw & packaging only
+Raw Material Weight Units
+Raw Materials
+Raw Materials Cost
+Raw material product not found.
+Raw material purchases are Owner/Admin-only.
+Raw material to factory
+Raw materials and packaging materials cannot be sold. Only finished goods can be invoiced.
+Raw materials are stored in KG. Opening stock, purchases (TON/KG/MAN) and factory consumption are all converted to KG with these factors. Historical transactions are never rewritten when you change them.
+Reactivate Account
+Reactivate this account?
+Reactivate this user?
+Reactivate this warehouse?
+Read
+Reason
+Reason *
+Reason / Claim Note
+Reason / Notes
+Reason / occasion
+Reason and amount are required.
+Reason:
+Receipt
+Receipt #
+Receipt / Photo
+Receipt / Reference No.
+Receipt No:
+Receipt Photo (optional)
+Receipt not found
+Receipt posted — Dr Cash/Bank, Cr Receivable.
+Receipts
+Receive Goods
+Receive Into
+Receive Into *
+Receive Payment
+Receive Payment From Salesman
+Receive Unsold Stock From
+Receive qty must be positive.
+Received
+Received (KG)
+Received + loss cannot exceed the quantity sent.
+Received By
+Received Into *
+Received by
+Received by:
+Received from customer
+Received into:
+Receiver Signature
+Receiving against
+Recent Attendance
+Recent Bonuses
+Recent Grinding
+Recent Issues — Paid vs Free Bonus
+Recent Payslips
+Recent Returns
+Recent Salary Periods
+Recent goods issues
+Recipe
+Recipe / BOM
+Recipe Name *
+Recipes define what each finished good consumes.
+Recipient
+Recipient name *
+Recipient name is required.
+Recipient type
+Reconciliation Summary
+Record Advance Payment
+Record Bonus
+Record Cheque
+Record Collection
+Record Company / Factory Expense
+Record Count → Create Adjustment
+Record Customer Collection
+Record Deduction
+Record Expense
+Record Gift (pending approval)
+Record Grinding
+Record Handover →
+Record Income
+Record Manual Repayment
+Record Other Income
+Record Owner Drawing
+Record Owner Investment
+Record Repayment
+Record Usage — %s
+Record archived.
+Record daily production, track output per product
+Record deleted.
+Record not found.
+Record once on save. Cash goes to the selected cash account; bank goes to the selected bank account.
+Record restored.
+Recorded / last updated by
+Recorded By
+Recorded by
+Recorded by:
+Recovered
+Recovered So Far
+Recovered:
+Ref
+Reference
+Reference (cheque / slip no)
+Reference / Notes
+Refund
+Reg. No
+Register New Asset
+Registration
+Registration & Banking
+Registration No *
+Registration Profile
+Registration approved — profile is now Active.
+Registration number already exists.
+Registration number required.
+Registration submitted — pending Owner/Admin approval. The profile will become active and a sales-stock warehouse will be created upon approval.
+Regular
+Regular (Paid)
+Regular Qty
+Regular paid quantity
+Reject
+Reject this adjustment?
+Reject without posting?
+Rejected
+Rejected (not stocked):
+Rejected (qty)
+Rejected Payments
+Rejected Qty
+Rejected Today
+Rejected — no balance or ledger entry was created.
+Related Invoice (optional)
+Related Party
+Relative
+Release
+Remaining
+Remaining (KG)
+Remaining / Outstanding
+Remaining Balance
+Remaining Goods Payable
+Remaining Payable
+Remaining Payable To Company
+Remaining Payable To Company — all-time
+Remaining Salary
+Remaining Stock
+Remaining Stock (now)
+Remaining at Jampur
+Remaining payable:
+Remaining — Salesman Must Pay Company
+Remaining:
+Reorder
+Reorder Level
+Repaid
+Repair / Maintenance Work Performed
+Repair / Work Performed
+Repair Jobs
+Repairs
+Repayment History
+Repayment amount must be positive.
+Repayment date *
+Repayment recorded — Dr Cash/Bank, Cr Employee Loans; installments marked paid.
+Repayment recorded.
+Report
+Reporting
+Reports
+Reports Hub
+Request
+Request #
+Request Advance
+Request Advance (goes to Admin)
+Request Bonus
+Request Loan (goes to Admin for approval)
+Request Salary Advance
+Request Type
+Requested
+Requested At
+Requested By
+Requested:
+Requester
+Require Owner/Admin approval for factory consumption requests (recommended OFF — daily issues post directly)
+Required when no customer is selected.
+Requires Owner/Admin approval
+Reset
+Restore
+Restore Warehouse
+Restore procedure
+Restore this record?
+Restore this warehouse from the archive?
+Restricted schemes and bonus issues above the threshold require
+Retired
+Return
+Return Against
+Return Credit
+Return Date
+Return History
+Return No
+Return No.
+Return Qty
+Return Stock to Warehouse
+Return Stock —
+Return date is required.
+Return failed: 
+Return has no items.
+Return not found
+Return quantity must be positive.
+Return recorded. Ahmedpur stock updated.
+Return reversed.
+Return to Ahmedpur
+Returned
+Returned (KG)
+Returned (range)
+Returned stock value
+Returned to Ahmedpur
+Returns
+Returns Today
+Returns restore stock and post reversal journals.
+Reversal entry #
+Reversal entry posted (#
+Reversal failed: 
+Reverse
+Reverse Entry
+Reverse Invoice
+Reverse this GRN/invoice? Stock will be deducted and the journal reversed.
+Reverse this expense?
+Reverse this income? The journal will be reversed.
+Reverse this invoice? Stock will be restored and a reversal journal posted. This cannot be undone.
+Reverse this maintenance record? The expense and its journal will be reversed.
+Reverse this payslip? The journal(s) will be reversed and deductions released to advances/loans.
+Reverse this production entry? Stock will be issued back out.
+Reverse this return? Stock will be taken out again and the journal reversed.
+Reversed
+Reversed By
+Reversed Entries
+Review
+Review All (
+Role
+Role *
+Role not found.
+Role not seeded.
+Roles
+Roles & Permissions
+Roles (authorized login roles only)
+Roman Urdu
+Rows where the salesman sold
+Rs
+Run
+SALARY ADVANCE VOUCHER
+SALARY PAYSLIP
+SALESMAN PAYMENT RECEIPT
+SETTLED BY (SALESMAN)
+SETTLEMENT RECEIPT
+SKU
+SKU 
+SKU *
+SKU / Product
+STATEMENT FOR (SALESMAN)
+STOCK ISSUE RECEIPT
+STRN (Sales Tax)
+SUPPLIER
+Salaries & Wages expense account not configured.
+Salaries & Wages expense category not configured.
+Salary
+Salary & Advances
+Salary & Advances (separate from goods)
+Salary & Expense details
+Salary &amp; Advances
+Salary (Rs)
+Salary (kept separate)
+Salary Advance
+Salary Advances
+Salary Earned
+Salary Earned (to date)
+Salary Expense
+Salary Frequency
+Salary History
+Salary Ledger
+Salary Ledger —
+Salary Paid
+Salary Payable Ledger
+Salary Payment
+Salary Payment Frequency
+Salary Payment Method (Cash/Bank)
+Salary Payments
+Salary Rate (Rs / month, week, day, hour or fixed)
+Salary Rate (Rs)
+Salary Remaining
+Salary Type
+Salary Type:
+Salary can be paid from status 
+Salary earned (to date)
+Salary earned / paid / remaining
+Salary is never mixed with goods payable or collections. Outstanding salary is handled through Payroll — not through this settlement.
+Salary paid (all-time)
+Salary payable and advance receivable are tracked separately and never mixed. Payments and accruals are ordered with a running balance.
+Salary payment cannot be posted from status 
+Salary payment not found.
+Salary payment processed.
+Salary payment submitted — Owner/Admin must approve it before the journal posts.
+Salary payments
+Salary remaining (earned not yet paid)
+Salary saved.
+Salary to Pay
+Salary —
+Salary, expenses and other adjustments are kept separate and never netted against goods payable.
+Salary:
+Sale
+Sale Price (Rs) — company shop price
+Sales
+Sales (Month)
+Sales Invoice
+Sales Invoices
+Sales Orders
+Sales Returns
+Sales Stock Location
+Sales Summary
+Sales Summary by
+Sales Tax
+Sales Tax Rate (%)
+Sales This Month
+Sales Today
+Sales below this price require Owner/Admin approval
+Sales invoice has no items.
+Sales invoice not found
+Sales invoices
+Sales order created. Create the invoice when delivering.
+Sales return has no items.
+Sales return increases finished stock. Issued to salesmen deducts from finished goods into the van/assignee warehouse. Everything is derived from posted stock movements.
+Sales return not found
+Sales return posted — stock restocked and journal created.
+Sales stock location:
+Salesman
+Salesman (auto)
+Salesman (van/stock)
+Salesman *
+Salesman Balances
+Salesman Bonus Issued
+Salesman Bonus Issues — Paid vs Free
+Salesman Claims
+Salesman Expense
+Salesman Expenses category not configured.
+Salesman Goods Issue
+Salesman Goods Issues
+Salesman Issue Rate (Rs)
+Salesman Ledger
+Salesman Name
+Salesman Outstanding (owed to company)
+Salesman Payable
+Salesman Performance — This Month
+Salesman Photo
+Salesman Price Difference
+Salesman Price Difference — Issue Rate vs Selling
+Salesman Profiles
+Salesman Salary Advances
+Salesman Salary Payments
+Salesman Salary expense category not configured.
+Salesman Statement
+Salesman Stock & Settlement
+Salesman Van Stock —
+Salesman and amount are required.
+Salesman bonuses are in the Salesman profile → Account / Bonus tabs.
+Salesman created with a dedicated sales-stock warehouse.
+Salesman deposited — Rs 
+Salesman expense — 
+Salesman goods issues
+Salesman has no van warehouse.
+Salesman is holding unsettled money; he owes the company this amount.
+Salesman issue not found
+Salesman not found.
+Salesman outstanding — 
+Salesman over-paid — company owes him.
+Salesman owes the company this amount (goods payable).
+Salesman owes the company.
+Salesman paid a company expense out of customer collections — deducted here and credited in his receivable ledger
+Salesman payable
+Salesman pays from collection
+Salesman return posted — stock restocked, his ledger credited.
+Salesman signature
+Salesman tabs
+Salesman updated.
+Salesman van assignment
+Salesmen
+Salesmen CSV
+Salesmen automatically get a dedicated stock location when you create them in the Salesmen section — issues to a salesman are stock transfers, not sales.
+Save
+Save & Post
+Save (Pending Approval)
+Save Asset
+Save Attendance
+Save Attendance — %s
+Save BOM
+Save Changes
+Save Company Expense (pending approval)
+Save Company Profile
+Save Conversions
+Save Customer
+Save Employee
+Save Expense
+Save Grinding Record
+Save Loan
+Save Maintenance Record
+Save Permissions
+Save Photo
+Save Production Entry
+Save Purchase →
+Save Repayment — Remaining
+Save Return
+Save Rules
+Save Salary
+Save Settlement
+Save Settlement & Print Receipt
+Save Supplier
+Save Usage (deduct from stock)
+Save as Draft
+Save changes
+Save → Deduct Stock
+Save → Start Production
+Saving posts the entry immediately (money in) and credits the salesman’s goods payable.
+Scheme
+Scheme (optional)
+Scheme / Product
+Scheme name already exists.
+Scheme name required.
+Scope the earned/paid figures to one month
+Search
+Search SKU / name…
+Search asset / department / location…
+Search batch / details / issue no…
+Search by name / ID / CNIC…
+Search by name / ID / phone…
+Search by name / ID…
+Search code / name / designation / phone…
+Search code / name / phone / area…
+Search code / name / phone…
+Search item / supplier / invoice…
+Search loan no / employee / reason…
+Search machine / record / vendor…
+Search name / ID / CNIC / designation…
+Search name / ID / phone / CNIC / area
+Search name / loan # / phone…
+Search name / username / designation / role…
+Search order / product…
+Search product / supplier / invoice…
+Search products by name or code…
+Search recipient / gift # / reason
+Search requester / reason…
+Search title / body / user…
+Search users…
+Search…
+Select Jampur Record *
+Select a Jampur grinding record.
+Select a bank account to see the reconciliation summary.
+Select a finished-goods product.
+Select a material.
+Select a posted invoice.
+Select a valid active salesman (or use Cash Sale / counter sale).
+Select a valid warehouse.
+Select all
+Select finished good…
+Select material…
+Select the Invoice to Return Against
+Select the bank account to pay from.
+Select the cash/bank account paid from (or choose "On credit/payable").
+Select the cash/bank account paid from (or choose “On credit/payable”).
+Select the cash/bank account paying the cash (or choose Credit).
+Select the cash/bank account to pay from.
+Select the cash/bank account used for payment.
+Select the payout account - needed to pay the bonus after approval.
+Select the raw material.
+Select warehouse…
+Selected salesman has no stock location. Assign a van first.
+Sell to customer
+Selling
+Send Material for Grinding
+Send to Jampur
+Sent
+Sent (KG)
+Sent to Jampur
+Sent · Grinding · Returns · Remaining
+Set Salary
+Settings → Opening Balances
+Settle —
+Settled
+Settled / no activity
+Settlement
+Settlement / Hisab — 
+Settlement Date
+Settlement History
+Settlement saved. Variance = counted − expected cash.
+Settlement signed off — 
+Settlement — 
+Settlements
+Shop / Customer Name *
+Show
+Show inactive
+Shown
+Sign In
+Sign In —
+Sign in to Admin Console
+Sign in to Management Console
+Sign-off for
+Simple Reports
+Since
+Single Main Warehouse (Ahmedpur)
+Single day
+Size
+Soft-delete records. Deleted archives still appear everywhere previously; restore anytime.
+Sold
+Sold Today
+Source
+Source Status
+Spare Part
+Spare Parts
+Spare Parts Total
+Spare Parts Used
+Spare parts total
+Staff sign-in →
+Statement
+Statement —
+Station
+Station / Vendor / Note
+Status
+Status reflects actual posted transactions, not typed-in figures.
+Status:
+Still at Jampur
+Stock Adjustments
+Stock Currently With Salesman
+Stock Ledger
+Stock Qty
+Stock Transfer
+Stock Transfer (location change — no sale, no journal)
+Stock Transfers
+Stock Valuation
+Stock Value
+Stock View
+Stock With Salesman
+Stock With Salesmen
+Stock adjustments
+Stock balance rows
+Stock count recorded — an adjustment (
+Stock currently with salesman (units · value)
+Stock deducted on approval
+Stock movements
+Stock purchased — 
+Stock right now
+Stock with salesmen is company inventory (not COGS) until sold. Collection counts receipts from the salesman's assigned customers only.
+Storekeeper Signature
+Submit Claim (goes for Admin approval)
+Submit Payment (for Admin approval)
+Submit for Approval
+Subtotal
+Subtotal:
+Summary
+Supplier
+Supplier *
+Supplier / Company Name *
+Supplier / Shop Name
+Supplier Aging
+Supplier Claim Goods
+Supplier Claim Goods (company ledger)
+Supplier Code *
+Supplier Payable
+Supplier Statement —
+Supplier created.
+Supplier invoice:
+Supplier not found.
+Supplier payments debit Accounts Payable. Owner drawings debit the Drawings equity account (never an expense) — your profit report stays clean.
+Supplier required.
+Supplier updated.
+Supplier's own bill number
+Supplier, warehouse and at least one item are required.
+Supplier-wise Claim History
+Supplier/owner payment posted — journal 
+Supplier:
+Supplier: 
+Suppliers
+Suppliers with Opening Balance (
+Supporting Details
+System Qty
+System account not configured: 
+System accounts (used by auto-posting) are protected from deletion. P&L and Balance Sheet derive from these codes.
+TON and MAN are converted to KG automatically.
+TOTAL
+TOTAL COST
+TOTAL MAINTENANCE COST
+TOTAL NET PAID
+TOTAL STOCK VALUE
+TOTAL:
+TOTALS
+Table not available for archival.
+Tap a salesman to open the quick issue form.
+Tap a salesman to open their goods-return form — accepted returns restock the warehouse, rejected ones stay on the salesman ledger.
+Tax
+Tax %
+Tax Collected
+Team performance · Reports · Journals
+Technician / Repair Shop
+Technician / Repair shop:
+Terms & Conditions
+Terms:
+The category's linked account receives the debit when an expense is posted. Owner drawings categories link to the Drawings equity account.
+The claim must be approved and posted before payment can be recorded.
+The default logo recreated from the company artwork is used until you upload the official file. It appears on the sidebar, login page, invoices and statements.
+The owner role always has full access and cannot be edited.
+The page you requested does not exist.
+Their Invoice #
+Their Invoice / Bill No
+Their Ref
+Their bill no (optional)
+Then enable Hostinger weekly backups too. Keep at least one copy off-site (Google Drive / PC).
+Thermal 80mm
+This Month
+This Month (posted)
+This Month Sales
+This Month’s Production
+This account already has a management profile.
+This account is not allowed to sign in. This ERP is for the Owner/Admin, Manager and Accountant only.
+This advance will be adjusted against upcoming salary / commission. The salesman authorises this deduction with their signature below.
+This advance will be adjusted against upcoming salary. The employee authorises this deduction with their signature below.
+This cannot be undone from the UI (you would need to reverse the CL entries manually).
+This cannot be undone.
+This claim is fully settled. ✓
+This company is configured with a single Main Warehouse. Add another warehouse only for exceptional management reasons — it is not needed for normal operations.
+This company is configured with a single Main Warehouse. Add another warehouse only for exceptional management reasons. Continue?
+This document will be posted to the system. This action cannot be undone.
+This form was already submitted. Loading the existing invoice.
+This installation uses one Main Warehouse only. All stock (production, purchases, opening stock, counts and reports) and goods issues to salesmen flow through it. Salesman vans remain separate salesman stock locations. Additional warehouses are not part of the normal workflow — use Settings → Warehouses (Owner/Admin) only for exceptional system management.
+This month:
+This payslip is already fully paid.
+This period already contains payslips — generating again will skip employees who already have one. Reverse a payslip to re-generate it.
+This request is awaiting Owner/Admin approval. You will be notified the moment a decision is made.
+This request is pending approval. Only Owner/Admin can approve or reject it — Managers cannot decide approvals. You will be notified when a decision is made.
+This system keeps a running record of role changes in Salary History (Set Salary with effective date).
+This usage entry was cancelled — it cannot be re-used. Delete it first or create a new correction.
+This user must change password at next login.
+This user must change their password at next login.
+This view is Owner/Admin only. It shows every notification stored in the system; visibility for each user is otherwise role-scoped and never crosses users.
+Tick one option per person, then save once.
+Time
+To
+To Account *
+To Warehouse *
+Tobacco / Raw Material *
+Tobacco leaves your Ahmedpur main warehouse and is tracked at Jampur until it is ground and returned.
+Today
+Today Expenses
+Today in plain words
+Today's Sales
+Today’s Production
+Toggle
+Toggle menu
+Top Seller (Month)
+Total
+Total (Rs)
+Total (filtered)
+Total (posted)
+Total Advances Given
+Total Amount
+Total Amount (Rs) *
+Total Approved Expenses
+Total Assets
+Total Bonus Units
+Total Claims
+Total Collected
+Total Collected From Customers
+Total Cost
+Total Customer Collections
+Total Debit:
+Total Deductions
+Total Earned
+Total Equity
+Total Expenses
+Total Finished Qty
+Total Gifts
+Total Good Qty:
+Total Goods Issued
+Total Goods Payable
+Total Income
+Total Invested
+Total Liabilities
+Total Loans (active)
+Total Maintenance Cost
+Total Maintenance Cost (Range)
+Total Money Handed Over
+Total Outstanding
+Total Payable
+Total Payment Amount (Rs) *
+Total Pending Payment Amount
+Total People
+Total Produced
+Total Production
+Total Production Cost
+Total Products
+Total Qty
+Total Raw Material Qty
+Total Received
+Total Repaid
+Total Repair Cost
+Total Repair Cost (All Time)
+Total Returned
+Total Running Cost
+Total Salary
+Total Used (range)
+Total Vouchers
+Total Withdrawn
+Total approved expenses
+Total auto-calculates from quantity × rate when quantity and rate are filled — otherwise enter amount manually. Paid only after Owner/Admin approves in the Admin Console (/admin/approvals) — every expense posts exactly once.
+Total bonus value issued (never charged)
+Total collected
+Total cost = materials (auto) + labor + overhead. Finished goods are received at (total ÷ produced qty) so inventory valuation is exact.
+Total credit issued (payable)
+Total customer collections
+Total goods issued (paid value, posted)
+Total goods payable (ledger)
+Total handed over
+Total money handed over
+Total outstanding
+Total outstanding (open invoices)
+Total outstanding across approved advances:
+Total quantity
+Total recovered
+Total repaid
+Total repaid so far:
+Total sent
+Total today:
+Totals
+Totals (P / H / A)
+Transaction History
+Transaction History (period)
+Transfer
+Transfer cost follows the configured costing method (
+Transfer not found
+Transfer request submitted — Owner/Admin must approve it before any ledger/bank entry posts.
+Trial Balance
+Type
+Type *
+Type CLOSE
+Type CLOSE to confirm.
+Type a custom value in “Other” by typing it here:
+Type area, village, market…
+Type to search salesman…
+Type:
+Unbalanced journal: debits %.2f ≠ credits %.2f
+Uncategorised
+Uncleared / pending items (timing differences)
+Unit
+Unit & packaging conversion settings saved.
+Unit *
+Unit Cost
+Unit Cost (Rs)
+Units
+Units & Packaging
+Units & Packaging Conversions
+Units this month
+Unknown approval reference type: 
+Unlinked management accounts
+Unpaid
+Unpaid Payroll
+Unsupported payment party_type: 
+Upload
+Upload document
+Upload new logo (PNG/JPG/SVG/WebP, max 2 MB)
+Usage cancelled — stock returned.
+Usage entry not found.
+Use Raw Material
+Use this for money the salesman received from any customer. Amount still held by him shows in the Hisab tab until he hands it over.
+Used
+Used (KG)
+Used Today
+Used Today (KG) *
+Used in Prod
+Used in Production
+Used today (KG) *
+User
+User 
+User deleted permanently.
+User is linked — delete is blocked. Deactivate instead.
+User not found.
+User updated.
+Username
+Username *
+Username can only contain letters, digits, dot, dash and underscore.
+Username, full name and a valid role are required.
+Users & Roles
+VOUCHER
+Value
+Value (Rs)
+Value of Raw Materials (Range)
+Valued at
+Variance
+Variance (+ short / - excess)
+Variance = counted − expected. Negative variance =
+Variance vs Posted Handover
+Vehicle
+Vehicle (optional)
+Vehicle / Petrol
+Vehicle / Petrol·Diesel
+Vehicle / Transport Details
+Vehicle Expense History —
+Vehicle Expenses
+Vehicle Name
+Vehicle Note
+Vehicle Photo
+Vehicle Reg #
+Vehicle Type
+Vehicle added.
+Vehicle expense recorded.
+Vehicle not found.
+Vehicle —
+Vehicle-wise expenses feed the vehicle-wise and date-wise reports.
+Vehicles
+Vendor
+Vendor / Workshop
+Verification
+Via
+View
+View Goods Issue →
+View advance history →
+View all notifications
+View attachment
+View current attachment
+View document
+View finished goods & issue stock
+View →
+View/Print
+Voucher
+Voucher No:
+Vouchers
+Waiting Owner/Admin
+Waiting documents
+Walk-in / counter sale
+Warehouse
+Warehouse *
+Warehouse added.
+Warehouse and reason are required.
+Warehouse code already exists.
+Warehouse deleted permanently.
+Warehouse is linked — delete is blocked
+Warehouse not found.
+Warehouse required.
+Warehouse updated.
+Warehouse:
+Warehouses
+Waste / Reject Qty
+Website
+Weekly
+Weekly and Monthly staff are generated independently — pick the frequency to generate for that staff only. Weekly pays rate × present days / 6 working days (Half Day 0.5). Monthly pays full rate. Advances and due loan installments deduct automatically. Nothing posts until Owner/Admin approves each payment.
+Weekly employees only
+What do you want to do?
+What happened? e.g. Main bearing worn out, belt broken…
+When
+When OFF, workers with production.release post consumption directly. When ON, every consumption request waits in Admin Console (type RM_CONSUMPTION) before stock is deducted. Cancellation always stays with journal.reverse.
+When grinding is completed, record the output here. The sent quantity is never overwritten — it stays in the record.
+Who gets the stock?
+Who is returning goods?
+Why is this gift being given?
+Why this loan was given / taken
+Work
+Work Date
+Work History
+Work date:
+Year
+Year-end procedure.
+Yearly
+You
+You can only cancel advances you requested.
+You can only edit expenses that are still pending approval. Posted or rejected expenses stay locked for accounting safety.
+You can only file claims for your customers.
+You can view attendance but cannot mark it (attendance.mark permission required).
+You can view this loan but cannot record repayments.
+You cannot approve your own request.
+You cannot deactivate yourself.
+You cannot delete your own account.
+You don't have permission to do that (
+Your 
+Your session expired due to inactivity. Please sign in again.
+accepted
+accepted goods enter stock at claim terms — damaged/rejected are recorded and never stocked
+accrued − paid
+active
+active employee(s) have no payslip for
+active products
+adjusted against salary
+all payments to date
+all requests
+all types
+all-time
+all-time payments
+all-time, all customers
+all-time, cash + bank
+all-time, orders + daily
+already posted.
+and
+approved
+approved good goods returns
+approved payments only
+approved salary payments only
+authorized
+auto
+auto-calculated
+available
+awaiting approval
+bank
+below
+blank = deduct full remaining
+bonus
+bonus issues in history
+by
+can return
+cash
+cash + bank
+cash account(s)
+claim records
+claim(s)
+claimed
+company owes salesman
+company warehouses
+config/config.php
+cost of each material when you post completion.
+cost value
+cost.
+counted
+counts as 0.5
+ctc_erp_YYYYMMDD_HHMMSS.sql
+customer bonus invoices
+customers
+damaged
+dashboard
+database/schema.mysql.sql
+date-wise — newest first
+directly deposited / transferred
+disbursed
+document(s) waiting
+e.g. 10 sticks / 50 cartons
+e.g. 2
+e.g. 2 cartons crushed in transit; short-dated sticks in carton #4521
+e.g. 2000
+e.g. 250
+e.g. 5
+e.g. 5000
+e.g. Ahmed Plaza (rent), scrap dealer
+e.g. Ahmed Traders / Counter sale
+e.g. B-20261116
+e.g. BATCH-2026-001
+e.g. CHQ-000123 / TRX-987654321
+e.g. Cartoning Machine #2
+e.g. Cash received
+e.g. Cigarettes, Mouth Freshener…
+e.g. Customer 10+1 Free
+e.g. Driver · Technician · Helper…
+e.g. Eid bonus / annual increment / performance
+e.g. Eid gift, marriage, personal favor
+e.g. Eid, marriage, personal favor
+e.g. Factory Pickup #3
+e.g. Gawalmandi
+e.g. Grinding / Packing / Electrical
+e.g. Grinding Machine #2
+e.g. Grinding unit, 500 kg capacity
+e.g. Guest dinner for 4 — Nadeem & family
+e.g. HBL Main Account / Factory Petty Cash
+e.g. Insurance Expense
+e.g. JUSTI 10s production run
+e.g. JUSTI Number One 10s
+e.g. Kamal Plastic, City Market
+e.g. Khan Engineering Works
+e.g. LEA-1234
+e.g. LEB-1234
+e.g. MAC-014
+e.g. Machine Operator
+e.g. Main bearing
+e.g. Main factory, Line 2
+e.g. Month-end accrual — March salaries
+e.g. Mr. Khan / Guest / Driver
+e.g. Nov rent for shop #2
+e.g. November salary
+e.g. PSO Gawalmandi
+e.g. Packing
+e.g. Pickup / Truck / Shehzore / Motorcycle
+e.g. Plastic Bags
+e.g. Produced batch RM-070… optional
+e.g. Production
+e.g. Purchased 5,000 plastic bags — Packaging supplier
+e.g. Restaurant, LESCO, driver, landlord
+e.g. Rickshaw / Motorbike / Van
+e.g. Standard 10s blend v1
+e.g. Sunday settlement
+e.g. Vehicle Insurance
+e.g. annual increment
+e.g. cash deposit to HBL main
+e.g. company rickshaw
+e.g. damaged cartons, count variance, wastage…
+e.g. damaged cigarettes, short-dated stock
+e.g. damaged in transit; short-shipped cartons
+e.g. day shift
+e.g. day shift, night shift, rework
+e.g. diesel for Rickshaw LEA-1234
+e.g. evening return, verified by manager
+e.g. festive offer for retail shops
+e.g. flagship 10s pack, preferred distributor…
+e.g. loss / late deduction / advance recovery
+e.g. medical emergency
+e.g. medical emergency, house deposit
+e.g. monthly target achieved, special scheme, Diwali gift
+e.g. morning shift, machine 2
+e.g. personal emergency
+e.g. personal savings deposited / car for family
+e.g. pieces / bags / rolls / units
+e.g. short by Rs 200 — commiss on held / reason noted
+e.g. target achievement, festival incentive
+e.g. tyre change, engine oil, brake pads
+e.g. weekend route return · damaged found
+e.g. weekly collection from van
+e.g. weekly van collection
+each row has a
+employees
+enter the
+entries
+every report in the system
+everyone registered (salesmen, labour, employees)
+excess
+factory
+factory, guest, tea, meals, fuel, office, owner drawings…
+failed logins (24h)
+filtered total
+finished today
+flow through automatically (still audited).
+for the total value. Use for your starting inventory only — it posts a single journal for the whole batch.
+free goods given
+free stock
+free units given
+free value
+frequency
+from all Van collections
+from customers
+from issue minus returns minus payments
+fuel
+full or partial
+full or partial payments
+given
+goes to Owner/Admin for approval before any payment posts
+goods go back to saleable stock and reduce salesman payable.
+half day units
+he owes you
+hrs)
+in factory
+in selected range
+in stock
+in the source) in
+includes paid from collection + company-paid
+index.php
+installments
+invoice(s)
+invoice(s) past due
+invoices
+invoices, tax
+issue rate × units issued on credit
+issued value
+issues this period
+issues/expenses awaiting approval
+kept separate, no credit
+kind = finished only — ready-to-sell products, separate from raw materials
+leave blank to skip
+legacy
+line-payable on paid quantity
+link (Ctrl+P → Save as PDF).
+live — from actual posted transactions
+logout
+maint
+makes such sales require Owner/Admin approval.
+month
+monthly
+months accrued
+months since joining
+months since joining × monthly rate
+more rows in the selected period (see the Overview tab for the full list).
+needs approval
+net pay
+never charged
+no pending approvals
+no sales this month yet
+not
+not yet recovered
+note (required to reject)
+nothing outstanding — accounts reconciled
+now on hand
+of
+of bonus units at issue time (salesman stock and customer invoices).
+open credit invoices
+opening-balance journal entr
+optional
+optional, e.g. 4 kg, 3 plates
+outstanding
+outstanding as of now (all-time)
+overpaid / in advance
+owner/admin decides in the Admin Console
+paid
+paid / remitted against goods
+paid goods only
+paid this month
+paid today
+pay slips, full or partial
+payments, salary, loans, transfers…
+payslip(s) in draft/approval
+payslip(s) ·
+payslips pending or partial
+pcs
+pending
+people
+php /home/USER/public_html/bin/backup.php
+posted
+posted only
+posted to PROMO
+price sold below company issue rate
+processed
+products
+quantity for each product — variances are queued as a pending adjustment
+rate
+raw & packaging material only. Stock converts to KG automatically on save.
+raw + finished, company-wide
+raw materials leave stock into production
+ready to sell
+reason
+receipts)
+recorded
+recorded separately, NOT returned to stock, NO payable reversal.
+registered; click card to open
+remaining
+repair jobs
+requested
+requests waiting
+requires Owner/Admin approval — disburses after approval
+restocked, credit issued
+returned
+salary advances given
+saleable van stock
+sales
+salesman
+salesman bonus issues
+salesman ledger debit − credit
+salesman owes
+salesman owes company
+salesman owes for goods taken
+salesman still owes
+salesmen
+saves a settlement receipt (DS-…) and prints it. All values pull from posted transactions; nothing is re-typed.
+send(s) awaiting grinding
+settings
+shortage
+shown
+shown in list
+sold above issue rate
+still to pay him
+still to recover
+stock
+stock in + journal posted on save
+stock is added in KG
+stock out + journal posted on save
+storage/backups/
+suggested order
+sum of all pending approval requests
+supplier payable (claim terms)
+suppliers
+the issue rate are marked red. Setting a product's
+the same way.
+these users have the Accountant or Manager role but no linked profile yet (no salary/attendance). Open the edit form to link them.
+they owe you
+this month
+this month (posted payslips)
+to
+to the new database or re-run the installer into it.
+today
+total
+total awaiting approval
+total deductions
+units
+units accepted
+units damaged (written off)
+units issued today
+units · posted issues only
+value
+value of good returns
+value of goods on the vans
+valued at the claim rate.
+vans
+vehicle, repair, hotel, other
+via
+via phpMyAdmin (Import).
+web-downloadable; copy them via Hostinger File Manager or FTP/SFTP.
+weekly
+what he owes you
+you owe him
+you owe them
+· By
+· Damaged:
+· Date
+· Difference:
+· Generated
+· Includes all posted purchase invoices, supplier payments and opening balance. Print or “Save as PDF” from the print dialog.
+· Outstanding:
+· Rejected:
+· Software: JUSTI NUMBER ONE ERP
+· This month
+· Total Credit:
+· Total Debits
+اردو
+—
+— Rs
+— auto (first BOM of product) —
+— both are recorded in the settlement history.
+— cash only / not deposited —
+— choose posted invoice —
+— direct GRN —
+— direct —
+— none / counter sale —
+— none —
+— not linked —
+— not registered / walk-in —
+— not used —
+— pick a product —
+— pick material —
+— pick product —
+— quantities pre-filled from the PO.
+— select account —
+— select city —
+— select material —
+— select product —
+— select province first —
+— select province —
+— select record —
+— select —
+— stock will not move and no journal posts until approval. Below the threshold, restricted
+— walk-in / counter order —
+… and
+− Cheques issued, cleared
+✔ Approvals Inbox
+🔔 All Notifications (Admin)
+🖨 Print
+🖨 Print / Save as PDF
+🗄 Archives

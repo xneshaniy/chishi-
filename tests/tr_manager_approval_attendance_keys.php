@@ -1,0 +1,36 @@
+<?php
+/** Urdu + Roman Urdu translations for the Manager Payment Approval read view and Attendance history. */
+return [
+    'ur' => [
+        'Awaiting Owner/Admin approval' => 'مالک/ایڈمن کی منظوری کے منتظر',
+        'Awaiting Owner/Admin decision' => 'مالک/ایڈمن کے فیصلے کے منتظر',
+        'Attendance History' => 'حاضری کی تاریخ',
+        'Recorded by' => 'درج کیا',
+        'Recorded / last updated by' => 'درج کیا / آخری ترمیم کس نے کی',
+        'Manager view — you can track every request, status, approval history and rejection reasons here. Only Owner/Admin can approve or reject payments; your own submitted requests appear alongside all others.' => 'مینیجر منظر — یہاں ہر درخواست، حیثیت، منظوری کی تاریخ اور مسترد ہونے کی وجوہات دیکھ سکتے ہیں۔ ادائیگیاں منظور/مسترد صرف مالک یا ایڈمن کرتے ہیں؛ آپ کی اپنی پیش کردہ درخواستیں بھی اسی فہرست میں آئیں گی۔',
+        'This request is pending approval. Only Owner/Admin can approve or reject it — Managers cannot decide approvals. You will be notified when a decision is made.' => 'یہ درخواست منظوری کی متنظر ہے۔ منظور/مسترد صرف مالک یا ایڈمن کر سکتے ہیں — مینیجر فیصلے نہیں کر سکتے۔ فیصلہ ہونے پر آپ کو اطلاع دی جائے گی۔',
+        'Every attendance entry recorded or updated is listed here — who did it, what changed, and when.' => 'حاضری کا ہر درج شدہ یا ترمیم شدہ ریکارڈ یہاں درج ہے — کس نے کیا، کیا بدلا، اور کب۔',
+        'Search by name / ID…' => 'نام / کوڈ سے تلاش کریں…',
+        'No attendance changes in this range.' => 'اس مدت میں حاضری میں کوئی تبدیلی نہیں۔',
+        'Change' => 'تبدیلی',
+        'Changed By' => 'تبدیل کیا',
+        'History' => 'تاریخچہ',
+        'Person' => 'فرد',
+    ],
+    'roman' => [
+        'Awaiting Owner/Admin approval' => 'Owner/Admin ki manzoori is intezaar mein',
+        'Awaiting Owner/Admin decision' => 'Owner/Admin ke faisale ka intezar',
+        'Attendance History' => 'Haziri ki tareekh',
+        'Recorded by' => 'Darj karne wala',
+        'Recorded / last updated by' => 'Darj kiya / aakhri tarmeem kis ne ki',
+        'Manager view — you can track every request, status, approval history and rejection reasons here. Only Owner/Admin can approve or reject payments; your own submitted requests appear alongside all others.' => 'Manager view — yahan har request, status, approval history aur reject ki wajah dekh sakte hain. Payment approve/reject sirf Owner/Admin kar sakte hain; aap ki apni requests bhi isi list mein aati hain.',
+        'This request is pending approval. Only Owner/Admin can approve or reject it — Managers cannot decide approvals. You will be notified when a decision is made.' => 'Yeh request abhi manzoor hone ki raah dekh rahi hai. Approve/reject sirf Owner/Admin kar sakte hain — Manager approve nahi kar sakte. Faisla hone par aap ko notify kiya jaye ga.',
+        'Every attendance entry recorded or updated is listed here — who did it, what changed, and when.' => 'Haziri ka har darj/tarmeem kiya hua record yahan hai — kis ne kiya, kya badla, aur kab.',
+        'Search by name / ID…' => 'Naam / code se search karein…',
+        'No attendance changes in this range.' => 'Is muddat mein koi haziri tabdeeli nahi.',
+        'Change' => 'Tabdeeli',
+        'Changed By' => 'Tabdeeli kis ne ki',
+        'History' => 'History (tareekh)',
+        'Person' => 'Person (aadmi)',
+    ],
+];

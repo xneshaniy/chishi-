@@ -1,0 +1,20 @@
+# JUSTI NUMBER ONE ERP — root .htaccess (Hostinger / Apache / LiteSpeed)
+Options -Indexes
+AddDefaultCharset utf-8
+DirectoryIndex index.php
+
+# Force HTTPS (Hostinger issues a free SSL certificate — hPanel → SSL)
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Separate login areas: /admin and /management map to the front controller
+RewriteRule ^admin/?$ index.php?r=admin [L]
+RewriteRule ^admin/(.*)$ index.php?r=admin/$1 [L]
+RewriteRule ^management/?$ index.php?r=management [L]
+RewriteRule ^management/(.*)$ index.php?r=management/$1 [L]
+
+# Block direct access to sensitive file types anywhere in the tree
+<FilesMatch "\.(sql|md|log|sqlite|sqlite3|bak|ini|json|lock)$">
+  Require all denied
+</FilesMatch>

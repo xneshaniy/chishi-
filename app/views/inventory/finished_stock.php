@@ -1,0 +1,12 @@
+<?php $title = 'Finished Product Stock'; ?>
+<div class="cards">
+  <div class="card accent"><div class="lbl"><?= __('Total Finished Qty (Packets)') ?></div><div class="val"><?= qty($totQty) ?></div></div>
+  <div class="card gold"><div class="lbl"><?= __('Finished Product Stock Value') ?></div><div class="val"><?= money($totValue) ?></div></div>
+  <div class="card blue"><div class="lbl"><?= __('Produced (All Time)') ?></div><div class="val"><?= qty($totProduced) ?></div></div>
+  <div class="card red"><div class="lbl"><?= __('Low Stock Items') ?></div><div class="val"><?= (int)$lowCount ?></div></div>
+</div>
+<div class="panel"><h2><?= __('Finished Product Stock') ?><span class="muted" style="font-size:12px"><?= __('kind = finished only — ready-to-sell products, separate from raw materials') ?></span></h2>
+<div class="table-wrap"><table class="tbl"><thead><tr><th><?= __('SKU') ?></th><th><?= __('Product') ?></th><th class="num"><?= __('Produced (Packets)') ?></th><th class="num"><?= __('On Hand (Packets)') ?></th><th class="num"><?= __('Bundle Equivalent') ?></th><th class="num"><?= __('Issued Today (Packets)') ?></th><th class="num"><?= __('Sold Today (Packets)') ?></th><th class="num"><?= __('Returns Today (Packets)') ?></th><th class="num"><?= __('Value') ?></th><th class="num"><?= __('Reorder (Packets)') ?></th><th><?= __('Status') ?></th></tr></thead>
+<tbody><?php foreach ($rows as $r): $lowRow = (float)$r['reorder_level'] > 0 && $r['qty'] <= (float)$r['reorder_level']; $bundles = UnitConverter::packetsToBundles((float)$r['qty']); ?>
+<tr style="<?= $lowRow ? 'background:#fdf3ef' : '' ?>"><td class="mono"><?= e($r['sku']) ?></td><td><?= e($r['name']) ?></td><td class="num"><?= qty($r['produced']) ?></td><td class="num"><strong><?= qty($r['qty']) ?></strong></td><td class="num"><?= number_format($bundles, 2) ?></td><td class="num"><?= qty($r['issued_today']) ?></td><td class="num"><?= qty($r['sold_today']) ?></td><td class="num"><?= qty($r['returned_today']) ?></td><td class="num"><?= money($r['value']) ?></td><td class="num"><?= qty($r['reorder_level']) ?><?php if ($lowRow): ?><div class="muted" style="font-size:11px"><?= __('suggested order') ?> ≈ <?= qty(max(0, (float)$r['reorder_level'] * 2 - (float)$r['qty'])) ?></div><?php endif; ?></td><td><?= $lowRow ? '<span class="badge red">LOW</span>' : '<span class="badge green">OK</span>' ?></td></tr>
+<?php endforeach; ?><?php if (!$rows): ?><tr><td colspan="11" class="muted"><?= __('No finished products on file.') ?></td></tr><?php endif; ?></tbody></table></div></div>

@@ -1,0 +1,1471 @@
+=== 490 ===
+EN: + Manual Journal
+UR: + دستی جرنل
+
+EN: , positive =
+UR: ، مثبت =
+
+EN: / C
+UR: / C
+
+EN: / reorder
+UR: / دوبارہ آرڈر
+
+EN: 403 — Access denied
+UR: 403 — رسائی ممنوع
+
+EN: Account
+UR: اکاؤنٹ
+
+EN: Account Code *
+UR: اکاؤنٹ کوڈ *
+
+EN: Account Title
+UR: اکاؤنٹ کا عنوان
+
+EN: Accountant
+UR: اکاؤنٹنٹ
+
+EN: Action
+UR: عمل
+
+EN: Activate
+UR: فعال کریں
+
+EN: Active
+UR: فعال
+
+EN: Active Users
+UR: فعال یوزرز
+
+EN: Admin Console
+UR: ایڈمن کنسول
+
+EN: Admin Console — Chishti Tobacco Company
+UR: ایڈمن کنسول — چشتی ٹوبیکو کمپنی
+
+EN: Adv. Ded.
+UR: پیشگی کٹوتی
+
+EN: Advance Ledger
+UR: پیشگی لیجر
+
+EN: Advance Voucher —
+UR: ایڈوانس واؤچر —
+
+EN: Advances
+UR: پیشگیاں
+
+EN: Allowances
+UR: الاؤنسز
+
+EN: Already Returned
+UR: پہلے ہی واپس ہو چکا
+
+EN: Alt Phone
+UR: متبادل فون
+
+EN: Approval
+UR: منظوری
+
+EN: Approval Rules
+UR: منظوری کے قواعد
+
+EN: Approvals Inbox
+UR: منظوری ان باکس
+
+EN: Area
+UR: علاقہ
+
+EN: Area / Route
+UR: علاقہ / روٹ
+
+EN: Area:
+UR: علاقہ:
+
+EN: Asset
+UR: اثاثہ
+
+EN: Asset / Machine *
+UR: اثاثہ / مشین *
+
+EN: Asset ID:
+UR: اثاثہ آئی ڈی:
+
+EN: Assets
+UR: اثاثے
+
+EN: Assigned Salesman
+UR: مقررہ سیلزمین
+
+EN: Attachment:
+UR: اٹیچمنٹ:
+
+EN: Attendance
+UR: حاضری
+
+EN: Attendance —
+UR: حاضری —
+
+EN: Audit Log
+UR: آڈٹ لاگ
+
+EN: Auth::requireArea()
+UR: Auth::requireArea()
+
+EN: Authorized Signatory
+UR: مجاز دستخط کنندہ
+
+EN: Automated backups (recommended)
+UR: خودکار بیک اپ (تجویز کردہ)
+
+EN: Avg Cost
+UR: اوسط لاگت
+
+EN: Balance
+UR: بیلنس
+
+EN: Balance (Dr−Cr)
+UR: بیلنس (Dr−Cr)
+
+EN: Balance Sheet
+UR: بیلنس شیٹ
+
+EN: Balance brought forward
+UR: لایا گیا بیلنس
+
+EN: Bank
+UR: بینک
+
+EN: Bank Account
+UR: بینک اکاؤنٹ
+
+EN: Bank Account *
+UR: بینک اکاؤنٹ *
+
+EN: Bank Account:
+UR: بینک اکاؤنٹ:
+
+EN: Bank Reconciliation
+UR: بینک ریکنسیلئیشن
+
+EN: Basic
+UR: بنیادی
+
+EN: Below-Issue-Rate Loss
+UR: ایشو ریٹ سے کم نقصان
+
+EN: Bill Ref
+UR: بل حوالہ
+
+EN: Bonus
+UR: بونس
+
+EN: Bonus & Free Stock Report
+UR: بونس اور مفت اسٹاک رپورٹ
+
+EN: Bonus Approval Threshold (Rs)
+UR: بونس منظوری حد (روپے)
+
+EN: Bonus Cost
+UR: بونس لاگت
+
+EN: Bonus Qty
+UR: بونس مقدار
+
+EN: Bonus Return
+UR: بونس واپسی
+
+EN: Bonus Scheme:
+UR: بونس اسکیم:
+
+EN: Bonus Schemes & Rules
+UR: بونس سکیمیں اور قواعد
+
+EN: Book Balance
+UR: کتاب بیلنس
+
+EN: Branch
+UR: برانچ
+
+EN: Branches (
+UR: برانچیں (
+
+EN: Branches / Factories
+UR: برانچیں / فیکٹریاں
+
+EN: Bundles
+UR: بنڈل
+
+EN: CLOSED
+UR: بند
+
+EN: CNIC
+UR: CNIC
+
+EN: COGS
+UR: COGS
+
+EN: CSV
+UR: CSV
+
+EN: Cash
+UR: کیش
+
+EN: Cash / Bank Account
+UR: کیش / بینک اکاؤنٹ
+
+EN: Cash / Bank Account *
+UR: کیش / بینک اکاؤنٹ *
+
+EN: Cash Counted (Rs)
+UR: گنتی شدہ کیش (روپے)
+
+EN: Cash Flow
+UR: کیش فلو
+
+EN: Cash Flow Statement —
+UR: کیش فلو اسٹیٹمنٹ —
+
+EN: Cash ↔ Bank / Bank ↔ Bank Transfer
+UR: کیش ↔ بینک / بینک ↔ بینک ٹرانسفر
+
+EN: Cash ↔ Bank Transfers
+UR: کیش ↔ بینک ٹرانسفر
+
+EN: Categories
+UR: کیٹیگریز
+
+EN: Category
+UR: کیٹیگری
+
+EN: Category *
+UR: کیٹیگری *
+
+EN: Category:
+UR: زمرہ:
+
+EN: Central / Main
+UR: مرکزی / مین
+
+EN: Cheque Register
+UR: چیک رجسٹر
+
+EN: Chishti Tobacco Co.
+UR: Chishti Tobacco Co.
+
+EN: Chishti Tobacco Company
+UR: چشتی ٹوبیکو کمپنی
+
+EN: Chishti Tobacco Company · Managers & Accountants
+UR: چشتی ٹوبیکو کمپنی · مینیجرز اور اکاؤنٹنٹس
+
+EN: Chishti Tobacco Company · Owner & Admin only
+UR: چشتی ٹوبیکو کمپنی · صرف مالک اور ایڈمن
+
+EN: Claim Rate
+UR: کلیم ریٹ
+
+EN: Claim Rate (Rs)
+UR: کلیم ریٹ (روپے)
+
+EN: Claims
+UR: دعوے
+
+EN: Closed
+UR: بند
+
+EN: Closing
+UR: اختتامی
+
+EN: Closing Balance
+UR: اختتامی بیلنس
+
+EN: Code
+UR: کوڈ
+
+EN: Code *
+UR: کوڈ *
+
+EN: Code:
+UR: کوڈ:
+
+EN: Comm. %
+UR: کمیشن %
+
+EN: Commission
+UR: کمیشن
+
+EN: Commission %
+UR: کمیشن %
+
+EN: Commission & Bonuses
+UR: کمیشن اور بونس
+
+EN: Commission Preview —
+UR: کمیشن کا جائزہ —
+
+EN: Commissions & Bonuses
+UR: کمیشن اور بونس
+
+EN: Company Logo
+UR: کمپنی کا لوگو
+
+EN: Company Profile
+UR: کمپنی پروفائل
+
+EN: Company Profile & Logo
+UR: کمپنی پروفائل اور لوگو
+
+EN: Compute
+UR: حساب کریں
+
+EN: Computer-generated payslip —
+UR: کمپیوٹر سے بنی سلپ —
+
+EN: Configured Schemes (
+UR: مقررہ اسکیمیں (
+
+EN: Consume Qty
+UR: استعمال مقدار
+
+EN: Cost
+UR: لاگت
+
+EN: Cost (Rs) *
+UR: لاگت (روپے) *
+
+EN: Counted
+UR: گنتی شدہ
+
+EN: Counted Qty
+UR: گنتی شدہ مقدار
+
+EN: Created
+UR: تخلیق شدہ
+
+EN: Credit Limit
+UR: کریڈٹ حد
+
+EN: Credit Limit (Rs)
+UR: کریڈٹ حد (روپے)
+
+EN: Credit Limit:
+UR: کریڈٹ حد:
+
+EN: Current
+UR: موجودہ
+
+EN: Customer
+UR: گاہک
+
+EN: Customer *
+UR: گاہک *
+
+EN: Customer Aging
+UR: گاہک کی عمر
+
+EN: Customer Claims
+UR: گاہک دعوے
+
+EN: Customer Code *
+UR: گاہک کوڈ *
+
+EN: Customer Receivable
+UR: گاہک واجب الوصول
+
+EN: Customer Statement —
+UR: گاہک اسٹیٹمنٹ —
+
+EN: Customers
+UR: گاہک
+
+EN: D
+UR: D
+
+EN: DOCUMENT
+UR: دستاویز
+
+EN: Damaged
+UR: خراب
+
+EN: Damaged Qty
+UR: خراب مقدار
+
+EN: Debit
+UR: ڈیبٹ
+
+EN: Debit (receivable)
+UR: ڈیبٹ (واجب الوصول)
+
+EN: Deducted
+UR: کاٹ لیا گیا
+
+EN: Deduction References
+UR: کٹوتی کے حوالے
+
+EN: Deductions
+UR: کٹوتیاں
+
+EN: Department
+UR: شعبہ
+
+EN: Department:
+UR: شعبہ:
+
+EN: Deposit Into *
+UR: جمع کریں *
+
+EN: Deposited Into
+UR: جمع کیا گیا
+
+EN: Designation
+UR: عہدہ
+
+EN: Designation:
+UR: عہدہ:
+
+EN: Desktop Notifications
+UR: ڈیسک ٹاپ اطلاعات
+
+EN: Details
+UR: تفصیلات
+
+EN: Diesel / Fuel
+UR: ڈیزل / ایندھن
+
+EN: Diff/Unit
+UR: فرق/یونٹ
+
+EN: Difference
+UR: فرق
+
+EN: Direction
+UR: سمت
+
+EN: Disc.
+UR: رعایت
+
+EN: Discount
+UR: رعایت
+
+EN: Doc
+UR: دستاویز
+
+EN: Dr Inventory / Cr Owner Capital
+UR: Dr Inventory / Cr Owner Capital
+
+EN: Draft
+UR: ڈرافٹ
+
+EN: Driver
+UR: ڈرائیور
+
+EN: Due
+UR: واجب
+
+EN: Due:
+UR: واجب:
+
+EN: Dyna / Mazda / Shehzore
+UR: Dyna / Mazda / Shehzore
+
+EN: EN
+UR: EN
+
+EN: EQUITY
+UR: ایکویٹی
+
+EN: ERP
+UR: ERP
+
+EN: Eligible Claim
+UR: اہل کلیم
+
+EN: Eligible Claim: Rs
+UR: اہل کلیم: روپے
+
+EN: Email
+UR: ای میل
+
+EN: Entity
+UR: اینٹیٹی
+
+EN: Entry
+UR: اندراج
+
+EN: Existing Backups (
+UR: موجودہ بیک اپ (
+
+EN: Expected Delivery
+UR: متوقع ڈیلیوری
+
+EN: Export CSV
+UR: CSV ایکسپورٹ کریں
+
+EN: Factory
+UR: فیکٹری
+
+EN: Factory Consumption
+UR: فیکٹری کھپت
+
+EN: Factory Maintenance & Repair Record
+UR: فیکٹری مینٹیننس اور مرمت ریکارڈ
+
+EN: Factory Maintenance & Repairs
+UR: فیکٹری مینٹیننس اور مرمت
+
+EN: Factory Use
+UR: فیکٹری یوز
+
+EN: File
+UR: فائل
+
+EN: Filter
+UR: فلٹر
+
+EN: Fiscal Years
+UR: مالی سال
+
+EN: Fuel (L)
+UR: فیول (لیٹر)
+
+EN: Fuel Cost
+UR: فیول لاگت
+
+EN: GL Account
+UR: GL اکاؤنٹ
+
+EN: GL Movement
+UR: GL حرکت
+
+EN: GRN
+UR: GRN
+
+EN: General Ledger
+UR: جنرل لیجر
+
+EN: Generate Backup Now
+UR: ابھی بیک اپ بنائیں
+
+EN: Generate Database Backup
+UR: ڈیٹابیس بیک اپ بنائیں
+
+EN: Generate Draft Payroll
+UR: ڈرافٹ پے رول بنائیں
+
+EN: Generate Payroll
+UR: پے رول بنائیں
+
+EN: Generated
+UR: تخلیق شدہ
+
+EN: Generated:
+UR: تخلیق:
+
+EN: Good
+UR: اچھا
+
+EN: Good Qty
+UR: اچھی مقدار
+
+EN: Good Value
+UR: اچھے مال کی قیمت
+
+EN: Gross Margin
+UR: مجموعی مارجن
+
+EN: Group
+UR: گروپ
+
+EN: IBAN
+UR: IBAN
+
+EN: INCOME
+UR: آمدنی
+
+EN: IP
+UR: IP
+
+EN: Identity
+UR: شناخت
+
+EN: Import
+UR: امپورٹ
+
+EN: Inactive
+UR: غیر فعال
+
+EN: Income Statement —
+UR: انکم اسٹیٹمنٹ —
+
+EN: Installment Schedule
+UR: قسط شیڈول
+
+EN: Into
+UR: میں
+
+EN: Inventory → Opening Stock
+UR: Inventory → Opening Stock
+
+EN: Invoice
+UR: انوائس
+
+EN: Invoice #
+UR: انوائس نمبر
+
+EN: Invoice Discount (Rs)
+UR: انوائس ڈسکاؤنٹ (روپے)
+
+EN: Invoice Footer & Terms
+UR: انوائس فوٹر اور شرائط
+
+EN: Invoices
+UR: انوائسز
+
+EN: Invoices (posted)
+UR: انوائسز (پوسٹڈ)
+
+EN: Issue
+UR: ایشو
+
+EN: Issue Rate
+UR: ایشو ریٹ
+
+EN: Issue Stock
+UR: اسٹاک ایشو کریں
+
+EN: Issue Stock —
+UR: اسٹاک ایشو —
+
+EN: Issues
+UR: مسائل
+
+EN: Item
+UR: آئیٹم
+
+EN: Jobs
+UR: کام
+
+EN: Journal
+UR: جرنل
+
+EN: Journal Entries
+UR: جرنل اندراجات
+
+EN: KB
+UR: KB
+
+EN: KG
+UR: کلو
+
+EN: LIABILITIES
+UR: واجبات
+
+EN: LIABILITIES + EQUITY
+UR: واجبات + ایکویٹی
+
+EN: Labor+OH
+UR: لیبر+OH
+
+EN: Labour
+UR: مزدور
+
+EN: Labour charges
+UR: مزدوری کے اخراجات
+
+EN: Last Login
+UR: آخری لاگ اِن
+
+EN: Latest Audit Events
+UR: تازہ ترین آڈٹ واقعات
+
+EN: Ledger
+UR: لیجر
+
+EN: Ledger History
+UR: لیجر ہسٹری
+
+EN: Ledger —
+UR: لیجر —
+
+EN: Line Claim
+UR: لائن کلیم
+
+EN: Line Memo
+UR: لائن میمو
+
+EN: Lines
+UR: لائنیں
+
+EN: Linked GL Account *
+UR: وابستہ GL اکاؤنٹ *
+
+EN: Liters *
+UR: لیٹر *
+
+EN: Litres
+UR: لیٹر
+
+EN: Location
+UR: مقام
+
+EN: Location:
+UR: مقام:
+
+EN: MANAGEMENT CONSOLE
+UR: مینجمنٹ کنسول
+
+EN: Machine
+UR: مشین
+
+EN: Maintenance
+UR: مینٹیننس
+
+EN: Maintenance Assets
+UR: مینٹیننس اثاثے
+
+EN: Make
+UR: بنائیں
+
+EN: Make / Model
+UR: میک / ماڈل
+
+EN: Management Console
+UR: مینجمنٹ کنسول
+
+EN: Management Console — Chishti Tobacco Company
+UR: مینجمنٹ کنسول — چشتی ٹوبیکو کمپنی
+
+EN: Manager
+UR: مینیجر
+
+EN: Manual Journal Entry
+UR: دستی جرنل اندراج
+
+EN: Margin
+UR: مارجن
+
+EN: Material
+UR: مٹیریل
+
+EN: Materials
+UR: مٹیریلز
+
+EN: Materials & Packaging
+UR: مٹیریلز اور پیکجنگ
+
+EN: Memo
+UR: میمو
+
+EN: Memo / Narration
+UR: میمو / بیانیہ
+
+EN: Method:
+UR: طریقہ:
+
+EN: Mileage
+UR: مائلیج
+
+EN: Mileage (km)
+UR: مائلیج (کلومیٹر)
+
+EN: Model
+UR: ماڈل
+
+EN: NTN
+UR: NTN
+
+EN: NTN:
+UR: NTN:
+
+EN: Narration
+UR: بیانیہ
+
+EN: Net Cash
+UR: خالص کیش
+
+EN: Net Movement
+UR: خالص حرکت
+
+EN: Notes
+UR: نوٹس
+
+EN: Notes:
+UR: نوٹس:
+
+EN: Notification
+UR: اطلاع
+
+EN: Notification Sound
+UR: اطلاعات کی آواز
+
+EN: Notifications
+UR: اطلاعات
+
+EN: OB
+UR: OB
+
+EN: OK
+UR: ٹھیک
+
+EN: OPEN
+UR: کھلا
+
+EN: OT
+UR: OT
+
+EN: OUT (−)
+UR: OUT (−)
+
+EN: Off
+UR: آف
+
+EN: Opening
+UR: اوپننگ
+
+EN: Opening Balance (Rs)
+UR: اوپننگ بیلنس (روپے)
+
+EN: Opening Balances
+UR: اوپننگ بیلنسز
+
+EN: Opening Stock
+UR: اوپننگ اسٹاک
+
+EN: Order
+UR: آرڈر
+
+EN: Other
+UR: دیگر
+
+EN: Other Deductions
+UR: دیگر کٹوتیاں
+
+EN: Output Qty
+UR: پیداوار مقدار
+
+EN: Output Qty per batch *
+UR: پیداوار مقدار فی بیچ *
+
+EN: Overdue Credit Invoices
+UR: واجب التاخیر کریڈٹ انوائسز
+
+EN: Overhead
+UR: اوور ہیڈ
+
+EN: Overtime
+UR: اوور ٹائم
+
+EN: Overtime (
+UR: اوور ٹائم (
+
+EN: Owner / Admin
+UR: مالک / ایڈمن
+
+EN: Pack Size
+UR: پیک سائز
+
+EN: Packaging
+UR: پیکجنگ
+
+EN: Packets
+UR: پیکٹس
+
+EN: Packs
+UR: پیکس
+
+EN: Part
+UR: پارٹ
+
+EN: Parts
+UR: پارٹس
+
+EN: Party
+UR: پارٹی
+
+EN: Password
+UR: پاس ورڈ
+
+EN: Payee
+UR: وصول کنندہ
+
+EN: Payee / Vendor
+UR: وصول کنندہ / وینڈر
+
+EN: Payroll
+UR: پے رول
+
+EN: Payroll Run
+UR: پے رول چلائیں
+
+EN: Payslip
+UR: پے سلپ
+
+EN: Payslip —
+UR: سلپ —
+
+EN: Payslips
+UR: سلپیں
+
+EN: Pending Approvals
+UR: زیرِ التوا منظوری
+
+EN: Period
+UR: دورانیہ
+
+EN: Period:
+UR: دورانیہ:
+
+EN: Periods —
+UR: ادوار —
+
+EN: Permissions
+UR: اجازتیں
+
+EN: Phone
+UR: فون
+
+EN: Phone:
+UR: فون:
+
+EN: Physical Stock Count
+UR: جسمانی اسٹاک گنتی
+
+EN: Plan:
+UR: پلان:
+
+EN: Planned
+UR: منصوب شدہ
+
+EN: Planned Material Consumption
+UR: منصوب مٹیریل استعمال
+
+EN: Planned Output Qty *
+UR: منصوب پیداوار مقدار *
+
+EN: Point
+UR: نکتہ
+
+EN: Post Cash/Bank Openings
+UR: کیش/بینک اوپننگز پوسٹ کریں
+
+EN: Post Customer Openings
+UR: گاہک اوپننگز پوسٹ کریں
+
+EN: Post Entry
+UR: اندراج پوسٹ کریں
+
+EN: Post GRN / Invoice
+UR: GRN / انوائس پوسٹ کریں
+
+EN: Post Invoice
+UR: انوائس پوسٹ کریں
+
+EN: Post Opening Stock
+UR: اوپننگ اسٹاک پوسٹ کریں
+
+EN: Post Receipt
+UR: رسید پوسٹ کریں
+
+EN: Post Return
+UR: واپسی پوسٹ کریں
+
+EN: Post Supplier Openings
+UR: سپلائر اوپننگز پوسٹ کریں
+
+EN: Post Transfer
+UR: ٹرانسفر پوسٹ کریں
+
+EN: Posting
+UR: پوسٹنگ
+
+EN: Posts
+UR: پوسٹ کرتا ہے
+
+EN: Price
+UR: قیمت
+
+EN: Print payslips:
+UR: سلپیں پرنٹ کریں:
+
+EN: Problem
+UR: مسئلہ
+
+EN: Problem / Damage
+UR: مسئلہ / نقصان
+
+EN: Product
+UR: پروڈکٹ
+
+EN: Product *
+UR: پروڈکٹ *
+
+EN: Product Categories
+UR: پروڈکٹ زمرے
+
+EN: Products
+UR: پروڈکٹس
+
+EN: Qty Sold
+UR: فروخت شدہ مقدار
+
+EN: Qty per batch
+UR: مقدار فی بیچ
+
+EN: Quick Actions
+UR: فوری کارروائیاں
+
+EN: Quick Links
+UR: فوری لنکس
+
+EN: REJECTED
+UR: مسترد
+
+EN: RESTRICTED
+UR: پابندی شدہ
+
+EN: Rate
+UR: ریٹ
+
+EN: Rate (Rs)
+UR: ریٹ (روپے)
+
+EN: Receipt
+UR: رسید
+
+EN: Receipts
+UR: رسیدیں
+
+EN: Receipts (Customer)
+UR: رسیدیں (گاہک)
+
+EN: Receive Into *
+UR: موصول کریں *
+
+EN: Receiving against
+UR: موصول شدہ بمقابلہ
+
+EN: Recent Bonuses
+UR: حالیہ بونس
+
+EN: Recipe
+UR: ریسیپی
+
+EN: Recipe / BOM
+UR: ریسیپی / BOM
+
+EN: Reconciliation Summary
+UR: ریکنسیلئیشن خلاصہ
+
+EN: Record Bonus
+UR: بونس درج کریں
+
+EN: Record Cheque
+UR: چیک درج کریں
+
+EN: Record Manual Repayment
+UR: دستی ادائیگی درج کریں
+
+EN: Record Repayment
+UR: ادائیگی درج کریں
+
+EN: Recovered
+UR: وصول شدہ
+
+EN: Ref
+UR: حوالہ
+
+EN: Reference
+UR: حوالہ
+
+EN: Reference / Notes
+UR: حوالہ / نوٹس
+
+EN: Registration & Banking
+UR: رجسٹریشن اور بینکنگ
+
+EN: Rejected
+UR: رد شدہ
+
+EN: Rejected Qty
+UR: رد شدہ مقدار
+
+EN: Release
+UR: ریلیز
+
+EN: Reorder Level
+UR: ری آرڈر لیول
+
+EN: Reports
+UR: رپورٹس
+
+EN: Reports Hub
+UR: رپورٹس حب
+
+EN: Restore procedure
+UR: بحالی طریقہ کار
+
+EN: Return Against
+UR: واپسی بمقابلہ
+
+EN: Return Qty
+UR: واپسی مقدار
+
+EN: Return Stock —
+UR: اسٹاک واپس کریں —
+
+EN: Returns
+UR: واپسی
+
+EN: Reverse
+UR: ریورس
+
+EN: Reverse Entry
+UR: ریورس اندراج
+
+EN: Reverse Invoice
+UR: انوائس ریورس کریں
+
+EN: Reversed
+UR: ریورس شدہ
+
+EN: Role
+UR: رول
+
+EN: Roles
+UR: رولز
+
+EN: Rs
+UR: روپے
+
+EN: SKU
+UR: SKU
+
+EN: SKU *
+UR: SKU *
+
+EN: SKU / Product
+UR: SKU / پروڈکٹ
+
+EN: SYS
+UR: SYS
+
+EN: Salesman
+UR: سیلزمین
+
+EN: Salesman *
+UR: سیلزمین *
+
+EN: Salesman Issue Rate (Rs)
+UR: سیلزمین ایشو ریٹ (روپے)
+
+EN: Salesman Ledger
+UR: سیلز مین لیجر
+
+EN: Salesman Performance
+UR: سیلزمین کارکردگی
+
+EN: Salesmen
+UR: سیلز مین
+
+EN: Scheme / Product
+UR: اسکیم / پروڈکٹ
+
+EN: Settings → Opening Balances
+UR: Settings → Opening Balances
+
+EN: Settle —
+UR: سیٹل —
+
+EN: Settlement
+UR: تصفیہ
+
+EN: Settlement History
+UR: سیٹلمنٹ ہسٹری
+
+EN: Settlement —
+UR: تصفیہ —
+
+EN: Simple Reports
+UR: سادہ رپورٹس
+
+EN: Size
+UR: سائز
+
+EN: Source
+UR: ماخذ
+
+EN: Spare Part
+UR: اسپیر پارٹ
+
+EN: Statement
+UR: اسٹیٹمنٹ
+
+EN: Statement —
+UR: اسٹیٹمنٹ —
+
+EN: Station
+UR: اسٹیشن
+
+EN: Status
+UR: اسٹیٹس
+
+EN: Status:
+UR: اسٹیٹس:
+
+EN: Stock Adjustments
+UR: اسٹاک ایڈجسٹمنٹس
+
+EN: Stock Ledger
+UR: اسٹاک لیجر
+
+EN: Stock Qty
+UR: اسٹاک مقدار
+
+EN: Stock Transfer
+UR: اسٹاک ٹرانسفر
+
+EN: Stock Transfers
+UR: اسٹاک ٹرانسفرز
+
+EN: Stock Valuation
+UR: اسٹاک ویلیوایشن
+
+EN: Stock Value
+UR: اسٹاک قیمت
+
+EN: Subtotal
+UR: ذیلی کل
+
+EN: Subtotal:
+UR: ذیلی کل:
+
+EN: Supplier
+UR: سپلائر
+
+EN: Supplier *
+UR: سپلائر *
+
+EN: Supplier Aging
+UR: سپلائر کی عمر
+
+EN: Supplier Code *
+UR: سپلائر کوڈ *
+
+EN: Supplier Statement —
+UR: سپلائر اسٹیٹمنٹ —
+
+EN: Supplier-wise Claim History
+UR: سپلائر وار کلیم ہسٹری
+
+EN: Supplier:
+UR: سپلائر:
+
+EN: Suppliers
+UR: سپلائرز
+
+EN: System Qty
+UR: سسٹم مقدار
+
+EN: TOTALS
+UR: کل
+
+EN: Tax
+UR: ٹیکس
+
+EN: Tax %
+UR: ٹیکس %
+
+EN: Tax Collected
+UR: وصول شدہ ٹیکس
+
+EN: Team performance · Reports · Journals
+UR: ٹیم کارکردگی · رپورٹس · جرنلز
+
+EN: Terms & Conditions
+UR: شرائط و ضوابط
+
+EN: Terms:
+UR: شرائط:
+
+EN: Their Ref
+UR: ان کا حوالہ
+
+EN: Thermal 80mm
+UR: تھرمل 80mm
+
+EN: Totals
+UR: کل
+
+EN: Toyota / Suzuki / Hino
+UR: Toyota / Suzuki / Hino
+
+EN: Transfer
+UR: ٹرانسفر
+
+EN: Trial Balance
+UR: ٹرائل بیلنس
+
+EN: Unit
+UR: یونٹ
+
+EN: Unit Cost
+UR: یونٹ لاگت
+
+EN: Unit Cost (Rs)
+UR: یونٹ لاگت (روپے)
+
+EN: Units & Packaging
+UR: یونٹس اور پیکجنگ
+
+EN: Units & Packaging Conversions
+UR: یونٹس اور پیکجنگ کنورژنز
+
+EN: Units:
+UR: یونٹس:
+
+EN: Unpaid Payroll
+UR: غیر ادا شدہ پے رول
+
+EN: Unread
+UR: ان پڑھی
+
+EN: User
+UR: یوزر
+
+EN: Username
+UR: یوزر نام
+
+EN: Username *
+UR: یوزر نام *
+
+EN: Users & Roles
+UR: یوزرز اور رولز
+
+EN: VOUCHER
+UR: ووچر
+
+EN: Value
+UR: قیمت
+
+EN: Vendor
+UR: وینڈر
+
+EN: Vendor / Workshop
+UR: وینڈر / ورکشاپ
+
+EN: Via
+UR: بذریعہ
+
+EN: Voucher
+UR: وائچر
+
+EN: Vouchers
+UR: وائچرز
+
+EN: Waste
+UR: ضیاع
+
+EN: Waste / Reject Qty
+UR: ضیاع / رد شدہ مقدار
+
+EN: Waste Qty
+UR: ضیاع مقدار
+
+EN: Website
+UR: ویب سائٹ
+
+EN: Weighted-average / FIFO
+UR: ویٹڈایورج / FIFO
+
+EN: When
+UR: کب
+
+EN: below
+UR: نیچے
+
+EN: claim(s)
+UR: کلیم
+
+EN: config/config.php
+UR: config/config.php
+
+EN: counted
+UR: گنتی شدہ
+
+EN: ctc_erp_YYYYMMDD_HHMMSS.sql
+UR: ctc_erp_YYYYMMDD_HHMMSS.sql
+
+EN: database/schema.mysql.sql
+UR: database/schema.mysql.sql
+
+EN: failed logins (24h)
+UR: ناکام لاگ انز (24 گھنٹے)
+
+EN: free
+UR: مفت
+
+EN: hrs)
+UR: گھنٹے)
+
+EN: index.php
+UR: index.php
+
+EN: litres
+UR: لیٹر
+
+EN: payslip(s) ·
+UR: سلپ(س) ·
+
+EN: pcs
+UR: پیسز
+
+EN: storage/backups/
+UR: storage/backups/
+
+EN: via
+UR: بذریعہ
+
+EN: · Bonus:
+UR: · بونس:
+
+EN: · Damaged:
+UR: · خراب:
+
+EN: · Difference:
+UR: · فرق:
+
+EN: · Driver:
+UR: · ڈرائیور:
+
+EN: · Generated
+UR: · تخلیق شدہ
+
+EN: · Rejected:
+UR: · رد شدہ:
+
+EN: · Tax:
+UR: · ٹیکس:
+
+EN: اردو
+UR: اردو
+
+EN: — Rs
+UR: — روپے
+
+EN: — direct —
+UR: — براہ راست —
+
+EN: — none —
+UR: — کوئی نہیں —
+
+EN: — select —
+UR: — منتخب کریں —
+
+EN: ✔ Approvals Inbox
+UR: ✔ منظوری ان باکس
+
+EN: 🖨 Print
+UR: 🖨 پرنٹ
+

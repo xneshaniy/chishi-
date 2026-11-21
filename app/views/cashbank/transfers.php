@@ -1,0 +1,6 @@
+<?php $title = __('Cash ↔ Bank Transfers'); ?>
+<form method="get" class="toolbar"><input type="hidden" name="r" value="cashbank/transfers"><input type="date" name="from" value="<?= e($from) ?>"><input type="date" name="to" value="<?= e($to) ?>"><button class="btn btn-primary" type="submit"><?= __('Filter') ?></button><span style="flex:1"></span><a class="btn btn-primary" href="<?= e(url('cashbank/transfers/new')) ?>"><?= __('+ New Transfer') ?></a></form>
+<div class="panel"><div class="table-wrap"><table class="tbl"><thead><tr><th><?= __('Transfer') ?></th><th><?= __('Date') ?></th><th><?= __('From') ?></th><th><?= __('To') ?></th><th class="num"><?= __('Amount') ?></th><th><?= __('Reference') ?></th></tr></thead>
+<tbody><?php foreach ($p['rows'] as $t): ?><tr><td class="mono"><?= e($t['transfer_no']) ?></td><td><?= date_display($t['date']) ?></td><td><?= e($t['from_account']) ?></td><td><?= e($t['to_account']) ?></td><td class="num"><?= money($t['amount']) ?></td><td><?= e($t['reference'] ?? '—') ?></td></tr>
+<?php endforeach; ?><?php if (!$p['rows']): ?><tr><td colspan="6" class="muted"><?= __('No transfers.') ?></td></tr><?php endif; ?></tbody></table></div>
+<?= pager_html($p, 'cashbank/transfers', ['from' => $from, 'to' => $to]) ?></div>

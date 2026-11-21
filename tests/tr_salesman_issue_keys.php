@@ -1,0 +1,38 @@
+<?php
+/** Urdu + Roman Urdu translations for Warehouse → Salesman issue integration. */
+return [
+    'ur' => [
+        'Company stock breakdown →' => 'کمپنی اسٹاک کی تفصیل →',
+        'FG Stock' => 'تیار مال اسٹاک',
+        'View finished goods & issue stock' => 'تیار مال اسٹاک دیکھیں اور جاری کریں',
+        'Goods Issued / Stock Received' => 'مال جاری / اسٹاک موصول',
+        'Issuing goods to a salesman is a stock transfer, not a customer sale. Stock decreases from Main Warehouse and increases in the salesman van.' => 'سیلز مین کو مال دینا اسٹاک ٹرانسفر ہے، سیلز نہیں۔ مین گودام سے کم ہو کر سیلز مین کی وین میں بڑھے گا۔',
+        'Regular (Paid)' => 'باقاعدہ (معاوضہ)',
+        'Regular' => 'باقاعدہ',
+        'No entries in this period.' => 'اس مدت میں کوئی اندراج نہیں۔',
+        'Selected salesman has no stock location. Assign a van first.' => 'منتخب سیلز مین کا کوئی اسٹاک لوکیشن نہیں۔ پہلے وین تفویض کریں۔',
+        'Goods issued to salesman — stock transferred, history updated.' => 'سیلز مین کو مال جاری — اسٹاک منتقل ہو گیا، تاریخ درج ہو گئی۔',
+        'All products' => 'تمام پروڈکٹس',
+        'Print / Save as PDF' => 'پرنٹ / PDF محفوظ کریں',
+        'Reset' => 'ری سیٹ کریں',
+        'Total received' => 'کل موصول',
+        'Totals' => 'ٹوٹل',
+    ],
+    'roman' => [
+        'Company stock breakdown →' => 'Company stock ki tafseel →',
+        'FG Stock' => 'Finished Goods Stock',
+        'View finished goods & issue stock' => 'Finished goods stock aana',
+        'Goods Issued / Stock Received' => 'Maal jari / stock mosal',
+        'Issuing goods to a salesman is a stock transfer, not a customer sale. Stock decreases from Main Warehouse and increases in the salesman van.' => 'Salesman ko maal dena stock transfer hai, sale nahi. Main Warehouse se ghatayga, salesman ki van mein barhayga.',
+        'Regular (Paid)' => 'Regular (muagza)',
+        'Regular' => 'Regular (muagza)',
+        'No entries in this period.' => 'Is muddat mein koi entry nahi.',
+        'Selected salesman has no stock location. Assign a van first.' => 'Selected salesman ka koi stock location nahi. Pehle van assign karein.',
+        'Goods issued to salesman — stock transferred, history updated.' => 'Salesman ko maal jari — stock transfer ho gaya, history update ho gayi.',
+        'All products' => 'Tamam products',
+        'Print / Save as PDF' => 'Print / PDF save karein',
+        'Reset' => 'Reset karein',
+        'Total received' => 'Kul mosal',
+        'Totals' => 'Totals',
+    ],
+];

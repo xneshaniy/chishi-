@@ -1,0 +1,250 @@
+% of Total
+(check “Bonus” for free goods — quantity moves from stock, no revenue booked)
+(check “Bonus” for supplier free goods — they add stock at zero cost and never increase the payable)
+(makes
+(quantities & cost) is handled under
+(required when selling below minimum price or restricted bonus)
+). Contact your administrator if you believe this is wrong.
+). Use this for factory→warehouse, warehouse→salesman van, etc.
++ Add Line
++ Add Material
++ Add Product
++ All posted GL movements (book)
++ Cheques received, cleared (per cheque register)
++ Manual Journal
++ New Account
++ New Adjustment
++ New BOM / Recipe
++ New Bonus
++ New Category
++ New Cheque
++ New Claim
++ New Customer
++ New Employee
++ New Expense
++ New Invoice
++ New Loan
++ New Order
++ New PO
++ New Payment
++ New Product
++ New Production Order
++ New Receipt
++ New Return
++ New Salesman
++ New Supplier
++ New Transfer
++ New User
++ New Vehicle
++ Receive Goods (GRN)
+, positive =
+, so partially-used stock is respected.
+, which also posts the Dr Inventory / Cr Capital entry automatically.
+. Backups are
+/ C
+/ reorder
+1–30 Days
+1–30 days overdue
+31–60 Days
+31–60 days
+403 — Access denied
+404 — Page not found
+61–90 Days
+61–90 days
+= Total Credits
+ACTIVE
+ADMIN CONSOLE
+ASSETS
+Above-Issue-Rate Margin
+Access denied (403)
+Account
+Account Code *
+Account Name
+Account Name *
+Account No
+Account No / IBAN
+Account Title
+Account code already exists.
+Account created.
+Account created. If you set an opening balance, post it via Settings → Opening Balances.
+Action
+Action e.g. post, reverse
+Activate
+Active
+Active Users
+Actual consumption is valued at the current
+Add
+Add Bonus Scheme
+Add Branch
+Add Branch / Factory
+Add Category
+Add Fuel Log
+Add Maintenance
+Add Scheme
+Add Vehicle
+Add Warehouse
+Add Warehouse / Stock Location
+Add a salesman
+Add at least one item line.
+Add at least one item.
+Add at least one material line.
+Add at least one product with quantity.
+Address
+Adjustment already processed.
+Adjustment created — pending approval. Stock moves only after approval.
+Adjustment not found.
+Adjustment processed.
+Adjustments affect stock and post journals only after approval.
+Admin Console
+Admin Console — Chishti Tobacco Company
+Adv. Ded.
+Advance Ledger
+Advance request submitted — disburses only after Owner/Admin approval.
+Advances
+Advances Ded.
+Against PO
+Aging of Outstanding (FIFO allocation)
+Aging of Payables (FIFO allocation)
+All
+All bank accounts
+All cash accounts
+All categories
+All kinds
+All products
+All statuses
+All types
+All users
+All warehouses
+Allocation: receipts are applied FIFO (oldest invoice first). Invoices without a due date are assumed due 30 days after invoice date.
+Allocation: supplier payments apply FIFO against purchase invoices. Invoices without due date are assumed due 30 days after the GRN date.
+Allow direct posting to this account
+Allowances
+Already Returned
+Alt Phone
+Amount
+Amount (Rs) *
+Amount Received (Rs) *
+Amount and account required.
+Amount in words:
+Apply
+Approval
+Approval Rules
+Approvals Inbox
+Approvals are decided by Owner/Admin in the Admin Console (/admin/approvals).
+Approvals post the source document exactly once when approved. Rejections never touch balances. Requesters cannot approve their own requests.
+Approve
+Approve & Post
+Approved advances deduct automatically from the next salary run (capped so net cannot go negative). Loans use a separate ledger (Loans screen).
+Area
+Area / Route
+Area:
+As of
+Assigned Salesman
+At least two lines required.
+Attendance
+Attendance —
+Audit Log
+Auth::requireArea()
+Authorized Owner/Admin personnel only · All access is logged ·
+Authorized Signatory
+Authorized personnel only · All access is logged · Software support: CTC IT Department
+Auto — system default (Cash/Bank)
+Automated backups (recommended)
+Avg Cost
+Awaiting Admin Approval
+Awaiting Admin approval
+BILL TO
+BONUS / FREE
+Back
+Back to Dashboard
+Back to Journal
+Back to List
+Backup & Restore
+Backup deleted.
+Balance
+Balance (Dr−Cr)
+Balance (payable)
+Balance Sheet
+Balance Sheet — as of
+Balance brought forward
+Bank
+Bank / Account No
+Bank Account
+Bank Account *
+Bank Account:
+Bank Balance
+Bank Name
+Bank Name (printed on invoices)
+Bank Reconciliation
+Bank account, cheque number and amount are required.
+Basic
+Basic Salary / Wages
+Batch No.
+Below-Issue-Rate Loss
+Bill Ref
+Bill of materials saved.
+Bills of Materials
+Bonus
+Bonus & Free Stock Report
+Bonus & Payable Summary
+Bonus Approval Threshold (Rs)
+Bonus Approval Threshold (Rs) — any bonus above this needs Admin approval
+Bonus Cost
+Bonus Qty
+Bonus Return
+Bonus Scheme (optional)
+Bonus Scheme:
+Bonus Schemes & Rules
+Bonus approval threshold saved.
+Bonus payouts: create an Expense with category “Sales Commission” to post the journal (Dr Commission Expense / Cr Cash-Bank).
+Bonus recorded (pending). Pay it via Expenses → category “Sales Commission” to post the journal.
+Bonus scheme added.
+Bonus/discount authorised by:
+Book Balance
+Book balance (per ERP)
+Book balance = opening + all posted GL movements on the linked account.
+Branch
+Branch added.
+Branch code already exists.
+Branches (
+Branches / Factories
+By
+By Kind
+By Warehouse
+CLOSED
+CNIC
+COGS
+CSV
+Cancel
+Cash
+Cash & Bank Accounts
+Cash & Bank Opening Balances (
+Cash / Bank Account
+Cash Collected (his customers)
+Cash Counted (Rs)
+Cash Flow
+Cash Flow Statement —
+Cash Sale
+Cash in Hand
+Cash ↔ Bank / Bank ↔ Bank Transfer
+Cash ↔ Bank Transfers
+Categories
+Category
+Category *
+Category Name *
+Category added.
+Category and a positive amount are required.
+Category name required.
+Central / Main
+Chart of Accounts
+Cheque / slip / bill no
+Cheque No *
+Cheque No.
+Cheque Register
+Cheque recorded (pending).
+Cheque updated.
+Chishti Tobacco Co.
+Chishti Tobacco Company
+Chishti Tobacco Company · Managers & Accountants
+Chishti Tobacco Company · Owner & Admin only
+Choose two different accounts and a positive amount.

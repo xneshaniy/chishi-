@@ -1,0 +1,1018 @@
+ · Tax:
++ Manual Journal
++ New Adjustment
++ New BOM / Recipe
++ New Bonus
++ New PO
++ New Payment
++ New Production Order
++ Receive Goods (GRN)
+, positive =
+/ C
+/ reorder
+1–30 Days
+1–30 days overdue
+31–60 Days
+31–60 days
+403 — Access denied
+404 — Page not found
+61–90 Days
+61–90 days
+= Total Credits
+ACTIVE
+AMOUNT
+AMOUNT PAID
+AMOUNT RECEIVED
+Accepted:
+Access denied (403)
+Account
+Account Code *
+Account Name
+Account Name *
+Account No
+Account No / IBAN
+Account Title
+Accountant
+Action
+Activate
+Active
+Active Users
+Address
+Admin Console
+Admin Console — Chishti Tobacco Company
+Adv. Ded.
+Advance Ledger
+Advance Voucher —
+Advance outstanding:
+Advances
+Against PO
+Aging of Outstanding (FIFO allocation)
+Aging of Payables (FIFO allocation)
+All
+Allowances
+Already Returned
+Alt Phone
+Amount
+Amount (Rs) *
+Amount Received (Rs) *
+Amount in words:
+Approval
+Approval Rules
+Approvals Inbox
+Approve & Post
+Area
+Area / Route
+Area:
+As of
+Asset
+Asset / Machine *
+Asset ID / Code (optional)
+Asset ID:
+Asset No
+Assets
+Assigned Salesman
+Attachment — invoice / receipt / repair photo / PDF (optional)
+Attachment:
+Attendance
+Attendance —
+Audit Log
+Auth::requireArea()
+Authorized Signatory
+Auto — system default (Cash/Bank)
+Automated backups (recommended)
+Avg Cost
+Awaiting Admin Approval
+Awaiting Admin approval
+BILL TO
+BONUS
+BONUS / FREE
+Backup & Restore
+Balance
+Balance (Dr−Cr)
+Balance (payable)
+Balance Sheet
+Balance Sheet — as of
+Balance brought forward
+Bank
+Bank / Account No
+Bank Account
+Bank Account *
+Bank Account:
+Bank Balance
+Bank Name
+Bank Reconciliation
+Basic
+Basic Salary / Wages
+Batch No.
+Below-Issue-Rate Loss
+Bill Ref
+Bills of Materials
+Bonus
+Bonus & Free Stock Report
+Bonus & Payable Summary
+Bonus Approval Threshold (Rs)
+Bonus Cost
+Bonus Qty
+Bonus Return
+Bonus Scheme (optional)
+Bonus Scheme:
+Bonus Schemes & Rules
+Bonus scheme
+Book Balance
+Branch
+Branches (
+Branches / Factories
+Bundles
+By
+By Kind
+By Warehouse
+CLAIM RECEIPT
+CLOSED
+CNIC
+COGS
+CSV
+Cash
+Cash & Bank Accounts
+Cash & Bank Opening Balances (
+Cash / Bank Account
+Cash / Bank Account *
+Cash Counted (Rs)
+Cash Flow
+Cash Flow Statement —
+Cash Paid
+Cash Paid:
+Cash Sale
+Cash in Hand
+Cash ↔ Bank / Bank ↔ Bank Transfer
+Cash ↔ Bank Transfers
+Categories
+Category
+Category *
+Category Name *
+Category:
+Central / Main
+Chart of Accounts
+Cheque / slip / bill no
+Cheque No *
+Cheque No.
+Cheque Register
+Chishti Tobacco Co.
+Chishti Tobacco Company
+Chishti Tobacco Company · Managers & Accountants
+Chishti Tobacco Company · Owner & Admin only
+City
+City:
+Claim Amount
+Claim Amount (Rs)
+Claim Goods
+Claim No
+Claim No:
+Claim Rate
+Claim Rate (Rs)
+Claims
+Closed
+Closing
+Closing Balance
+Closing Cash & Bank
+Code
+Code *
+Code:
+Collected
+Collection Report
+Collections
+Comm. %
+Commission
+Commission %
+Commission & Bonuses
+Commission Preview —
+Commissions & Bonuses
+Company Logo
+Company Name
+Company Profile
+Company Profile & Logo
+Compares against the estimated
+Compute
+Computer-generated claim receipt —
+Computer-generated payslip —
+Configured Schemes (
+Consume Qty
+Cost
+Cost (Rs) *
+Cost Value
+Count Stock
+Count the physical cash
+Counted
+Counted Qty
+Created
+Created By
+Credit
+Credit (payable)
+Credit Limit
+Credit Limit (Rs)
+Credit Limit:
+Credit Sale
+Current
+Current / not yet due
+Currently With
+Customer
+Customer *
+Customer Aging
+Customer Claims
+Customer Code *
+Customer Free Goods
+Customer Free Goods (invoice bonus lines)
+Customer Payment Received
+Customer Receivable
+Customer Statement —
+Customers
+D
+DEFAULT
+DOCUMENT
+Daily Sales
+Daily Settlement —
+Damaged
+Damaged (qty)
+Damaged Qty
+Dashboard
+Date
+Date:
+Day Book
+Days Overdue
+Debit
+Debit (receivable)
+Deducted
+Deduction References
+Deductions
+Default issue warehouse
+Delivery Date
+Department
+Department:
+Deposit Into *
+Deposited Into
+Description
+Description *
+Description / Bill Details
+Designation
+Designation:
+Desktop Notifications
+Destination Warehouse *
+Details
+Diesel / Fuel
+Diff/Unit
+Difference
+Direction
+Disc.
+Discount
+Doc
+Dr Inventory / Cr Owner Capital
+Draft
+Driver
+Driver Name
+Due
+Due / Clearing Date
+Due Date
+Due Date (credit)
+Due loan installments
+Due:
+Dyna / Mazda / Shehzore
+EN
+EQUITY
+ERP
+EXPENSE VOUCHER
+EXPENSES
+Earnings
+Edit Permissions
+Edit Permissions —
+Eligible Claim
+Eligible Claim Amount:
+Eligible Claim: Rs
+Email
+Employee Loans
+Employee Salary Expense
+Employee Signature
+Empty.
+Entity
+Entry
+Entry No
+Existing Backups (
+Expected Cash (from receipts)
+Expected Delivery
+Expense Categories
+Expense Summary
+Expenses
+Expenses are recorded as
+Expiry Date
+Export CSV
+Factory
+Factory Consumption
+Factory Maintenance & Repair Record
+Factory Maintenance & Repairs
+Factory Management · Sales & Distribution · Accounting
+Factory Use
+File
+Filter
+Financial Year & Periods
+Financial year to date
+Finished Goods
+Finished Product
+Finished Product *
+Finished Product Daily
+Finished Product Stock
+Fiscal Year Closing
+Fiscal Years
+From
+From Account *
+From Warehouse *
+Fuel (L)
+Fuel Cost
+Full Name
+Full Name *
+Full access (locked)
+GL Account
+GL Account (optional)
+GL Movement
+GRAND TOTAL
+GRN
+GRN Date
+General Ledger
+Generate Backup Now
+Generate Database Backup
+Generate Draft Payroll
+Generate Payroll
+Generated
+Generated:
+Good
+Good / Accepted
+Good / Accepted (qty)
+Good Qty
+Good Value
+Goods Received Note / Purchase Invoice
+Gross Earnings
+Gross Margin
+Gross Sales
+Group
+Has expiry date / batch tracking
+Hours
+IBAN
+INCOME
+INVOICE
+IP
+Identity
+Import
+Inactive
+Income
+Income Statement —
+Income statement
+Installment Amount (Rs) *
+Installment Schedule
+Installment Type
+Into
+Inventory → Opening Stock
+Invoice
+Invoice #
+Invoice Date
+Invoice Discount (Rs)
+Invoice Discount (Rs, whole invoice)
+Invoice Footer & Terms
+Invoices
+Invoices (posted)
+Issue
+Issue Date
+Issue Rate
+Issue Stock
+Issue Stock —
+Issue Type
+Issues
+Item
+Items — Good / Accepted · Damaged · Rejected (claim rate per accepted unit)
+Items — Paid / Bonus / Issue Rate
+JUSTI NUMBER ONE
+JUSTI NUMBER ONE ERP
+Jobs
+Join Date
+Journal
+Journal Entries
+KB
+KG
+Kind
+LIABILITIES
+LIABILITIES + EQUITY
+LOW
+Labor Cost (Rs)
+Labor+OH
+Labour
+Labour charges
+Last Login
+Latest Audit Events
+Ledger
+Ledger History
+Ledger —
+Line Claim
+Line Memo
+Line Total
+Lines
+Linked GL Account *
+Liters *
+Litres
+Loan
+Loan Amount
+Loan Amount (Rs) *
+Loan Ded.
+Loan Installments
+Loan No
+Loans Ded.
+Loans:
+Location
+Location:
+Low Stock Alerts
+Low Stock Items
+MAIN
+MAIN, LAHORE…
+MAINTENANCE / REPAIR RECORD
+MANAGEMENT CONSOLE
+Machine
+Main branch / head office
+Maintenance
+Maintenance Assets
+Make
+Make / Model
+Management Console
+Management Console — Chishti Tobacco Company
+Manager
+Manual Journal Entry
+Margin
+Material
+Material Cost
+Materials
+Materials & Packaging
+Memo
+Memo / Narration
+Method:
+Mileage
+Mileage (km)
+Minimum Selling Price
+Model
+Month
+Month *
+Month Sales
+Month Snapshot — Income Statement
+Monthly
+Monthly Deduction Cap (Rs) — optional
+Monthly Salary (Rs)
+NET PAY
+NET PROFIT / (LOSS)
+NTN
+NTN (optional)
+NTN:
+Name
+Name *
+Narration
+Net Cash
+Net Difference
+Net Movement
+Net Paid
+Net Pay
+Net Profit (Month)
+Net Profit / (Loss) —
+New BOM / Recipe
+New Bill of Materials
+New Bonus
+New Bonus / Incentive
+New Cash/Bank Account
+New Cheque
+New Claim
+New Customer Claim
+New Customer Receipt
+New Employee Loan
+New Expense
+New Expense Category
+New GL Account
+New General Ledger Account
+New Manual Journal
+New Payment
+New Production Order
+New Purchase Order
+New Sales Invoice
+New Sales Order
+New Sales Return
+New Stock Adjustment
+New Transfer
+New Vehicle
+No.
+Notes
+Notes:
+Notification
+Notification Sound
+Notifications
+Number of Installments
+OB
+OK
+OPEN
+OPENING
+OT
+OUT (−)
+Off
+On
+On Hand
+On credit (expense payable)
+One-time setup.
+Opening
+Opening Balance (Rs)
+Opening Balances
+Opening Cash & Bank
+Opening Stock
+Opening Stock (quantities & cost)
+Opening Type
+Opening balance
+Opening balance as of
+Order
+Order Date
+Order Total: Rs
+Other
+Other Deductions
+Output Qty
+Output Qty per batch *
+Outstanding
+Over 90 Days
+Over 90 days
+Overdue Credit Invoices
+Overhead
+Overhead Cost (Rs)
+Overtime
+Overtime (
+Overtime Rate (Rs/hr) — blank = auto 1.5×
+Owner (personal drawing)
+Owner / Admin
+Owner/Admin approval
+PAID TO / FOR
+PAY TO
+PAYMENT VOUCHER
+PENDING APPROVAL
+PO No.
+PO Total: Rs
+PURCHASE INVOICE / GRN
+Pack Size
+Packaging
+Packets
+Packs
+Paid
+Paid Qty
+Paid Return
+Paid from Bank
+Paid from Cash
+Paid from:
+Paid salary (posted journals),
+Paid:
+Parent (optional)
+Part
+Parts
+Party
+Party Name
+Party Type
+Password
+Pay From *
+Pay Out From *
+Payable
+Payee
+Payee / Vendor
+Payee Type *
+Payment
+Payment Approvals
+Payment Option *
+Payment Type
+Payment by bank transfer:
+Payment method:
+Payment status:
+Payment — Supplier / Owner Drawing
+Payment:
+Payments
+Payments (Supplier/Owner)
+Payroll
+Payroll Run
+Payslip
+Payslip No:
+Payslip —
+Payslips
+Pending Approvals
+Pending Salary — No Payslip
+Period
+Period expenses:
+Period from
+Period purchases:
+Period total:
+Period:
+Periods —
+Permissions
+Phone
+Phone:
+Physical Stock Count
+Plan:
+Planned
+Planned Material Consumption
+Planned Output Qty *
+Point
+Post All Opening Balances
+Post Cash/Bank Openings
+Post Customer Openings
+Post Entry
+Post GRN / Invoice
+Post Invoice
+Post Opening Stock
+Post Payment
+Post Receipt
+Post Return
+Post Sales Return
+Post Supplier Openings
+Post Transfer
+Posted
+Posted Expenses by Category —
+Posted expenses
+Posting
+Posts
+Price
+Print payslips:
+Problem
+Problem / Damage
+Produced
+Product
+Product *
+Product Categories
+Product Name *
+Production
+Production Order
+Production Orders
+Production Report
+Production entry
+Products
+Profit & Loss
+Purchase
+Purchase Bonus (supplier free goods)
+Purchase Bonus Received
+Purchase Invoice
+Purchase Invoices / GRN
+Purchase Orders
+Purchase Price (Rs)
+Purchased
+Purchases
+Qty
+Qty Produced *
+Qty Sold
+Qty per batch
+Quick Actions
+Quick Links
+RECEIPT
+RECEIVED FROM
+RECORD NO
+REJECTED
+RESTRICTED
+Rate
+Rate (Rs)
+Raw Material Daily
+Raw Material Purchases
+Raw Material Stock
+Raw Materials
+Read
+Reason
+Reason *
+Reason / Claim Note
+Reason for discount / bonus
+Reason:
+Receipt
+Receipt No:
+Receipts
+Receipts (Customer)
+Receive Goods
+Receive Goods (GRN)
+Receive Into *
+Receive Payment From Salesman
+Receive Unsold Stock From
+Received Into *
+Received into:
+Receiving against
+Recent Bonuses
+Recipe
+Recipe / BOM
+Recipe Name *
+Reconciliation Summary
+Record Bonus
+Record Cheque
+Record Count → Create Adjustment
+Record Expense
+Record Manual Repayment
+Record Repayment
+Recovered
+Ref
+Reference
+Reference (cheque / slip no)
+Reference / Notes
+Reg. No
+Registration & Banking
+Registration No *
+Rejected
+Rejected (qty)
+Rejected Qty
+Related Invoice (optional)
+Release
+Reorder Level
+Reports
+Reports Hub
+Requested
+Requested By
+Restore procedure
+Return Against
+Return Date
+Return No.
+Return Qty
+Return Stock to Warehouse
+Return Stock —
+Returned stock value
+Returns
+Reverse
+Reverse Entry
+Reverse Invoice
+Reversed
+Review All (
+Role
+Roles
+Roles & Permissions
+Roman
+Rs
+SALARY PAYSLIP
+SKU
+SKU *
+SKU / Product
+STRN (Sales Tax)
+SUPPLIER
+SYS
+Salary
+Salary Advance
+Salary Advances
+Salary Ledger
+Salary Ledger —
+Salary Type
+Salary Type:
+Salary payments
+Salary —
+Salary:
+Sale
+Sale Price (Rs) — company shop price
+Sales
+Sales Invoices
+Sales Orders
+Sales Returns
+Sales Stock Location
+Sales Summary
+Sales Summary by
+Sales Tax
+Sales Tax Rate (%)
+Sales stock location:
+Salesman
+Salesman (optional)
+Salesman (van/stock)
+Salesman *
+Salesman Bonus Issued
+Salesman Bonus Issues — Paid vs Free
+Salesman Issue Rate (Rs)
+Salesman Ledger
+Salesman Payable:
+Salesman Performance
+Salesman Performance — This Month
+Salesman Price Difference — Issue Rate vs Selling
+Salesman Stock & Settlement
+Salesman payable
+Salesmen
+Save & Post
+Save (Pending Approval)
+Save Attendance
+Save BOM
+Save Company Profile
+Save Customer
+Save Employee
+Save Permissions
+Save Rules
+Save Settlement
+Save Supplier
+Save as Draft
+Scheme / Product
+Search SKU / name…
+Search code / name / designation / phone…
+Search code / name / phone / area…
+Search code / name / phone…
+Search loan no / employee / reason…
+Search requester / reason…
+Search users…
+Search…
+Selling
+Settings → Opening Balances
+Settle —
+Settlement
+Settlement History
+Settlement —
+Shop / Customer Name *
+Sign In
+Sign In —
+Simple Reports
+Size
+Sold
+Source
+Spare Part
+Staff sign-in →
+Statement
+Statement —
+Station
+Status
+Status:
+Stock Adjustments
+Stock Currently With Salesman
+Stock Ledger
+Stock Qty
+Stock Transfer
+Stock Transfer (location change — no sale, no journal)
+Stock Transfers
+Stock Valuation
+Stock Value
+Submit for Approval
+Subtotal
+Subtotal:
+Supplier
+Supplier *
+Supplier / Company Name *
+Supplier Aging
+Supplier Code *
+Supplier Payable
+Supplier Statement —
+Supplier invoice:
+Supplier-wise Claim History
+Supplier:
+Suppliers
+System Qty
+TOTAL
+TOTAL COST
+TOTAL MAINTENANCE COST
+TOTAL NET PAID
+TOTAL STOCK VALUE
+TOTAL:
+TOTALS
+Tax
+Tax %
+Tax Collected
+Team performance · Reports · Journals
+Terms & Conditions
+Terms:
+Their Invoice / Bill No
+Their Ref
+Thermal 80mm
+To
+To Account *
+To Warehouse *
+Today's Sales
+Total
+Total Assets
+Total Cost
+Total Debit:
+Total Deductions
+Total Equity
+Total Expenses
+Total Expenses:
+Total Good Qty:
+Total Income
+Total Income:
+Total Liabilities
+Total Loans (active)
+Total Outstanding
+Total Payable
+Total Production Cost
+Total Running Cost
+Total collected
+Total credit issued (payable)
+Total outstanding
+Total outstanding (open invoices)
+Total recovered
+Totals
+Toyota / Suzuki / Hino
+Transfer
+Trial Balance
+Type
+Type *
+Type CLOSE
+Type:
+Uncleared / pending items (timing differences)
+Unit
+Unit Cost
+Unit Cost (Rs)
+Units & Packaging
+Units & Packaging Conversions
+Units Produced
+Units:
+Unpaid Payroll
+Unread
+User
+Username
+Username *
+Users & Roles
+VOUCHER
+Value
+Valued at
+Variance
+Variance = counted − expected. Negative variance =
+Vendor
+Vendor / Workshop
+Via
+Voucher
+Vouchers
+WH-MAIN
+Warehouse
+Warehouse *
+Warehouse:
+Warehouses
+Warehouses (
+Waste
+Waste / Reject Qty
+Waste Qty
+Website
+Weekly
+Weighted-average / FIFO
+When
+Year
+Year-end procedure.
+and
+auto
+bank
+below
+blank = deduct full remaining
+bonus
+by
+cash
+claim(s)
+completed
+config/config.php
+cost value
+cost.
+counted
+ctc_erp_YYYYMMDD_HHMMSS.sql
+customer bonus invoices
+database/schema.mysql.sql
+enter the
+entries
+excess
+factory, salary, fuel, office, owner drawings…
+failed logins (24h)
+free
+hrs)
+incl. opening
+index.php
+installments
+invoices, tax
+link (Ctrl+P → Save as PDF).
+litres
+net pay
+not
+of
+open production orders
+optional
+outstanding
+paid
+payments, salary, loans, transfers…
+payslip(s) ·
+pcs
+pending
+php /home/USER/public_html/bin/backup.php
+receipts)
+salesman bonus issues
+shortage
+stock
+storage/backups/
+supplier payable (claim terms)
+this month
+to
+via
+· Bonus:
+· By
+· Damaged:
+· Date
+· Difference:
+· Driver:
+· Generated
+· Outstanding:
+· Paid:
+· Rejected:
+· Software: JUSTI NUMBER ONE ERP
+· Tax:
+· This month
+· Total Credit:
+· Total Debits
+اردو
+— Rs
+— counter sale —
+— direct GRN —
+— direct —
+— no BOM (manual inputs) —
+— none —
+— select account —
+— select material —
+— select product —
+— select —
+− Expenses
+✔ Approvals Inbox
+🖨 Print
+🖨 Print / Save as PDF

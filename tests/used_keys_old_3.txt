@@ -1,0 +1,289 @@
+Ledger —
+Line Memo
+Line Total
+Lines
+Linked GL Account *
+Linked Salesman (for salesman logins)
+Liters *
+Liters and cost are required.
+Litres
+Loan
+Loan Amount
+Loan Amount (Rs) *
+Loan Ded.
+Loan Installments
+Loan No
+Loan not found.
+Loan request submitted — Owner/Admin approval required before disbursement.
+Loans Ded.
+Logo must be PNG, JPG, SVG or WebP.
+Logo too large (max 2 MB).
+Low Stock Alerts
+Low Stock Items
+MAIN
+MAIN, LAHORE…
+MANAGEMENT CONSOLE
+Main branch / head office
+Maintenance
+Maintenance recorded.
+Make
+Make / Model
+Manage
+Management Console
+Management Console — Chishti Tobacco Company
+Managers & Accountants only · All access is logged ·
+Managers and Accountants cannot open this console — server-side enforced in
+Manual Journal Entry
+Margin
+Material
+Material Cost
+Materials
+Materials & Packaging
+Memo
+Memo / Narration
+Mileage
+Mileage (km)
+Minimum Selling Price
+Minimum Selling Price (Rs) — Approvals if below
+Model
+Month
+Month *
+Month Sales
+Month Snapshot — Income Statement
+Monthly
+Monthly Deduction Cap (Rs) — optional
+Monthly Salary (Rs)
+NET PAY
+NET PROFIT / (LOSS)
+NTN
+NTN (optional)
+NTN:
+Name
+Name *
+Name and GL account required.
+Name required.
+Narration
+Net Cash
+Net Difference
+Net Movement
+Net Paid
+Net Pay
+Net Profit (Month)
+Net Profit / (Loss) —
+New BOM / Recipe
+New Bill of Materials
+New Bonus
+New Bonus / Incentive
+New Cash / Bank Account
+New Cash/Bank Account
+New Cheque
+New Claim
+New Customer Claim
+New Customer Receipt
+New Employee Loan
+New Expense
+New Expense Category
+New GL Account
+New General Ledger Account
+New Manual Journal
+New Payment
+New Production Order
+New Purchase Order
+New Sales Invoice
+New Sales Order
+New Sales Return
+New Stock Adjustment
+New Stock Adjustment (pending approval)
+New Transfer
+New Vehicle
+No adjustments yet.
+No advances.
+No approval needed for money IN. Dr Cash/Bank, Cr Salesman Receivable — ledger credited.
+No backups yet. Generate one before making changes.
+No cheques recorded.
+No claims.
+No collections in range.
+No completed orders in range.
+No customer bonus lines in range.
+No customers found.
+No employees found.
+No entries in range.
+No expenses in range.
+No fuel logs.
+No installments generated yet (created when Admin approves disbursement).
+No invoices in range.
+No items at/below reorder level. ✔
+No ledger entries yet — first credit issue creates them.
+No loans on file.
+No maintenance records.
+No movements in range.
+No orders.
+No outstanding credit invoices — everyone is settled. ✔
+No outstanding supplier bills. ✔
+No overdue invoices. ✔
+No paid salary in range.
+No payments in range.
+No pending approval request found for this expense.
+No posted expenses in range.
+No production orders yet.
+No products found.
+No products in this warehouse.
+No purchase bonus recorded in range.
+No purchase orders.
+No purchases in range.
+No receipts in range.
+No returns yet.
+No sales on this date.
+No sales with an issue rate in this period.
+No salesman bonus issues in range.
+No salesmen on file yet.
+No salesmen on file.
+No stock with this salesman yet.
+No suppliers found.
+No transfers.
+No variances found — stock matches system.
+No vehicles on file.
+No.
+None — set opening balance on Cash & Bank accounts.
+None — set opening balance on supplier records.
+None — set opening balance when creating/editing customers.
+Notes
+Nothing here.
+Nothing pending. ✔
+Nothing to return (quantities exceed invoiced/returned amounts).
+Number of Installments
+OB
+OPEN
+OPENING
+OT
+OUT (−)
+On Hand
+On credit (expense payable)
+One-time setup.
+Only active loans can accept repayments.
+Only draft entries can be posted.
+Only draft orders can be released.
+Only draft payslips can be submitted for payment.
+Only draft/released orders can be cancelled.
+Only released orders can be completed.
+Opening
+Opening Balance (Rs)
+Opening Balances
+Opening Cash & Bank
+Opening Stock
+Opening Stock (quantities & cost)
+Opening Type
+Opening balance
+Opening balance as of
+Opening balances post to the ledger only when you run
+Opening balances post to the ledger via
+Order
+Order Date
+Order Total: Rs
+Order has no material inputs (create a BOM and attach it).
+Order not found.
+Order released for production.
+Other
+Other Deductions
+Output Qty
+Output Qty per batch *
+Outstanding
+Outstanding (excl. openings)
+Over 90 Days
+Over 90 days
+Overdue Credit Invoices
+Overhead Cost (Rs)
+Overtime
+Overtime (
+Overtime Rate (Rs/hr) — blank = auto 1.5×
+Owner (personal drawing)
+Owner/Admin approval
+Owner/Admin must approve before the advance is paid out. Deducts automatically from the next salary (full remaining, or cap with a monthly deduction).
+PENDING APPROVAL
+PO No.
+PO Total: Rs
+Pack Size
+Packaging
+Paid Qty
+Paid Return
+Paid from Bank
+Paid from Cash
+Paid salary (posted journals),
+Parent (optional)
+Party
+Party Name
+Party Type
+Password
+Pay From *
+Pay Out From *
+Payable
+Payee
+Payee / Vendor
+Payee Type *
+Payment
+Payment Approvals
+Payment Type
+Payment by bank transfer:
+Payment received and posted — Dr Cash/Bank, Cr Salesman Receivable; ledger updated.
+Payment request submitted — Owner/Admin must approve it before any cash/bank/ledger entry posts.
+Payment — Supplier / Owner Drawing
+Payments
+Payments, transfers, expenses, salary and loans post only after Owner/Admin approval (Admin Console → Approvals). Ask Admin when something is pending.
+Payroll
+Payroll Run
+Payroll record not found.
+Payroll reversed; advances and loans released to outstanding.
+Payroll-deducted installments show as DEDUCTed; manual repayments as PAID. Outstanding = amount − recovered.
+Payslip No:
+Payslip not found.
+Payslip —
+Payslips
+Pending Approvals
+Pending Salary — No Payslip
+Pending cheques issued (not yet cleared)
+Pending cheques received (not yet cleared)
+Period
+Period already generated. Reverse it to re-generate.
+Period end before start.
+Period expenses:
+Period from
+Period purchases:
+Period total:
+Period:
+Periods —
+Permissions
+Phone
+Phone:
+Physical Stock Count
+Plan:
+Planned
+Planned Material Consumption
+Planned Output Qty *
+Point
+Post All Opening Balances
+Post Cash/Bank Openings
+Post Completion → Receive Finished Goods
+Post Customer Openings
+Post Entry
+Post GRN / Invoice
+Post Invoice
+Post Opening Stock
+Post Payment
+Post Receipt
+Post Return
+Post Sales Return
+Post Supplier Openings
+Post Transfer
+Post all pending vouchers and verify the Trial Balance first.
+Posted
+Posted Expenses by Category —
+Posted expenses
+Posting
+Posts
+Posts customer + supplier + cash/bank openings in one go. Safe to repeat — already-posted items are skipped.
+Price
+Print
+Print payslips:
+Produced
+Produced This Month
+Produced quantity must be positive.

@@ -1,0 +1,280 @@
+Choose two different warehouses.
+City
+City:
+Claim Amount (Rs)
+Claim registered — pending approval.
+Claim updated.
+Clear all
+Close Year
+Closed
+Closing Balance
+Closing Cash & Bank
+Code
+Code *
+Code and name are required.
+Code and name required.
+Code:
+Collected
+Collection Report
+Collections
+Collections Today
+Comm. %
+Commission
+Commission %
+Commission & Bonuses
+Commission = posted sales this month × commission %. Pay via Expenses → “Sales Commission” to record it in the ledger.
+Commission Preview —
+Commissions & Bonuses
+Company Logo
+Company Name
+Company Profile
+Company profile saved.
+Compares against the estimated
+Complete
+Complete Production
+Completed
+Compute
+Computer-generated payslip —
+Configured Schemes (
+Confirm
+Consume Qty
+Cost
+Cost (Rs) *
+Cost Value
+Cost reflects actual issue cost tracked at sale time (weighted-average / FIFO per settings). Margin = sales − COGS.
+Count Stock
+Count the physical cash
+Counted
+Counted Qty
+Create Account
+Create Draft Order
+Create Order
+Create PO
+Create Return
+Create a fresh empty database in Hostinger → Databases, assign the user.
+Created
+Created By
+Creates a timestamped SQL dump of all tables (data only — the empty schema lives in
+Credit
+Credit (payable)
+Credit Issue (payable — salesman owes us)
+Credit Limit
+Credit Limit (Rs)
+Credit Limit:
+Credit Sale
+Current
+Current / not yet due
+Currently With
+Customer
+Customer *
+Customer Aging
+Customer Claims
+Customer Code *
+Customer Free Goods
+Customer Free Goods (invoice bonus lines)
+Customer Payment Received
+Customer Receivable
+Customer Statement —
+Customer and description are required.
+Customer created.
+Customer not found.
+Customer required.
+Customer updated.
+Customer, account and a positive amount are required.
+Customers
+Customers with Opening Balance (
+D
+DEFAULT
+Daily Sales
+Daily Settlement —
+Dashboard
+Date
+Date:
+Day Book
+Days Overdue
+Debit
+Debit (receivable)
+Deducted
+Deduction References
+Deductions
+Default issue warehouse
+Delete
+Delivery Date
+Department
+Department:
+Deposit Into *
+Deposited Into
+Description
+Description *
+Description / Bill Details
+Description and cost required.
+Designation
+Designation:
+Destination Warehouse *
+Details
+Diff/Unit
+Difference
+Direction
+Disc.
+Discount
+Doc
+Dr Inventory / Cr Owner Capital
+Draft
+Driver
+Driver Name
+Due
+Due / Clearing Date
+Due Date
+Due Date (credit)
+Due loan installments
+Due:
+Duplicate submission detected — the invoice was already saved.
+Duplicate submission detected.
+Dyna / Mazda / Shehzore
+EN
+EQUITY
+ERP
+EXPENSES
+Earnings
+Edit
+Edit Permissions
+Edit Permissions —
+Email
+Employee
+Employee *
+Employee Loans
+Employee Salary Expense
+Employee Signature
+Employee not found.
+Employee saved.
+Employee:
+Employees
+Empty.
+Enter quantity to return per line (max = sold − already returned)
+Entity
+Entity e.g. sales_invoices
+Entries must balance (Σ debit = Σ credit) — the server rejects unbalanced entries. Posted entries are immutable; correct them by reversal.
+Entry
+Entry No
+Entry is not balanced — cannot post.
+Every outgoing payment requires your approval.
+Everyone has a payslip for this period. ✔
+Everything at once
+Existing Backups (
+Expected Cash (from receipts)
+Expected Delivery
+Expense Categories
+Expense Summary
+Expense approved — posted to the ledger exactly once.
+Expense recorded — Owner/Admin must approve it before it posts to the ledger.
+Expense reversed — a reversal journal was posted.
+Expenses
+Expenses This Month
+Expenses are recorded as
+Expiry Date
+Export CSV
+Factory
+Factory Management · Sales & Distribution · Accounting
+File
+File Claim
+Filter
+Financial Year & Periods
+Financial year to date
+Finished Goods
+Finished Product
+Finished Product *
+Fiscal Year Closing
+Fiscal Years
+Footer Note (e.g. “Goods once sold will not be taken back…”)
+Free Transfer (stock only, no payable)
+From
+From Account *
+From Warehouse *
+Fuel & maintenance logs feed the vehicle-wise reports.
+Fuel (L)
+Fuel Cost
+Fuel log added.
+Full Name
+Full Name *
+Full access (locked)
+Full name and at least one role are required.
+GL Account
+GL Account (optional)
+GL Movement
+GRAND TOTAL
+GRN Date
+General Ledger
+Generate Backup Now
+Generate Database Backup
+Generate Draft Payroll
+Generate Payroll
+Generated
+Generated:
+Go to ERP Dashboard
+Goods Received Note / Purchase Invoice
+Goods received — stock updated and journal posted.
+Gross Earnings
+Gross Margin
+Gross Sales
+Group
+Has expiry date / batch tracking
+Hostinger Premium supports Cron Jobs (hPanel → Advanced → Cron Jobs). Add a daily job running:
+Hours
+Hours default to 8.00 per present day — used for hourly-pay staff and overtime.
+IBAN
+INCOME
+INVOICE
+IP
+Identity
+If you set an opening balance it is added to the book balance; the offset (Owner Capital) is posted from Settings → Opening Balances.
+Import
+Inactive
+Income
+Income Statement —
+Installment Amount (Rs) *
+Installment Schedule
+Installment Type
+Into
+Inventory → Opening Stock
+Invoice
+Invoice / customer…
+Invoice / supplier / their ref…
+Invoice Date
+Invoice Discount (Rs)
+Invoice Discount (Rs, whole invoice)
+Invoice Footer & Terms
+Invoice not found.
+Invoice posted — stock deducted, journal created.
+Invoice reversed — stock restored and a reversal journal was posted.
+Invoice saved as PENDING — Owner/Admin must approve before stock moves and the journal posts.
+Invoices
+Issue
+Issue (posts when in limit)
+Issue Date
+Issue Rate
+Issue Stock
+Issue Stock —
+Issue Type
+Issued to supplier/other
+Issues
+Item
+Items
+Items  
+Items — Paid / Bonus / Issue Rate
+JUSTI NUMBER ONE
+JUSTI NUMBER ONE ERP
+Join Date
+Journal
+Journal Entries
+Journal entry not found.
+Journal posted.
+KB
+Kind
+LIABILITIES
+LIABILITIES + EQUITY
+Labor Cost (Rs)
+Labor+OH
+Last Login
+Latest Audit Events
+Ledger Balance (opening + all posted journals)
+Ledger History

@@ -1,0 +1,13 @@
+" data-id="
+Cash
+Bank
+Credit / Payable (not paid yet)
+— select —
++ Add Part
+, name:
+, asset_no:
+, department:
+, location:
+Active
+Inactive
+BONUS

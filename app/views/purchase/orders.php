@@ -1,0 +1,12 @@
+<?php $title = __('Purchase Orders'); ?>
+<form method="get" class="toolbar"><input type="hidden" name="r" value="purchase/orders">
+<select name="status" onchange="this.form.submit()"><option value=""><?= __('All') ?></option><?php foreach (['draft','pending_approval','approved','received','rejected','cancelled'] as $s): ?><option value="<?= $s ?>" <?= $status === $s ? 'selected' : '' ?>><?= strtoupper(str_replace('_', ' ', $s)) ?></option><?php endforeach; ?></select>
+<span style="flex:1"></span><a class="btn btn-primary" href="<?= e(url('purchase/orders/new')) ?>"><?= __('+ New PO') ?></a></form>
+<div class="panel"><div class="table-wrap"><table class="tbl"><thead><tr><th><?= __('PO No.') ?></th><th><?= __('Date') ?></th><th><?= __('Supplier') ?></th><th class="num"><?= __('Total') ?></th><th><?= __('Status') ?></th><th></th></tr></thead>
+<tbody><?php foreach ($p['rows'] as $o): ?><tr><td class="mono"><?= e($o['po_no']) ?></td><td><?= date_display($o['order_date']) ?></td><td><?= e($o['supplier']) ?></td><td class="num"><?= money($o['total']) ?></td>
+<td><span class="badge <?= ['draft'=>'gray','pending_approval'=>'amber','approved'=>'blue','received'=>'green','rejected'=>'red','cancelled'=>'red'][$o['status']] ?? 'gray' ?>"><?= e(strtoupper(str_replace('_', ' ', $o['status']))) ?></span></td>
+<td class="btn-group"><?php if ($o['status'] === 'pending_approval' && is_owner_or_admin()): ?><form method="post" action="<?= e(url('purchase/orders/' . (int)$o['id'] . '/approve')) ?>" style="display:inline"><?= csrf_field() ?><button class="btn btn-primary btn-sm" type="submit"><?= __('Approve') ?></button></form><?php endif; ?>
+<?php if (in_array($o['status'], ['approved','received'], true) && Auth::can('purchase.receive')): ?><a class="btn btn-primary btn-sm" href="<?= e(url('purchase/invoices/new', ['po_id' => (int)$o['id']])) ?>"><?= __('Receive Goods') ?></a><?php endif; ?>
+<?php if (in_array($o['status'], ['draft','approved','pending_approval'], true)): ?><form method="post" action="<?= e(url('purchase/orders/' . (int)$o['id'] . '/cancel')) ?>" style="display:inline" data-confirm="<?= __('Cancel this PO?') ?>"><?= csrf_field() ?><button class="btn btn-danger btn-sm"><?= __('Cancel') ?></button></form><?php endif; ?>
+</td></tr><?php endforeach; ?><?php if (!$p['rows']): ?><tr><td colspan="6" class="muted"><?= __('No purchase orders.') ?></td></tr><?php endif; ?></tbody></table></div>
+<?= pager_html($p, 'purchase/orders', ['status' => $status]) ?></div>
