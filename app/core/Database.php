@@ -18,7 +18,11 @@ final class Database {
             $dsn = sprintf('mysql:host=%s;port=%d;dbname=%s;charset=%s',
                 $c['host'], (int)($c['port'] ?? 3306), $c['name'], $c['charset'] ?? 'utf8mb4');
             $opts = self::opts();
-            $opts[PDO::MYSQL_ATTR_INIT_COMMAND] = "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci";
+            // PHP 8.4+ moved the constant to Pdo\Mysql namespace; fall back for older PHP
+            $initCmdKey = defined('Pdo\\Mysql::ATTR_INIT_COMMAND')
+                ? \Pdo\Mysql::ATTR_INIT_COMMAND
+                : PDO::MYSQL_ATTR_INIT_COMMAND;
+            $opts[$initCmdKey] = "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci";
             self::$pdo = new PDO($dsn, $c['user'], $c['pass'], $opts);
         }
         return self::$pdo;

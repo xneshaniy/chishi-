@@ -105,7 +105,7 @@ final class PurchaseController {
                     $assignedProds = $_POST['product_ids'] ?? [];
                     foreach ($assignedProds as $pid) {
                         if ((int)$pid > 0) {
-                            db_exec("INSERT OR IGNORE INTO supplier_products (supplier_id, product_id) VALUES (?, ?)", [$newSupId, (int)$pid]);
+                            db_exec("INSERT IGNORE INTO supplier_products (supplier_id, product_id) VALUES (?, ?)", [$newSupId, (int)$pid]);
                         }
                     }
                     flash('success', __('Supplier added successfully with assigned products.'));
@@ -117,7 +117,7 @@ final class PurchaseController {
                     $assignedProds = $_POST['product_ids'] ?? [];
                     foreach ($assignedProds as $pid) {
                         if ((int)$pid > 0) {
-                            db_exec("INSERT OR IGNORE INTO supplier_products (supplier_id, product_id) VALUES (?, ?)", [$supId, (int)$pid]);
+                            db_exec("INSERT IGNORE INTO supplier_products (supplier_id, product_id) VALUES (?, ?)", [$supId, (int)$pid]);
                         }
                     }
                     flash('success', __('Supplier products updated successfully.'));
@@ -129,7 +129,7 @@ final class PurchaseController {
                 $count = 0;
                 foreach ($assignedProds as $pid) {
                     if ((int)$pid > 0 && $supId > 0) {
-                        db_exec("INSERT OR IGNORE INTO supplier_products (supplier_id, product_id) VALUES (?, ?)", [$supId, (int)$pid]);
+                        db_exec("INSERT IGNORE INTO supplier_products (supplier_id, product_id) VALUES (?, ?)", [$supId, (int)$pid]);
                         $count++;
                     }
                 }
@@ -169,7 +169,7 @@ final class PurchaseController {
                     if (!empty($_POST['supplier_id'])) $supIds[] = $_POST['supplier_id'];
                     foreach ($supIds as $sid) {
                         if ((int)$sid > 0) {
-                            db_exec("INSERT OR IGNORE INTO supplier_products (supplier_id, product_id) VALUES (?, ?)", [(int)$sid, $newPid]);
+                            db_exec("INSERT IGNORE INTO supplier_products (supplier_id, product_id) VALUES (?, ?)", [(int)$sid, $newPid]);
                         }
                     }
                     flash('success', __('Raw material product created successfully.'));
@@ -292,8 +292,8 @@ final class PurchaseController {
         // Suppliers & associated products (Tab: suppliers)
         $suppliersList = db_all("SELECT s.*,
                                        COUNT(DISTINCT sp.product_id) AS prod_count,
-                                       GROUP_CONCAT(p.name, '||') AS product_names,
-                                       GROUP_CONCAT(p.id, ',') AS product_ids
+                                       GROUP_CONCAT(p.name SEPARATOR '||') AS product_names,
+                                       GROUP_CONCAT(p.id SEPARATOR ',') AS product_ids
                                 FROM suppliers s
                                 LEFT JOIN supplier_products sp ON sp.supplier_id = s.id
                                 LEFT JOIN products p ON p.id = sp.product_id AND p.is_active = 1
