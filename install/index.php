@@ -49,8 +49,12 @@ if (!$installed && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && ($_POST['
 
     if (!$errors) {
         try {
-            // 1) Schema (disable FK checks during table creation)
+            // 1) Clean previous half-installed tables and run fresh schema
             $pdo->exec("SET FOREIGN_KEY_CHECKS = 0;");
+            $existing = $pdo->query("SHOW TABLES")->fetchAll(PDO::FETCH_COLUMN);
+            foreach ($existing as $t) {
+                $pdo->exec("DROP TABLE IF EXISTS `{$t}`;");
+            }
             $sql = file_get_contents(ROOT . '/database/schema.mysql.sql');
             $statements = preg_split('/;\s*(\r?\n|$)/', $sql);
             foreach ($statements as $st) {

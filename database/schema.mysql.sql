@@ -7,14 +7,14 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ---------- Company & organisation ----------
-CREATE TABLE company_settings (
+CREATE TABLE IF NOT EXISTS company_settings (
   id INT AUTO_INCREMENT PRIMARY KEY,
   setting_key VARCHAR(100) NOT NULL UNIQUE,
   setting_value TEXT NULL,
   updated_at DATETIME NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE branches (
+CREATE TABLE IF NOT EXISTS branches (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(20) NOT NULL UNIQUE,
   name VARCHAR(120) NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE branches (
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
-CREATE TABLE warehouses (
+CREATE TABLE IF NOT EXISTS warehouses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   branch_id INT NULL,
   code VARCHAR(20) NOT NULL UNIQUE,
@@ -42,7 +42,7 @@ CREATE TABLE warehouses (
   INDEX idx_wh_branch (branch_id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE fiscal_years (
+CREATE TABLE IF NOT EXISTS fiscal_years (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) NOT NULL,          -- e.g. FY 2026-27
   start_date DATE NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE fiscal_years (
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
-CREATE TABLE fiscal_periods (
+CREATE TABLE IF NOT EXISTS fiscal_periods (
   id INT AUTO_INCREMENT PRIMARY KEY,
   fiscal_year_id INT NOT NULL,
   name VARCHAR(30) NOT NULL,          -- e.g. Jul 2026
@@ -63,7 +63,7 @@ CREATE TABLE fiscal_periods (
   INDEX idx_fp_dates (start_date, end_date)
 ) ENGINE=InnoDB;
 
-CREATE TABLE voucher_sequences (
+CREATE TABLE IF NOT EXISTS voucher_sequences (
   id INT AUTO_INCREMENT PRIMARY KEY,
   fiscal_year_id INT NOT NULL,
   voucher_type VARCHAR(10) NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE voucher_sequences (
 ) ENGINE=InnoDB;
 
 -- ---------- Security ----------
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(60) NOT NULL UNIQUE,
   full_name VARCHAR(120) NOT NULL,
@@ -94,21 +94,21 @@ CREATE TABLE users (
   CONSTRAINT fk_users_branch FOREIGN KEY (branch_id) REFERENCES branches(id) ON DELETE SET NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE roles (
+CREATE TABLE IF NOT EXISTS roles (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(40) NOT NULL UNIQUE,   -- owner|admin|accountant|manager|storekeeper|salesman
   name VARCHAR(80) NOT NULL,
   description VARCHAR(255) NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE permissions (
+CREATE TABLE IF NOT EXISTS permissions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(80) NOT NULL UNIQUE,   -- module.action e.g. sales.create
   module VARCHAR(40) NOT NULL,
   description VARCHAR(255) NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE user_roles (
+CREATE TABLE IF NOT EXISTS user_roles (
   user_id INT NOT NULL,
   role_id INT NOT NULL,
   PRIMARY KEY (user_id, role_id),
@@ -116,7 +116,7 @@ CREATE TABLE user_roles (
   CONSTRAINT fk_ur_r FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE role_permissions (
+CREATE TABLE IF NOT EXISTS role_permissions (
   role_id INT NOT NULL,
   permission_id INT NOT NULL,
   PRIMARY KEY (role_id, permission_id),
@@ -124,7 +124,7 @@ CREATE TABLE role_permissions (
   CONSTRAINT fk_rp_p FOREIGN KEY (permission_id) REFERENCES permissions(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE login_history (
+CREATE TABLE IF NOT EXISTS login_history (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NULL,
   username VARCHAR(60) NULL,
@@ -135,7 +135,7 @@ CREATE TABLE login_history (
   INDEX idx_lh_user (user_id, created_at)
 ) ENGINE=InnoDB;
 
-CREATE TABLE login_attempts (
+CREATE TABLE IF NOT EXISTS login_attempts (
   id INT AUTO_INCREMENT PRIMARY KEY,
   ip VARCHAR(45) NOT NULL,
   username VARCHAR(60) NOT NULL,
@@ -144,7 +144,7 @@ CREATE TABLE login_attempts (
   INDEX idx_la (ip, username, attempted_at)
 ) ENGINE=InnoDB;
 
-CREATE TABLE audit_logs (
+CREATE TABLE IF NOT EXISTS audit_logs (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NULL,
   action VARCHAR(40) NOT NULL,
@@ -158,7 +158,7 @@ CREATE TABLE audit_logs (
   INDEX idx_audit_time (created_at)
 ) ENGINE=InnoDB;
 
-CREATE TABLE idempotency_keys (
+CREATE TABLE IF NOT EXISTS idempotency_keys (
   id INT AUTO_INCREMENT PRIMARY KEY,
   idem_key VARCHAR(64) NOT NULL UNIQUE,
   user_id INT NULL,
@@ -166,7 +166,7 @@ CREATE TABLE idempotency_keys (
   created_at DATETIME NOT NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE attachments (
+CREATE TABLE IF NOT EXISTS attachments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   entity VARCHAR(60) NOT NULL,
   entity_id VARCHAR(60) NOT NULL,
@@ -180,14 +180,14 @@ CREATE TABLE attachments (
 ) ENGINE=InnoDB;
 
 -- ---------- Master data ----------
-CREATE TABLE product_categories (
+CREATE TABLE IF NOT EXISTS product_categories (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   kind VARCHAR(20) NOT NULL DEFAULT 'finished',  -- finished|raw|packaging
   is_archived TINYINT(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB;
 
-CREATE TABLE product_packaging (
+CREATE TABLE IF NOT EXISTS product_packaging (
   product_id INT PRIMARY KEY,
   pack_pieces DECIMAL(10,3) NULL,      -- pieces per pack; NULL = use global default
   bundle_packs DECIMAL(10,3) NULL,     -- packs per bundle; NULL = not configured
@@ -196,14 +196,14 @@ CREATE TABLE product_packaging (
   CONSTRAINT fk_pack_p FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE units (
+CREATE TABLE IF NOT EXISTS units (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(40) NOT NULL,
   short VARCHAR(10) NOT NULL,
   is_archived TINYINT(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB;
 
-CREATE TABLE products (
+CREATE TABLE IF NOT EXISTS products (
   id INT AUTO_INCREMENT PRIMARY KEY,
   sku VARCHAR(40) NOT NULL UNIQUE,
   name VARCHAR(150) NOT NULL,
@@ -229,14 +229,14 @@ CREATE TABLE products (
   INDEX idx_prod_name (name)
 ) ENGINE=InnoDB;
 
-CREATE TABLE pk_provinces (
+CREATE TABLE IF NOT EXISTS pk_provinces (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(70) NOT NULL UNIQUE,
   sort_order INT NOT NULL DEFAULT 0,
   is_active TINYINT(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE pk_cities (
+CREATE TABLE IF NOT EXISTS pk_cities (
   id INT AUTO_INCREMENT PRIMARY KEY,
   province_id INT NOT NULL,
   name VARCHAR(90) NOT NULL,
@@ -245,7 +245,7 @@ CREATE TABLE pk_cities (
   CONSTRAINT fk_pkcity_prov FOREIGN KEY (province_id) REFERENCES pk_provinces(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE areas (
+CREATE TABLE IF NOT EXISTS areas (
   id INT AUTO_INCREMENT PRIMARY KEY,
   province_id INT NULL,
   city_id INT NULL,
@@ -259,7 +259,7 @@ CREATE TABLE areas (
   CONSTRAINT fk_area_city FOREIGN KEY (city_id) REFERENCES pk_cities(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE customers (
+CREATE TABLE IF NOT EXISTS customers (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(30) NOT NULL UNIQUE,
   name VARCHAR(150) NOT NULL,
@@ -285,7 +285,7 @@ CREATE TABLE customers (
   INDEX idx_cust_area (area)
 ) ENGINE=InnoDB;
 
-CREATE TABLE salesmen (
+CREATE TABLE IF NOT EXISTS salesmen (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(30) NOT NULL UNIQUE,
   name VARCHAR(150) NOT NULL,
@@ -317,7 +317,7 @@ CREATE TABLE salesmen (
 
 ALTER TABLE customers ADD CONSTRAINT fk_cust_salesman FOREIGN KEY (salesman_id) REFERENCES salesmen(id) ON DELETE SET NULL;
 
-CREATE TABLE salesman_customers (
+CREATE TABLE IF NOT EXISTS salesman_customers (
   salesman_id INT NOT NULL,
   customer_id INT NOT NULL,
   PRIMARY KEY (salesman_id, customer_id),
@@ -325,7 +325,7 @@ CREATE TABLE salesman_customers (
   CONSTRAINT fk_sc_c FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE suppliers (
+CREATE TABLE IF NOT EXISTS suppliers (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(30) NOT NULL UNIQUE,
   name VARCHAR(150) NOT NULL,
@@ -340,7 +340,7 @@ CREATE TABLE suppliers (
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
-CREATE TABLE employees (
+CREATE TABLE IF NOT EXISTS employees (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(30) NOT NULL UNIQUE,
   name VARCHAR(150) NOT NULL,
@@ -370,7 +370,7 @@ CREATE TABLE employees (
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
-CREATE TABLE attendance (
+CREATE TABLE IF NOT EXISTS attendance (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
   date DATE NOT NULL,
@@ -380,7 +380,7 @@ CREATE TABLE attendance (
   CONSTRAINT fk_att_emp FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE employee_documents (
+CREATE TABLE IF NOT EXISTS employee_documents (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
   doc_type VARCHAR(60) NOT NULL DEFAULT 'other', -- photo|cnic_front|cnic_back|contract|certificate|other
@@ -394,7 +394,7 @@ CREATE TABLE employee_documents (
   CONSTRAINT fk_empdoc_emp FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE staff_leaves (
+CREATE TABLE IF NOT EXISTS staff_leaves (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
   start_date DATE NOT NULL,
@@ -413,7 +413,7 @@ CREATE TABLE staff_leaves (
   CONSTRAINT fk_staff_leave FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE salary_changes (
+CREATE TABLE IF NOT EXISTS salary_changes (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
   salary_type VARCHAR(10) NOT NULL DEFAULT 'monthly',
@@ -426,7 +426,7 @@ CREATE TABLE salary_changes (
   CONSTRAINT fk_salary_change FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE employee_bonuses (
+CREATE TABLE IF NOT EXISTS employee_bonuses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
   date DATE NOT NULL,
@@ -445,7 +445,7 @@ CREATE TABLE employee_bonuses (
   CONSTRAINT fk_eb_emp FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE employee_deductions (
+CREATE TABLE IF NOT EXISTS employee_deductions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
   date DATE NOT NULL,
@@ -457,7 +457,7 @@ CREATE TABLE employee_deductions (
   CONSTRAINT fk_edd_emp FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE staff_attendance (
+CREATE TABLE IF NOT EXISTS staff_attendance (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NULL,
   salesman_id INT NULL,
@@ -472,7 +472,7 @@ CREATE TABLE staff_attendance (
   CONSTRAINT chk_sa_person CHECK ((employee_id IS NOT NULL AND salesman_id IS NULL) OR (employee_id IS NULL AND salesman_id IS NOT NULL))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE staff_attendance_audit (
+CREATE TABLE IF NOT EXISTS staff_attendance_audit (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NULL,
   salesman_id INT NULL,
@@ -487,7 +487,7 @@ CREATE TABLE staff_attendance_audit (
   CONSTRAINT chk_saaud_person CHECK ((employee_id IS NOT NULL AND salesman_id IS NULL) OR (employee_id IS NULL AND salesman_id IS NOT NULL))
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE grinding_sends (
+CREATE TABLE IF NOT EXISTS grinding_sends (
   id INT AUTO_INCREMENT PRIMARY KEY,
   send_no VARCHAR(40) NOT NULL UNIQUE,
   date DATE NOT NULL,
@@ -503,7 +503,7 @@ CREATE TABLE grinding_sends (
   CONSTRAINT fk_gs_prod FOREIGN KEY (product_id) REFERENCES products(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE grinding_records (
+CREATE TABLE IF NOT EXISTS grinding_records (
   id INT AUTO_INCREMENT PRIMARY KEY,
   send_id INT NOT NULL,
   grind_date DATE NOT NULL,
@@ -517,7 +517,7 @@ CREATE TABLE grinding_records (
   CONSTRAINT fk_gr_send FOREIGN KEY (send_id) REFERENCES grinding_sends(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE grinding_returns (
+CREATE TABLE IF NOT EXISTS grinding_returns (
   id INT AUTO_INCREMENT PRIMARY KEY,
   send_id INT NOT NULL,
   return_date DATE NOT NULL,
@@ -529,7 +529,7 @@ CREATE TABLE grinding_returns (
   CONSTRAINT fk_gret_send FOREIGN KEY (send_id) REFERENCES grinding_sends(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE employee_advances (
+CREATE TABLE IF NOT EXISTS employee_advances (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
   date DATE NOT NULL,
@@ -548,7 +548,7 @@ CREATE TABLE employee_advances (
   CONSTRAINT fk_adv_emp FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE payroll (
+CREATE TABLE IF NOT EXISTS payroll (
   id INT AUTO_INCREMENT PRIMARY KEY,
   employee_id INT NOT NULL,
   period_start DATE NOT NULL,
@@ -571,7 +571,7 @@ CREATE TABLE payroll (
   CONSTRAINT fk_pay_emp FOREIGN KEY (employee_id) REFERENCES employees(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE payroll_payments (
+CREATE TABLE IF NOT EXISTS payroll_payments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   payroll_id INT NOT NULL,
   `date` DATE NOT NULL,
@@ -587,7 +587,7 @@ CREATE TABLE payroll_payments (
   CONSTRAINT fk_pp_acc FOREIGN KEY (account_id) REFERENCES cash_bank_accounts(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE vehicles (
+CREATE TABLE IF NOT EXISTS vehicles (
   id INT AUTO_INCREMENT PRIMARY KEY,
   reg_no VARCHAR(30) NOT NULL UNIQUE,
   make VARCHAR(60) NULL,
@@ -604,7 +604,7 @@ CREATE TABLE vehicles (
   notes VARCHAR(255) NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE vehicle_fuel_logs (
+CREATE TABLE IF NOT EXISTS vehicle_fuel_logs (
   id INT AUTO_INCREMENT PRIMARY KEY,
   vehicle_id INT NOT NULL,
   date DATE NOT NULL,
@@ -616,7 +616,7 @@ CREATE TABLE vehicle_fuel_logs (
   created_by INT NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE vehicle_maintenance (
+CREATE TABLE IF NOT EXISTS vehicle_maintenance (
   id INT AUTO_INCREMENT PRIMARY KEY,
   vehicle_id INT NOT NULL,
   date DATE NOT NULL,
@@ -630,7 +630,7 @@ CREATE TABLE vehicle_maintenance (
 ) ENGINE=InnoDB;
 
 -- ---------- Factory Maintenance & Repairs ----------
-CREATE TABLE maintenance_assets (
+CREATE TABLE IF NOT EXISTS maintenance_assets (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(150) NOT NULL,
   asset_no VARCHAR(60) NULL UNIQUE,
@@ -649,7 +649,7 @@ CREATE TABLE maintenance_assets (
   status VARCHAR(12) NOT NULL DEFAULT 'active'
 ) ENGINE=InnoDB;
 
-CREATE TABLE maintenance_records (
+CREATE TABLE IF NOT EXISTS maintenance_records (
   id INT AUTO_INCREMENT PRIMARY KEY,
   record_no VARCHAR(30) NOT NULL UNIQUE,
   asset_id INT NULL,
@@ -683,7 +683,7 @@ CREATE TABLE maintenance_records (
   INDEX idx_mr_machine (machine_name(60))
 ) ENGINE=InnoDB;
 
-CREATE TABLE maintenance_parts (
+CREATE TABLE IF NOT EXISTS maintenance_parts (
   id INT AUTO_INCREMENT PRIMARY KEY,
   maintenance_id INT NOT NULL,
   name VARCHAR(150) NOT NULL,
@@ -696,7 +696,7 @@ CREATE TABLE maintenance_parts (
 -- ---------- Inventory ----------
 
 -- ---------- Inventory ----------
-CREATE TABLE stock_balances (
+CREATE TABLE IF NOT EXISTS stock_balances (
   product_id INT NOT NULL,
   warehouse_id INT NOT NULL,
   qty DECIMAL(18,3) NOT NULL DEFAULT 0,
@@ -706,7 +706,7 @@ CREATE TABLE stock_balances (
   CONSTRAINT fk_sb_w FOREIGN KEY (warehouse_id) REFERENCES warehouses(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE stock_cost_layers (
+CREATE TABLE IF NOT EXISTS stock_cost_layers (
   id INT AUTO_INCREMENT PRIMARY KEY,
   product_id INT NOT NULL,
   warehouse_id INT NOT NULL,
@@ -718,7 +718,7 @@ CREATE TABLE stock_cost_layers (
   INDEX idx_layer (product_id, warehouse_id, created_at, id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE stock_movements (
+CREATE TABLE IF NOT EXISTS stock_movements (
   id INT AUTO_INCREMENT PRIMARY KEY,
   product_id INT NOT NULL,
   warehouse_id INT NOT NULL,
@@ -741,7 +741,7 @@ CREATE TABLE stock_movements (
   INDEX idx_mv_type (type)
 ) ENGINE=InnoDB;
 
-CREATE TABLE stock_adjustments (
+CREATE TABLE IF NOT EXISTS stock_adjustments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   adjustment_no VARCHAR(30) NOT NULL UNIQUE,
   warehouse_id INT NOT NULL,
@@ -755,7 +755,7 @@ CREATE TABLE stock_adjustments (
   INDEX idx_sa_status (status)
 ) ENGINE=InnoDB;
 
-CREATE TABLE stock_adjustment_items (
+CREATE TABLE IF NOT EXISTS stock_adjustment_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   adjustment_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -767,7 +767,7 @@ CREATE TABLE stock_adjustment_items (
 ) ENGINE=InnoDB;
 
 -- ---------- Factory daily raw-material consumption (deducts RM stock; no double-deduct at production) ----------
-CREATE TABLE factory_issues (
+CREATE TABLE IF NOT EXISTS factory_issues (
   id INT AUTO_INCREMENT PRIMARY KEY,
   issue_no VARCHAR(30) NOT NULL UNIQUE,
   `date` DATE NOT NULL,
@@ -782,7 +782,7 @@ CREATE TABLE factory_issues (
   CONSTRAINT fk_fi_po FOREIGN KEY (production_order_id) REFERENCES production_orders(id) ON DELETE SET NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE factory_issue_items (
+CREATE TABLE IF NOT EXISTS factory_issue_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   issue_id INT NOT NULL,
   product_id INT NOT NULL,             -- raw material (KG base)
@@ -796,7 +796,7 @@ CREATE TABLE factory_issue_items (
   CONSTRAINT fk_fii_p FOREIGN KEY (product_id) REFERENCES products(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE rm_daily_usage (
+CREATE TABLE IF NOT EXISTS rm_daily_usage (
   id INT AUTO_INCREMENT PRIMARY KEY,
   usage_date DATE NOT NULL,
   product_id INT NOT NULL,
@@ -830,7 +830,7 @@ CREATE TABLE IF NOT EXISTS daily_production_rm_items (
 
 
 
-CREATE TABLE bills_of_materials (
+CREATE TABLE IF NOT EXISTS bills_of_materials (
   id INT AUTO_INCREMENT PRIMARY KEY,
   product_id INT NOT NULL,                -- finished good produced
   name VARCHAR(120) NOT NULL,
@@ -839,7 +839,7 @@ CREATE TABLE bills_of_materials (
   CONSTRAINT fk_bom_p FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
-CREATE TABLE bom_lines (
+CREATE TABLE IF NOT EXISTS bom_lines (
   id INT AUTO_INCREMENT PRIMARY KEY,
   bom_id INT NOT NULL,
   material_id INT NOT NULL,
@@ -848,7 +848,7 @@ CREATE TABLE bom_lines (
   CONSTRAINT fk_boml_m FOREIGN KEY (material_id) REFERENCES products(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE production_orders (
+CREATE TABLE IF NOT EXISTS production_orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
   order_no VARCHAR(30) NOT NULL UNIQUE,
   product_id INT NOT NULL,
@@ -873,7 +873,7 @@ CREATE TABLE production_orders (
   INDEX idx_po_status (status)
 ) ENGINE=InnoDB;
 
-CREATE TABLE daily_production (
+CREATE TABLE IF NOT EXISTS daily_production (
   id INT AUTO_INCREMENT PRIMARY KEY,
   run_no VARCHAR(30) NOT NULL UNIQUE,
   `date` DATE NOT NULL,
@@ -887,7 +887,7 @@ CREATE TABLE daily_production (
   INDEX idx_dp_date (`date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE daily_production_items (
+CREATE TABLE IF NOT EXISTS daily_production_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   run_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -899,7 +899,7 @@ CREATE TABLE daily_production_items (
   CONSTRAINT fk_dpi_p FOREIGN KEY (product_id) REFERENCES products(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE production_inputs (
+CREATE TABLE IF NOT EXISTS production_inputs (
   id INT AUTO_INCREMENT PRIMARY KEY,
   production_order_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -911,7 +911,7 @@ CREATE TABLE production_inputs (
 ) ENGINE=InnoDB;
 
 -- ---------- Cash & bank ----------
-CREATE TABLE cash_bank_accounts (
+CREATE TABLE IF NOT EXISTS cash_bank_accounts (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(120) NOT NULL,
   type VARCHAR(10) NOT NULL,               -- cash|bank
@@ -925,7 +925,7 @@ CREATE TABLE cash_bank_accounts (
   is_archived TINYINT(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB;
 
-CREATE TABLE bank_transfers (
+CREATE TABLE IF NOT EXISTS bank_transfers (
   id INT AUTO_INCREMENT PRIMARY KEY,
   transfer_no VARCHAR(30) NOT NULL UNIQUE,
   from_account_id INT NOT NULL,
@@ -942,7 +942,7 @@ CREATE TABLE bank_transfers (
   CONSTRAINT fk_bt_to FOREIGN KEY (to_account_id) REFERENCES cash_bank_accounts(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE cheques (
+CREATE TABLE IF NOT EXISTS cheques (
   id INT AUTO_INCREMENT PRIMARY KEY,
   cheque_no VARCHAR(40) NOT NULL,
   bank_account_id INT NOT NULL,
@@ -960,7 +960,7 @@ CREATE TABLE cheques (
 ) ENGINE=InnoDB;
 
 -- ---------- Purchasing ----------
-CREATE TABLE purchase_orders (
+CREATE TABLE IF NOT EXISTS purchase_orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
   po_no VARCHAR(30) NOT NULL UNIQUE,
   supplier_id INT NOT NULL,
@@ -976,7 +976,7 @@ CREATE TABLE purchase_orders (
   CONSTRAINT fk_pur_po_sup FOREIGN KEY (supplier_id) REFERENCES suppliers(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE purchase_order_items (
+CREATE TABLE IF NOT EXISTS purchase_order_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   po_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -987,7 +987,7 @@ CREATE TABLE purchase_order_items (
   CONSTRAINT fk_poi_p FOREIGN KEY (product_id) REFERENCES products(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE purchase_invoices (
+CREATE TABLE IF NOT EXISTS purchase_invoices (
   id INT AUTO_INCREMENT PRIMARY KEY,
   invoice_no VARCHAR(30) NOT NULL UNIQUE,
   supplier_id INT NOT NULL,
@@ -1013,7 +1013,7 @@ CREATE TABLE purchase_invoices (
   INDEX idx_pi_date (date)
 ) ENGINE=InnoDB;
 
-CREATE TABLE purchase_items (
+CREATE TABLE IF NOT EXISTS purchase_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   invoice_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -1031,7 +1031,7 @@ CREATE TABLE purchase_items (
 ) ENGINE=InnoDB;
 
 -- ---------- Sales ----------
-CREATE TABLE sales_orders (
+CREATE TABLE IF NOT EXISTS sales_orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
   so_no VARCHAR(30) NOT NULL UNIQUE,
   customer_id INT NULL,
@@ -1048,7 +1048,7 @@ CREATE TABLE sales_orders (
   CONSTRAINT fk_so_sm FOREIGN KEY (salesman_id) REFERENCES salesmen(id) ON DELETE SET NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE sales_order_items (
+CREATE TABLE IF NOT EXISTS sales_order_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   sales_order_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -1059,7 +1059,7 @@ CREATE TABLE sales_order_items (
   CONSTRAINT fk_soi_p FOREIGN KEY (product_id) REFERENCES products(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE sales_invoices (
+CREATE TABLE IF NOT EXISTS sales_invoices (
   id INT AUTO_INCREMENT PRIMARY KEY,
   invoice_no VARCHAR(30) NOT NULL UNIQUE,
   customer_id INT NULL,
@@ -1088,7 +1088,7 @@ CREATE TABLE sales_invoices (
   INDEX idx_si_status (status)
 ) ENGINE=InnoDB;
 
-CREATE TABLE sales_invoice_items (
+CREATE TABLE IF NOT EXISTS sales_invoice_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   invoice_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -1106,7 +1106,7 @@ CREATE TABLE sales_invoice_items (
   CONSTRAINT fk_sii_p FOREIGN KEY (product_id) REFERENCES products(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE sales_returns (
+CREATE TABLE IF NOT EXISTS sales_returns (
   id INT AUTO_INCREMENT PRIMARY KEY,
   return_no VARCHAR(30) NOT NULL UNIQUE,
   sales_invoice_id INT NOT NULL,
@@ -1122,7 +1122,7 @@ CREATE TABLE sales_returns (
   CONSTRAINT fk_sr_c FOREIGN KEY (customer_id) REFERENCES customers(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE sales_return_items (
+CREATE TABLE IF NOT EXISTS sales_return_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   return_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -1135,7 +1135,7 @@ CREATE TABLE sales_return_items (
 ) ENGINE=InnoDB;
 
 -- Salesman stock issues (goods on van/with salesman; NOT sales)
-CREATE TABLE salesman_documents (
+CREATE TABLE IF NOT EXISTS salesman_documents (
   id INT AUTO_INCREMENT PRIMARY KEY,
   salesman_id INT NOT NULL,
   doc_type VARCHAR(60) NOT NULL DEFAULT 'other',
@@ -1149,7 +1149,7 @@ CREATE TABLE salesman_documents (
   CONSTRAINT fk_sdoc_sm FOREIGN KEY (salesman_id) REFERENCES salesmen(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE salesman_issues (
+CREATE TABLE IF NOT EXISTS salesman_issues (
   id INT AUTO_INCREMENT PRIMARY KEY,
   issue_no VARCHAR(30) NOT NULL UNIQUE,
   salesman_id INT NOT NULL,
@@ -1171,7 +1171,7 @@ CREATE TABLE salesman_issues (
   CONSTRAINT fk_si2_wh FOREIGN KEY (from_warehouse_id) REFERENCES warehouses(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE salesman_issue_items (
+CREATE TABLE IF NOT EXISTS salesman_issue_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   issue_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -1187,7 +1187,7 @@ CREATE TABLE salesman_issue_items (
   CONSTRAINT fk_sii2_p FOREIGN KEY (product_id) REFERENCES products(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE salesman_settlements (
+CREATE TABLE IF NOT EXISTS salesman_settlements (
   id INT AUTO_INCREMENT PRIMARY KEY,
   salesman_id INT NOT NULL,
   date DATE NOT NULL,
@@ -1213,7 +1213,7 @@ CREATE TABLE salesman_settlements (
   CONSTRAINT fk_set_sm FOREIGN KEY (salesman_id) REFERENCES salesmen(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE salesman_collections (
+CREATE TABLE IF NOT EXISTS salesman_collections (
   id INT AUTO_INCREMENT PRIMARY KEY,
   collection_no VARCHAR(30) NOT NULL UNIQUE,
   salesman_id INT NOT NULL,
@@ -1235,7 +1235,7 @@ CREATE TABLE salesman_collections (
   CONSTRAINT fk_scol_acc FOREIGN KEY (account_id) REFERENCES cash_bank_accounts(id),
   CONSTRAINT fk_scol_inv FOREIGN KEY (sales_invoice_id) REFERENCES sales_invoices(id) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-CREATE TABLE salesman_payments (
+CREATE TABLE IF NOT EXISTS salesman_payments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   receipt_no VARCHAR(30) NULL UNIQUE,
   salesman_id INT NOT NULL,
@@ -1262,7 +1262,7 @@ CREATE TABLE salesman_payments (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- ---------- Recovery: payment-to-invoice allocation (one payment may settle many invoices) ----------
-CREATE TABLE salesman_payment_allocations (
+CREATE TABLE IF NOT EXISTS salesman_payment_allocations (
   id INT AUTO_INCREMENT PRIMARY KEY,
   payment_id INT NOT NULL,
   issue_id INT NOT NULL,
@@ -1276,7 +1276,7 @@ CREATE TABLE salesman_payment_allocations (
   CONSTRAINT fk_spa_sm FOREIGN KEY (salesman_id) REFERENCES salesmen(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE salesman_salary_payments (
+CREATE TABLE IF NOT EXISTS salesman_salary_payments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   salesman_id INT NOT NULL,
   `date` DATE NOT NULL,
@@ -1294,7 +1294,7 @@ CREATE TABLE salesman_salary_payments (
   CONSTRAINT fk_ssp_acc FOREIGN KEY (account_id) REFERENCES cash_bank_accounts(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE salesman_salary_advances (
+CREATE TABLE IF NOT EXISTS salesman_salary_advances (
   id INT AUTO_INCREMENT PRIMARY KEY,
   salesman_id INT NOT NULL,
   `date` DATE NOT NULL,
@@ -1314,7 +1314,7 @@ CREATE TABLE salesman_salary_advances (
   CONSTRAINT fk_ssa_acc FOREIGN KEY (account_id) REFERENCES cash_bank_accounts(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE salesman_expenses (
+CREATE TABLE IF NOT EXISTS salesman_expenses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   salesman_id INT NOT NULL,
   `date` DATE NOT NULL,
@@ -1338,7 +1338,7 @@ CREATE TABLE salesman_expenses (
 ) ENGINE=InnoDB;
 
 -- ---------- Receipts & payments ----------
-CREATE TABLE receipts (
+CREATE TABLE IF NOT EXISTS receipts (
   id INT AUTO_INCREMENT PRIMARY KEY,
   receipt_no VARCHAR(30) NOT NULL UNIQUE,
   party_type VARCHAR(10) NOT NULL DEFAULT 'customer',  -- customer
@@ -1357,7 +1357,7 @@ CREATE TABLE receipts (
   INDEX idx_rcpt_cust (customer_id, date)
 ) ENGINE=InnoDB;
 
-CREATE TABLE payments (
+CREATE TABLE IF NOT EXISTS payments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   payment_no VARCHAR(30) NOT NULL UNIQUE,
   party_type VARCHAR(10) NOT NULL,          -- supplier|expense|owner|salary|salesman|other
@@ -1377,7 +1377,7 @@ CREATE TABLE payments (
 ) ENGINE=InnoDB;
 
 -- ---------- Expenses ----------
-CREATE TABLE expense_categories (
+CREATE TABLE IF NOT EXISTS expense_categories (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL UNIQUE,
   gl_account_id INT NOT NULL,               -- linked expense account
@@ -1385,7 +1385,7 @@ CREATE TABLE expense_categories (
   is_archived TINYINT(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB;
 
-CREATE TABLE other_income (
+CREATE TABLE IF NOT EXISTS other_income (
   id INT AUTO_INCREMENT PRIMARY KEY,
   income_no VARCHAR(30) NOT NULL UNIQUE,
   category VARCHAR(60) NOT NULL DEFAULT 'other',
@@ -1406,7 +1406,7 @@ CREATE TABLE other_income (
   CONSTRAINT fk_oi_acc FOREIGN KEY (account_id) REFERENCES cash_bank_accounts(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE expenses (
+CREATE TABLE IF NOT EXISTS expenses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   expense_no VARCHAR(30) NOT NULL UNIQUE,
   category_id INT NOT NULL,
@@ -1432,7 +1432,7 @@ CREATE TABLE expenses (
 ) ENGINE=InnoDB;
 
 -- ---------- Claims & bonuses ----------
-CREATE TABLE claims (
+CREATE TABLE IF NOT EXISTS claims (
   id INT AUTO_INCREMENT PRIMARY KEY,
   claim_no VARCHAR(30) NOT NULL UNIQUE,
   customer_id INT NULL,
@@ -1447,7 +1447,7 @@ CREATE TABLE claims (
   CONSTRAINT fk_clm_inv FOREIGN KEY (sales_invoice_id) REFERENCES sales_invoices(id) ON DELETE SET NULL
 ) ENGINE=InnoDB;
 
-CREATE TABLE bonuses (
+CREATE TABLE IF NOT EXISTS bonuses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   bonus_no VARCHAR(30) NOT NULL UNIQUE,
   salesman_id INT NOT NULL,
@@ -1461,7 +1461,7 @@ CREATE TABLE bonuses (
 ) ENGINE=InnoDB;
 
 -- ---------- Accounting ----------
-CREATE TABLE chart_of_accounts (
+CREATE TABLE IF NOT EXISTS chart_of_accounts (
   id INT AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(20) NOT NULL UNIQUE,
   name VARCHAR(150) NOT NULL,
@@ -1476,7 +1476,7 @@ CREATE TABLE chart_of_accounts (
   INDEX idx_coa_type (type)
 ) ENGINE=InnoDB;
 
-CREATE TABLE journal_entries (
+CREATE TABLE IF NOT EXISTS journal_entries (
   id INT AUTO_INCREMENT PRIMARY KEY,
   entry_no VARCHAR(30) NOT NULL UNIQUE,
   date DATE NOT NULL,
@@ -1499,7 +1499,7 @@ CREATE TABLE journal_entries (
   INDEX idx_je_status (status)
 ) ENGINE=InnoDB;
 
-CREATE TABLE journal_lines (
+CREATE TABLE IF NOT EXISTS journal_lines (
   id INT AUTO_INCREMENT PRIMARY KEY,
   entry_id INT NOT NULL,
   account_id INT NOT NULL,
@@ -1519,7 +1519,7 @@ CREATE TABLE journal_lines (
 
 
 -- ---------- Approvals (outgoing payments require Owner/Admin approval) ----------
-CREATE TABLE approval_requests (
+CREATE TABLE IF NOT EXISTS approval_requests (
   id INT AUTO_INCREMENT PRIMARY KEY,
   request_type VARCHAR(20) NOT NULL,     -- payment|transfer|expense|payroll|advance|loan|bonus|discount|refund|other
   reference_type VARCHAR(40) NOT NULL,   -- payments|expenses|payroll|payroll_payments|employee_advances|employee_loans|sales_invoices|bank_transfers|salesman_issues
@@ -1538,7 +1538,7 @@ CREATE TABLE approval_requests (
 ) ENGINE=InnoDB;
 
 -- ---------- Salesman credit ledger (goods issued on credit at issue rate) ----------
-CREATE TABLE salesman_ledger (
+CREATE TABLE IF NOT EXISTS salesman_ledger (
   id INT AUTO_INCREMENT PRIMARY KEY,
   salesman_id INT NOT NULL,
   date DATE NOT NULL,
@@ -1557,7 +1557,7 @@ CREATE TABLE salesman_ledger (
 ) ENGINE=InnoDB;
 
 -- ---------- Employee loans (separate from advances) ----------
-CREATE TABLE employee_loans (
+CREATE TABLE IF NOT EXISTS employee_loans (
   id INT AUTO_INCREMENT PRIMARY KEY,
   loan_no VARCHAR(30) NOT NULL UNIQUE,
   employee_id INT NOT NULL,
@@ -1581,7 +1581,7 @@ CREATE TABLE employee_loans (
   INDEX idx_loan_status (status)
 ) ENGINE=InnoDB;
 
-CREATE TABLE loan_installments (
+CREATE TABLE IF NOT EXISTS loan_installments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   loan_id INT NOT NULL,
   installment_no INT NOT NULL,
@@ -1596,7 +1596,7 @@ CREATE TABLE loan_installments (
 ) ENGINE=InnoDB;
 
 -- ---------- Bonus / free stock schemes ----------
-CREATE TABLE bonus_schemes (
+CREATE TABLE IF NOT EXISTS bonus_schemes (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL UNIQUE,
   kind VARCHAR(20) NOT NULL DEFAULT 'salesman',  -- salesman|customer|purchase|promotion|special
@@ -1607,7 +1607,7 @@ CREATE TABLE bonus_schemes (
 ) ENGINE=InnoDB;
 
 -- ---------- Payroll deduction links (advances / loans per payslip) ----------
-CREATE TABLE payroll_deductions (
+CREATE TABLE IF NOT EXISTS payroll_deductions (
   id INT AUTO_INCREMENT PRIMARY KEY,
   payroll_id INT NOT NULL,
   source_type VARCHAR(10) NOT NULL,   -- advance|loan_installment
@@ -1619,7 +1619,7 @@ CREATE TABLE payroll_deductions (
 
 
 -- ---------- Notifications (real-time alerts; bell + desktop popups + sound) ----------
-CREATE TABLE notifications (
+CREATE TABLE IF NOT EXISTS notifications (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
   type VARCHAR(40) NOT NULL,            -- payment_request|approval|expense|advance|loan|sale|purchase|low_stock|receipt|overdue|accounting|journal|bonus
@@ -1638,7 +1638,7 @@ CREATE TABLE notifications (
 
 
 -- ---------- Claim Goods (supplier claim receipts: accepted / damaged / rejected split) ----------
-CREATE TABLE claim_goods (
+CREATE TABLE IF NOT EXISTS claim_goods (
   id INT AUTO_INCREMENT PRIMARY KEY,
   claim_no VARCHAR(30) NOT NULL UNIQUE,
   supplier_id INT NOT NULL,
@@ -1665,7 +1665,7 @@ CREATE TABLE claim_goods (
   INDEX idx_cg_supplier (supplier_id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE claim_goods_items (
+CREATE TABLE IF NOT EXISTS claim_goods_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   claim_goods_id INT NOT NULL,
   product_id INT NOT NULL,
@@ -1679,7 +1679,7 @@ CREATE TABLE claim_goods_items (
   INDEX idx_cgi_cg (claim_goods_id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE claim_goods_payments (
+CREATE TABLE IF NOT EXISTS claim_goods_payments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   claim_goods_id INT NOT NULL,
   payment_no VARCHAR(30) NULL,
@@ -1698,7 +1698,7 @@ CREATE TABLE claim_goods_payments (
 
 -- ---------- Personal loans (separate, non-accounting) ----------
 
-CREATE TABLE personal_loans (
+CREATE TABLE IF NOT EXISTS personal_loans (
   id INT AUTO_INCREMENT PRIMARY KEY,
   loan_no VARCHAR(30) NOT NULL UNIQUE,
   person_name VARCHAR(150) NOT NULL,
@@ -1715,7 +1715,7 @@ CREATE TABLE personal_loans (
   CONSTRAINT fk_pl_user FOREIGN KEY (created_by) REFERENCES users(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE personal_loan_repayments (
+CREATE TABLE IF NOT EXISTS personal_loan_repayments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   loan_id INT NOT NULL,
   repayment_date DATE NOT NULL,
@@ -1727,7 +1727,7 @@ CREATE TABLE personal_loan_repayments (
   CONSTRAINT fk_plr_user FOREIGN KEY (recorded_by) REFERENCES users(id)
 ) ENGINE=InnoDB;
 
-CREATE TABLE company_expenses (
+CREATE TABLE IF NOT EXISTS company_expenses (
   id INT AUTO_INCREMENT PRIMARY KEY,
   expense_no VARCHAR(30) NOT NULL UNIQUE,
   linked_expense_id INT NULL,
@@ -1755,7 +1755,7 @@ CREATE TABLE company_expenses (
   CONSTRAINT fk_ce_linked FOREIGN KEY (linked_expense_id) REFERENCES expenses(id) ON DELETE SET NULL
 ) ENGINE=InnoDB;
 -- ---------- Gifts ----------
-CREATE TABLE gifts (
+CREATE TABLE IF NOT EXISTS gifts (
   id INT AUTO_INCREMENT PRIMARY KEY,
   gift_no VARCHAR(30) NOT NULL UNIQUE,
   gift_date DATE NOT NULL,
